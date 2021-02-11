@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package api_spec;
+
+option go_package = "akitasoftware.com/superstar/pb/go/api_spec";
+
+import "method.proto";
+
+message Witness {
+  // This may be a partial method (i.e. only containing arg or response value)
+  // depending on the broker's observation.
+  Method method = 1;
+}

@@ -1,0 +1,149 @@
+syntax = "proto3";
+
+package api_spec;
+
+option go_package = "akitasoftware.com/superstar/pb/go/api_spec";
+
+import "method.proto";
+import "types.proto";
+
+message NamedDataRef {
+  string key = 1;
+  DataRef data_ref = 2;
+}
+
+message IndexedDataRef {
+  int32 index = 1;
+  DataRef data_ref = 2;
+}
+
+message PrimitiveRef {
+  oneof type {
+    BoolType bool_type = 1;
+    BytesType bytes_type = 2;
+    StringType string_type = 3;
+    Int32Type int32_type = 4;
+    Int64Type int64_type = 5;
+    Uint32Type uint32_type = 6;
+    Uint64Type uint64_type = 7;
+    DoubleType double_type = 8;
+    FloatType float_type = 9;
+  }
+}
+
+message StructRef {
+  // Reference the entire struct.
+  message FullStructRef {
+  }
+
+  oneof ref {
+    FullStructRef full_struct = 1;
+
+    // Reference to a particular field.
+    NamedDataRef field_ref = 2;
+  }
+}
+
+message ListRef {
+  // Reference the entire list.
+  message FullListRef {
+  }
+
+  oneof ref {
+    FullListRef full_list = 1;
+
+    // Reference to specific element by index.
+    IndexedDataRef elem_ref = 2;
+  }
+}
+
+// DataRef is a reference or "pointer" to a particular Data object within a
+// parent Data object.
+message DataRef {
+  oneof value_ref {
+    PrimitiveRef primitive_ref = 1;
+    StructRef struct_ref = 2;
+    ListRef list_ref = 3;
+  }
+}
+
+// MethodDataRef describes a reference to a value within a Method in the
+// sequence.
+message MethodDataRef {
+  // Index of the method in the sequence.
+  int32 method_index = 1;
+
+  oneof ref {
+    NamedDataRef arg_ref = 2;
+    NamedDataRef response_ref = 3;
+  }
+
+  // This should come from the Data protobuf making the reference, not the Data
+  // protobuf being referenced. Because of this, it is easier for the sequence
+  // generator to add this to MethodDataRef, instead of PrimitiveRef, even
+  // though this should only exist for references to primitive data types.
+  AkitaAnnotations akita_annotations = 11;
+}
+
+message StructTemplate {
+  map<string, DataTemplate> field_templates = 1;
+}
+
+message ListTemplate {
+  repeated DataTemplate elem_templates = 1;
+}
+
+message OptionalTemplate {
+  DataTemplate value_template = 1;
+}
+
+// DataTemplate describes how to construct a Data object. It recursively encodes
+// the structure of the desired Data object while embedding values or references
+// to values that is needed to fill out the Data object.
+message DataTemplate {
+  oneof value_template {
+    StructTemplate struct_template = 1;
+    ListTemplate list_template = 2;
+    Data value = 3;
+    MethodDataRef ref = 4;
+    OptionalTemplate optional_template = 5;
+  }
+
+  DataMeta meta = 6;
+}
+
+// MethodTemplate describes how a method should be invoked.
+message MethodTemplate {
+  // Unique identifier for this MethodTemplate.
+  string id = 1;
+
+  // ID of the Method that this template represents.
+  MethodID method_id = 2;
+
+  // Templates for the arguments.
+  map<string, DataTemplate> arg_templates = 3;
+
+  // Describes the types expected in the method's response. This is needed in
+  // order to parse actual API call response back into the generic format and
+  // lives here mostly for plumbing reasons.
+  map<string, Data> responses = 4;
+
+  MethodMeta meta = 5;
+}
+
+message Sequence {
+  // Sequence ID is computed as sha256("".join(t.id for t in method_templates)).
+  // By generating sequence ID deterministically, we can easily compute the
+  // sequnce ID of the prefix of a given sequence.
+  string id = 1;
+
+  repeated MethodTemplate method_templates = 2;
+}
+
+message SequenceRun {
+  Sequence seq = 1;
+
+  // Indicates that this is the ith attempt to rerun the sequence. 0 means this
+  // is not a rerun (i.e. the initial run).
+  int32 rerun_attempt = 2;
+}

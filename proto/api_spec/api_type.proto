@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package api_spec;
+
+option go_package = "akitasoftware.com/superstar/pb/go/api_spec";
+
+enum ApiType {
+  GRPC = 0;
+  HTTP_REST = 1;
+}

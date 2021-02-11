@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package api_spec;
+
+option go_package = "akitasoftware.com/superstar/pb/go/api_spec";
+
+import "google/protobuf/wrappers.proto";
+
+// The Akita API spec language can express 9 types, as listed below. The
+// types from are chosen from the types supported by protobuf, minus types that
+// are identical in generated Go code. For example, fixed32 and uint32 in
+// protobuf are both represented by uint32 in Go, so we only include uint32.
+// Each type message may contain customization fields that specify guidelines on
+// how to generate random values for the type. For example, a regexp for string
+// or min/max for int32.
+message BoolType {
+  repeated bool fixed_values = 1;
+}
+
+message BytesType {
+  repeated bytes fixed_values = 1;
+}
+
+message StringType {
+  repeated string fixed_values = 1;
+  string regex = 2;
+}
+
+message Int32Type {
+  repeated int32 fixed_values = 1;
+  google.protobuf.Int32Value min = 2;
+  google.protobuf.Int32Value max = 3;
+}
+
+message Int64Type {
+  repeated int64 fixed_values = 1;
+  google.protobuf.Int64Value min = 2;
+  google.protobuf.Int64Value max = 3;
+}
+
+message Uint32Type {
+  repeated uint32 fixed_values = 1;
+  google.protobuf.UInt32Value min = 2;
+  google.protobuf.UInt32Value max = 3;
+}
+
+message Uint64Type {
+  repeated uint64 fixed_values = 1;
+  google.protobuf.UInt64Value min = 2;
+  google.protobuf.UInt64Value max = 3;
+}
+
+message DoubleType {
+  repeated double fixed_values = 1;
+  google.protobuf.DoubleValue min = 2;
+  google.protobuf.DoubleValue max = 3;
+}
+
+message FloatType {
+  repeated float fixed_values = 1;
+  google.protobuf.FloatValue min = 2;
+  google.protobuf.FloatValue max = 3;
+}
+
+message FormatOption{
+  oneof format {
+    string string_format = 1; // ex: "Bearer {REF}"
+  }
+}
+
+message AkitaAnnotations {
+  // True if the parameter/field can take arbitrary value.
+  bool is_free = 1;
+
+  // True if the parameter/field contains sensitive data that should not be
+  // leaked. Ex: password, credit card number
+  bool is_sensitive = 2;
+
+  // If provided, represents the modification needed to transform other values
+  // with the same type for this argument field
+  FormatOption format_option = 3;
+}

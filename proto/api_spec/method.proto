@@ -1,0 +1,304 @@
+syntax = "proto3";
+
+package api_spec;
+
+import "api_type.proto";
+import "types.proto";
+
+option go_package = "akitasoftware.com/superstar/pb/go/api_spec";
+
+message Bool {
+  BoolType type = 1;
+  bool value = 2;
+}
+
+message Bytes {
+  BytesType type = 1;
+  bytes value = 2;
+}
+
+message String {
+  StringType type = 1;
+  string value = 2;
+}
+
+message Int32 {
+  Int32Type type = 1;
+  int32 value = 2;
+}
+
+message Int64 {
+  Int64Type type = 1;
+  int64 value = 2;
+}
+
+message Uint32 {
+  Uint32Type type = 1;
+  uint32 value = 2;
+}
+
+message Uint64 {
+  Uint64Type type = 1;
+  uint64 value = 2;
+}
+
+message Double {
+  DoubleType type = 1;
+  double value = 2;
+}
+
+message Float {
+  FloatType type = 1;
+  float value = 2;
+}
+
+message Primitive {
+  string type_hint = 1;
+
+  oneof value {
+    Bool bool_value = 2;
+    Bytes bytes_value = 3;
+    String string_value = 4;
+    Int32 int32_value = 5;
+    Int64 int64_value = 6;
+    Uint32 uint32_value = 7;
+    Uint64 uint64_value = 8;
+    Double double_value = 9;
+    Float float_value = 10;
+  }
+
+  AkitaAnnotations akita_annotations = 11;
+
+  // If true, indicates that the value of this primitive was randomly generated.
+  // When making API calls against a target system whose state cannot be reset,
+  // the API caller may choose to generate a new random value to avoid the old
+  // value from invalidating the API call (e.g. creating an object with the same
+  // name). It's unlikely that the target system would behave differently
+  // depending on a random value, so we think this is a viable workaround.
+  // Note that we chose this approach instead of stop generating random values
+  // upfront because if we encounter a target system that supports reset, the
+  // fixed random values adds extra assurance to reproducibility.
+  bool contains_random_value = 12;
+
+  // Values of this Primitive must match one of these data formats, if present.
+  // An empty map means no restrictions on format.
+  //
+  // This is typed as a map to ensure stable hashing.  Values should always be
+  // `true`.
+  //
+  // Data format definitions:
+  // https://github.com/akitasoftware/test-service/blob/master/lib/data_formats/data_formats.go
+  map<string, bool> formats = 13;
+
+  // Format kinds describe collections of formats, e.g. datetime is the kind
+  // of various date formats, e.g. RFC3339 and Unix-style timestamps.
+  //
+  // Data format kind definitions:
+  // https://github.com/akitasoftware/test-service/blob/master/lib/data_formats/data_formats.go
+  string format_kind = 14;
+}
+
+message List {
+  repeated Data elems = 1;
+}
+
+message Struct {
+  map<string, Data> fields = 1;
+}
+
+message None {
+}
+
+message Optional {
+  oneof value {
+    Data data = 1;
+    None none = 2;
+  }
+}
+
+message OneOf {
+  // Map keys are the hashes of the Data values. This allows us to stably
+  // compare OneOf messages and ensure there are no duplicate options.
+  // See hash function at:
+  // https://github.com/akitasoftware/test-service/blob/master/lib/pbhash/pbhash.go
+  map<string, Data> options = 1;
+
+  // True if this oneof was created by Akita during learn mode to encode a
+  // potential conflict in the API spec.
+  bool potential_conflict = 2;
+}
+
+message GRPCMeta {
+  // TODO
+}
+
+message HTTPPath {
+  // Path parameter name
+  string key = 1;
+}
+
+message HTTPQuery {
+  // Query parameter name
+  string key = 1;
+}
+
+// Note: Authorization header should go into HTTPAuth, not HTTPHeader
+message HTTPHeader {
+  // Header name
+  string key = 1;
+}
+
+message HTTPAuth {
+  enum HTTPAuthType {
+    UNKNOWN = 0;
+    BASIC = 1;
+    BEARER = 2;
+  }
+  HTTPAuthType type = 1;
+}
+
+message HTTPCookie {
+  // Cookie parameter name
+  string key = 1;
+}
+
+// Represents HTTP body or a part in a multipart body.
+message HTTPBody {
+  enum ContentType {
+    UNKNOWN = 0;
+    JSON = 1;
+    FORM_URL_ENCODED = 2;
+    OCTET_STREAM = 3;
+    PDF = 4;
+    TEXT_PLAIN = 5;
+    YAML = 6;
+  }
+  ContentType content_type = 1;
+}
+
+message HTTPMultipart {
+  // "form-data" or "mixed"
+  string type = 1;
+}
+
+message HTTPEmpty {
+  // Used to designate the existence of a response code for which the response
+  // has no headers, cookies, or body.
+}
+
+message HTTPMeta {
+  // Should never be HTTPPath or HTTPQuery if this metadata is for a response.
+  // Should never be HTTPEmpty if this metadata is for an argument or for a
+  // response that contains headers, cookies, or a body.
+  oneof location {
+    HTTPPath path = 1;
+    HTTPQuery query = 2;
+    HTTPHeader header = 3;
+    HTTPCookie cookie = 4;
+    HTTPBody body = 5;
+    HTTPEmpty empty = 6;
+    HTTPAuth auth = 8;
+
+    // Multipart data is represented by a struct where each field is an HTTPBody
+    // with its own content-type.
+    HTTPMultipart multipart = 9;
+  }
+
+  // Response code with which this data is returned.
+  // Should be 0 if this data is an argument.
+  // Should be -1 if this data is the default response.
+  int32 response_code = 7;
+}
+
+message DataMeta {
+  oneof meta {
+    GRPCMeta grpc = 1;
+    HTTPMeta http = 2;
+  }
+}
+
+message ExampleValue {
+  // For future expansion.
+}
+
+message Data {
+  oneof value {
+    Primitive primitive = 1;
+    Struct struct = 2;
+    List list = 3;
+
+    // Indicates whether the value can be omitted. See comparison to nullable
+    // below.
+    Optional optional = 4;
+
+    // This should only exist if Data is describing an API spec, not when Data
+    // represents an instantiated value of an API call.
+    OneOf oneof = 6;
+  }
+
+  // The meta field describes how this Data should be encoded in the target API
+  // format (i.e. HTTP or gRPC).
+  // For HTTP, only the top-level Data contains meta. For example, if Data is a
+  // struct with HTTPBody in meta, it means "encode the full struct in the body
+  // for the HTTP request/response." This applies to OneOf as well - all OneOf
+  // options within the same Data share the same meta field in Data and each
+  // option has an empty meta field.
+  DataMeta meta = 5;
+
+  // True if the data can be represented by null. This is only meaningful when
+  // the Data represents a type rather than a concrete value.
+  //
+  // Nullable is different from Optional:
+  // - Optional means that the value can be omitted
+  // - Nullable means that we can use null as the value
+  bool nullable = 7;
+
+  // Example of values represented by this data. This is for informational
+  // purpose only, so we use string to encode values and this field is not
+  // included in pbhash.
+  map<string, ExampleValue> example_values = 8;
+}
+
+message MethodID {
+  string name = 1;
+  ApiType api_type = 2;
+
+  // TODO: Include service and version information here.
+}
+
+message GRPCMethodMeta {
+}
+
+message HTTPMethodMeta {
+  string method = 1;
+
+  // The request-URI as defined by RFC 2616 section 5.1.
+  // May contain path parameters in the form of `{key}` for substitution
+  // at runtime (e.g. `/user/{user_name}`). For substitution to happen, a
+  // corresponding `HTTPPath` Data must exist in the args of the method, with
+  // the `HTTPPath.Key` field set to the same value as the format string (e.g.
+  // `HTTPPath{ key: "user_name" }`) or else the substitution does not occur
+  // and the path is used as is.
+  string path_template = 2;
+
+  string host = 3;
+}
+
+message MethodMeta {
+  oneof meta {
+    GRPCMethodMeta grpc = 1;
+    HTTPMethodMeta http = 2;
+  }
+}
+
+message Method {
+  MethodID id = 1;
+
+  // For HTTP REST APIs, the keys in this map have no meaning.
+  map<string, Data> args = 2;
+
+  // For HTTP REST APIs, the keys in this map have no meaning.
+  map<string, Data> responses = 3;
+
+  MethodMeta meta = 4;
+}

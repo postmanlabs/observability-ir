@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package api_spec;
+
+option go_package = "akitasoftware.com/superstar/pb/go/api_spec";
+
+import "method.proto";
+
+message APISpec {
+  // The type/signature of each method in the API spec.
+  repeated Method methods = 1;
+
+  // User-supplied key value pairs associated with this spec.
+  map<string, string> tags = 2;
+}
+
+message MethodCalls {
+  // Instantiated methods with concrete argument and response values, as
+  // observed from actual API calls.
+  repeated Method calls = 1;
+}
