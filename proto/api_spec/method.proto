@@ -282,6 +282,14 @@ message HTTPMethodMeta {
   string path_template = 2;
 
   string host = 3;
+
+  // Processing latency in milliseconds.  This is 0 in specs, or if it
+  // has not been measured (in an existing trace, or a request without
+  // a corresponding response.)
+  //
+  // This measurement is from the last byte of the HTTP request to the
+  // first byte of the HTTP response, ignoring time spent in transmission.
+  float processing_latency = 4;  
 }
 
 message MethodMeta {
