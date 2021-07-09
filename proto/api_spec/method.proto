@@ -153,8 +153,24 @@ message HTTPAuth {
     UNKNOWN = 0;
     BASIC = 1;
     BEARER = 2;
+
+    // Less common types listed at https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml
+    // excluded HOBA as I couldn't find any references to its use.
+    DIGEST = 3;
+    MUTUAL = 4;
+    OAUTH = 5;
+    VAPID = 6;
+    SCRAM_SHA_1 = 7;
+    SCRAM_SHA_256 = 8;
+    NEGOTIATE = 9;
+    
+    // An application-specific authorization header, such as
+    // Github webhook's X-Hub-Signature-256 or X-Hub-Signature,
+    // not carried in "Authorization".
+    PROPRIETARY_HEADER = 10;
   }
   HTTPAuthType type = 1;
+  string proprietary_header = 2;
 }
 
 message HTTPCookie {
