@@ -159,7 +159,9 @@ message HTTPAuth {
     BEARER = 2;
     DIGEST = 3; 
     MUTUAL = 4;
-    OAUTH = 5;
+    OAUTH = 5; // This is OAuth v1, not used in v2
+    // Oauth V2 also defines a MAC, but this does not appear in the list above.
+    // https://datatracker.ietf.org/doc/html/rfc6749#section-7.1
     VAPID = 6;
     SCRAM_SHA_1 = 7;
     SCRAM_SHA_256 = 8;
