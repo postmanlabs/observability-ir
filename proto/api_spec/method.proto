@@ -102,8 +102,19 @@ message List {
   repeated Data elems = 1;
 }
 
+// Represents a struct or a map.
 message Struct {
+  // Populated if this represents a struct.
   map<string, Data> fields = 1;
+
+  // Populated if this represents a map.
+  MapData map_type = 2;
+}
+
+// Gives the key and value types of a map.
+message MapData {
+  Data key = 1;
+  Data value = 2;
 }
 
 message None {
@@ -303,9 +314,11 @@ message Method {
   MethodID id = 1;
 
   // For HTTP REST APIs, the keys in this map have no meaning.
+  // Requests
   map<string, Data> args = 2;
 
   // For HTTP REST APIs, the keys in this map have no meaning.
+  // Responses
   map<string, Data> responses = 3;
 
   MethodMeta meta = 4;
