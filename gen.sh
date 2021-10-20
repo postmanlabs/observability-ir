@@ -4,6 +4,11 @@ set -euo pipefail
 
 SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
+# Using namely/protoc:1.39_0 to output go code using
+# golang protobuf APIv2.
+# Previously used 1:26_1 to use golang api v1.
+PROTOC_VERSION=namely/protoc:1.39_0
+
 pushd ${SCRIPTPATH} > /dev/null
 
 for d in proto/*; do
@@ -16,14 +21,12 @@ for d in proto/*; do
   go_out=$(cd go/${pkg}; pwd)
   py_out=$(cd py/${pkg}; pwd)
 
-  # Using namely/protoc:1.26_1 (libprotoc 3.8.0) to output go code using
-  # golang protobuf APIv1.
   docker run --rm \
     -u $(id -u ${USER}):$(id -g ${USER}) \
     -v ${proto_dir}:/defs \
     -v ${go_out}:/go_out \
     --entrypoint /bin/sh \
-    namely/protoc:1.26_1 \
+    ${PROTOC_VERSION} \
     -c '/usr/local/bin/protoc -I /opt/include -I /defs --go_out paths=source_relative:/go_out /defs/*.proto'
 
   docker run --rm \
@@ -31,7 +34,7 @@ for d in proto/*; do
     -v ${proto_dir}:/defs \
     -v ${py_out}:/py_out \
     --entrypoint /bin/sh \
-    namely/protoc:1.26_1 \
+    ${PROTOC_VERSION} \
     -c '/usr/local/bin/protoc -I /opt/include -I /defs --python_out /py_out /defs/*.proto'
 done
 
