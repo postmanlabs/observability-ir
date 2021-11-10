@@ -183,8 +183,13 @@ message HTTPBody {
     PDF = 4;
     TEXT_PLAIN = 5;
     YAML = 6;
+    TEXT_HTML = 7;
+    OTHER = 8;
   }
   ContentType content_type = 1;
+
+  // Preserve original value if "other"
+  String other_type = 2;
 }
 
 message HTTPMultipart {
