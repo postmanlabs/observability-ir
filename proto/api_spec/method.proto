@@ -139,6 +139,11 @@ message OneOf {
   bool potential_conflict = 2;
 }
 
+// Represents an unstructured type. This is used in place of a OneOf when the
+// number of options in the OneOf crosses a threshold.
+message Unstructured {
+}
+
 message GRPCMeta {
   // TODO
 }
@@ -250,6 +255,10 @@ message Data {
     // This should only exist if Data is describing an API spec, not when Data
     // represents an instantiated value of an API call.
     OneOf oneof = 6;
+
+    // Only appears if Data describes an API spec, not when it represents an
+    // instantiated value of an API call.
+    Unstructured unstructured = 9;
   }
 
   // The meta field describes how this Data should be encoded in the target API

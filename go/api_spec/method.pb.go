@@ -66,7 +66,7 @@ func (x HTTPAuth_HTTPAuthType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use HTTPAuth_HTTPAuthType.Descriptor instead.
 func (HTTPAuth_HTTPAuthType) EnumDescriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{20, 0}
+	return file_method_proto_rawDescGZIP(), []int{21, 0}
 }
 
 type HTTPBody_ContentType int32
@@ -133,7 +133,7 @@ func (x HTTPBody_ContentType) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use HTTPBody_ContentType.Descriptor instead.
 func (HTTPBody_ContentType) EnumDescriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{22, 0}
+	return file_method_proto_rawDescGZIP(), []int{23, 0}
 }
 
 type Bool struct {
@@ -1211,6 +1211,46 @@ func (x *OneOf) GetPotentialConflict() bool {
 	return false
 }
 
+// Represents an unstructured type. This is used in place of a OneOf when the
+// number of options in the OneOf crosses a threshold.
+type Unstructured struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *Unstructured) Reset() {
+	*x = Unstructured{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_method_proto_msgTypes[16]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *Unstructured) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Unstructured) ProtoMessage() {}
+
+func (x *Unstructured) ProtoReflect() protoreflect.Message {
+	mi := &file_method_proto_msgTypes[16]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Unstructured.ProtoReflect.Descriptor instead.
+func (*Unstructured) Descriptor() ([]byte, []int) {
+	return file_method_proto_rawDescGZIP(), []int{16}
+}
+
 type GRPCMeta struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1220,7 +1260,7 @@ type GRPCMeta struct {
 func (x *GRPCMeta) Reset() {
 	*x = GRPCMeta{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[16]
+		mi := &file_method_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1233,7 +1273,7 @@ func (x *GRPCMeta) String() string {
 func (*GRPCMeta) ProtoMessage() {}
 
 func (x *GRPCMeta) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[16]
+	mi := &file_method_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1246,7 +1286,7 @@ func (x *GRPCMeta) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GRPCMeta.ProtoReflect.Descriptor instead.
 func (*GRPCMeta) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{16}
+	return file_method_proto_rawDescGZIP(), []int{17}
 }
 
 type HTTPPath struct {
@@ -1261,7 +1301,7 @@ type HTTPPath struct {
 func (x *HTTPPath) Reset() {
 	*x = HTTPPath{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[17]
+		mi := &file_method_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1274,7 +1314,7 @@ func (x *HTTPPath) String() string {
 func (*HTTPPath) ProtoMessage() {}
 
 func (x *HTTPPath) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[17]
+	mi := &file_method_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1287,7 +1327,7 @@ func (x *HTTPPath) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPPath.ProtoReflect.Descriptor instead.
 func (*HTTPPath) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{17}
+	return file_method_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *HTTPPath) GetKey() string {
@@ -1309,7 +1349,7 @@ type HTTPQuery struct {
 func (x *HTTPQuery) Reset() {
 	*x = HTTPQuery{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[18]
+		mi := &file_method_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1322,7 +1362,7 @@ func (x *HTTPQuery) String() string {
 func (*HTTPQuery) ProtoMessage() {}
 
 func (x *HTTPQuery) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[18]
+	mi := &file_method_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1335,7 +1375,7 @@ func (x *HTTPQuery) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPQuery.ProtoReflect.Descriptor instead.
 func (*HTTPQuery) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{18}
+	return file_method_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *HTTPQuery) GetKey() string {
@@ -1358,7 +1398,7 @@ type HTTPHeader struct {
 func (x *HTTPHeader) Reset() {
 	*x = HTTPHeader{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[19]
+		mi := &file_method_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1371,7 +1411,7 @@ func (x *HTTPHeader) String() string {
 func (*HTTPHeader) ProtoMessage() {}
 
 func (x *HTTPHeader) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[19]
+	mi := &file_method_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1384,7 +1424,7 @@ func (x *HTTPHeader) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPHeader.ProtoReflect.Descriptor instead.
 func (*HTTPHeader) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{19}
+	return file_method_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *HTTPHeader) GetKey() string {
@@ -1405,7 +1445,7 @@ type HTTPAuth struct {
 func (x *HTTPAuth) Reset() {
 	*x = HTTPAuth{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[20]
+		mi := &file_method_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1418,7 +1458,7 @@ func (x *HTTPAuth) String() string {
 func (*HTTPAuth) ProtoMessage() {}
 
 func (x *HTTPAuth) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[20]
+	mi := &file_method_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1431,7 +1471,7 @@ func (x *HTTPAuth) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPAuth.ProtoReflect.Descriptor instead.
 func (*HTTPAuth) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{20}
+	return file_method_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *HTTPAuth) GetType() HTTPAuth_HTTPAuthType {
@@ -1453,7 +1493,7 @@ type HTTPCookie struct {
 func (x *HTTPCookie) Reset() {
 	*x = HTTPCookie{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[21]
+		mi := &file_method_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1466,7 +1506,7 @@ func (x *HTTPCookie) String() string {
 func (*HTTPCookie) ProtoMessage() {}
 
 func (x *HTTPCookie) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[21]
+	mi := &file_method_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1479,7 +1519,7 @@ func (x *HTTPCookie) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPCookie.ProtoReflect.Descriptor instead.
 func (*HTTPCookie) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{21}
+	return file_method_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *HTTPCookie) GetKey() string {
@@ -1503,7 +1543,7 @@ type HTTPBody struct {
 func (x *HTTPBody) Reset() {
 	*x = HTTPBody{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[22]
+		mi := &file_method_proto_msgTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1516,7 +1556,7 @@ func (x *HTTPBody) String() string {
 func (*HTTPBody) ProtoMessage() {}
 
 func (x *HTTPBody) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[22]
+	mi := &file_method_proto_msgTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1529,7 +1569,7 @@ func (x *HTTPBody) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPBody.ProtoReflect.Descriptor instead.
 func (*HTTPBody) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{22}
+	return file_method_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *HTTPBody) GetContentType() HTTPBody_ContentType {
@@ -1558,7 +1598,7 @@ type HTTPMultipart struct {
 func (x *HTTPMultipart) Reset() {
 	*x = HTTPMultipart{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[23]
+		mi := &file_method_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1571,7 +1611,7 @@ func (x *HTTPMultipart) String() string {
 func (*HTTPMultipart) ProtoMessage() {}
 
 func (x *HTTPMultipart) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[23]
+	mi := &file_method_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1584,7 +1624,7 @@ func (x *HTTPMultipart) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPMultipart.ProtoReflect.Descriptor instead.
 func (*HTTPMultipart) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{23}
+	return file_method_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *HTTPMultipart) GetType() string {
@@ -1603,7 +1643,7 @@ type HTTPEmpty struct {
 func (x *HTTPEmpty) Reset() {
 	*x = HTTPEmpty{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[24]
+		mi := &file_method_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1616,7 +1656,7 @@ func (x *HTTPEmpty) String() string {
 func (*HTTPEmpty) ProtoMessage() {}
 
 func (x *HTTPEmpty) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[24]
+	mi := &file_method_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1629,7 +1669,7 @@ func (x *HTTPEmpty) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPEmpty.ProtoReflect.Descriptor instead.
 func (*HTTPEmpty) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{24}
+	return file_method_proto_rawDescGZIP(), []int{25}
 }
 
 type HTTPMeta struct {
@@ -1660,7 +1700,7 @@ type HTTPMeta struct {
 func (x *HTTPMeta) Reset() {
 	*x = HTTPMeta{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[25]
+		mi := &file_method_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1673,7 +1713,7 @@ func (x *HTTPMeta) String() string {
 func (*HTTPMeta) ProtoMessage() {}
 
 func (x *HTTPMeta) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[25]
+	mi := &file_method_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1686,7 +1726,7 @@ func (x *HTTPMeta) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPMeta.ProtoReflect.Descriptor instead.
 func (*HTTPMeta) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{25}
+	return file_method_proto_rawDescGZIP(), []int{26}
 }
 
 func (m *HTTPMeta) GetLocation() isHTTPMeta_Location {
@@ -1827,7 +1867,7 @@ type DataMeta struct {
 func (x *DataMeta) Reset() {
 	*x = DataMeta{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[26]
+		mi := &file_method_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1840,7 +1880,7 @@ func (x *DataMeta) String() string {
 func (*DataMeta) ProtoMessage() {}
 
 func (x *DataMeta) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[26]
+	mi := &file_method_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1853,7 +1893,7 @@ func (x *DataMeta) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DataMeta.ProtoReflect.Descriptor instead.
 func (*DataMeta) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{26}
+	return file_method_proto_rawDescGZIP(), []int{27}
 }
 
 func (m *DataMeta) GetMeta() isDataMeta_Meta {
@@ -1902,7 +1942,7 @@ type ExampleValue struct {
 func (x *ExampleValue) Reset() {
 	*x = ExampleValue{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[27]
+		mi := &file_method_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1915,7 +1955,7 @@ func (x *ExampleValue) String() string {
 func (*ExampleValue) ProtoMessage() {}
 
 func (x *ExampleValue) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[27]
+	mi := &file_method_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1928,7 +1968,7 @@ func (x *ExampleValue) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ExampleValue.ProtoReflect.Descriptor instead.
 func (*ExampleValue) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{27}
+	return file_method_proto_rawDescGZIP(), []int{28}
 }
 
 type Data struct {
@@ -1942,6 +1982,7 @@ type Data struct {
 	//	*Data_List
 	//	*Data_Optional
 	//	*Data_Oneof
+	//	*Data_Unstructured
 	Value isData_Value `protobuf_oneof:"value"`
 	// The meta field describes how this Data should be encoded in the target API
 	// format (i.e. HTTP or gRPC).
@@ -1967,7 +2008,7 @@ type Data struct {
 func (x *Data) Reset() {
 	*x = Data{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[28]
+		mi := &file_method_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1980,7 +2021,7 @@ func (x *Data) String() string {
 func (*Data) ProtoMessage() {}
 
 func (x *Data) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[28]
+	mi := &file_method_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1993,7 +2034,7 @@ func (x *Data) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Data.ProtoReflect.Descriptor instead.
 func (*Data) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{28}
+	return file_method_proto_rawDescGZIP(), []int{29}
 }
 
 func (m *Data) GetValue() isData_Value {
@@ -2034,6 +2075,13 @@ func (x *Data) GetOptional() *Optional {
 func (x *Data) GetOneof() *OneOf {
 	if x, ok := x.GetValue().(*Data_Oneof); ok {
 		return x.Oneof
+	}
+	return nil
+}
+
+func (x *Data) GetUnstructured() *Unstructured {
+	if x, ok := x.GetValue().(*Data_Unstructured); ok {
+		return x.Unstructured
 	}
 	return nil
 }
@@ -2087,6 +2135,12 @@ type Data_Oneof struct {
 	Oneof *OneOf `protobuf:"bytes,6,opt,name=oneof,proto3,oneof"`
 }
 
+type Data_Unstructured struct {
+	// Only appears if Data describes an API spec, not when it represents an
+	// instantiated value of an API call.
+	Unstructured *Unstructured `protobuf:"bytes,9,opt,name=unstructured,proto3,oneof"`
+}
+
 func (*Data_Primitive) isData_Value() {}
 
 func (*Data_Struct) isData_Value() {}
@@ -2096,6 +2150,8 @@ func (*Data_List) isData_Value() {}
 func (*Data_Optional) isData_Value() {}
 
 func (*Data_Oneof) isData_Value() {}
+
+func (*Data_Unstructured) isData_Value() {}
 
 type MethodID struct {
 	state         protoimpl.MessageState
@@ -2109,7 +2165,7 @@ type MethodID struct {
 func (x *MethodID) Reset() {
 	*x = MethodID{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[29]
+		mi := &file_method_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2122,7 +2178,7 @@ func (x *MethodID) String() string {
 func (*MethodID) ProtoMessage() {}
 
 func (x *MethodID) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[29]
+	mi := &file_method_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2135,7 +2191,7 @@ func (x *MethodID) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MethodID.ProtoReflect.Descriptor instead.
 func (*MethodID) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{29}
+	return file_method_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *MethodID) GetName() string {
@@ -2161,7 +2217,7 @@ type GRPCMethodMeta struct {
 func (x *GRPCMethodMeta) Reset() {
 	*x = GRPCMethodMeta{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[30]
+		mi := &file_method_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2174,7 +2230,7 @@ func (x *GRPCMethodMeta) String() string {
 func (*GRPCMethodMeta) ProtoMessage() {}
 
 func (x *GRPCMethodMeta) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[30]
+	mi := &file_method_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2187,7 +2243,7 @@ func (x *GRPCMethodMeta) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GRPCMethodMeta.ProtoReflect.Descriptor instead.
 func (*GRPCMethodMeta) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{30}
+	return file_method_proto_rawDescGZIP(), []int{31}
 }
 
 type HTTPMethodMeta struct {
@@ -2217,7 +2273,7 @@ type HTTPMethodMeta struct {
 func (x *HTTPMethodMeta) Reset() {
 	*x = HTTPMethodMeta{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[31]
+		mi := &file_method_proto_msgTypes[32]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2230,7 +2286,7 @@ func (x *HTTPMethodMeta) String() string {
 func (*HTTPMethodMeta) ProtoMessage() {}
 
 func (x *HTTPMethodMeta) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[31]
+	mi := &file_method_proto_msgTypes[32]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2243,7 +2299,7 @@ func (x *HTTPMethodMeta) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use HTTPMethodMeta.ProtoReflect.Descriptor instead.
 func (*HTTPMethodMeta) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{31}
+	return file_method_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *HTTPMethodMeta) GetMethod() string {
@@ -2288,7 +2344,7 @@ type MethodMeta struct {
 func (x *MethodMeta) Reset() {
 	*x = MethodMeta{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[32]
+		mi := &file_method_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2301,7 +2357,7 @@ func (x *MethodMeta) String() string {
 func (*MethodMeta) ProtoMessage() {}
 
 func (x *MethodMeta) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[32]
+	mi := &file_method_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2314,7 +2370,7 @@ func (x *MethodMeta) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MethodMeta.ProtoReflect.Descriptor instead.
 func (*MethodMeta) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{32}
+	return file_method_proto_rawDescGZIP(), []int{33}
 }
 
 func (m *MethodMeta) GetMeta() isMethodMeta_Meta {
@@ -2372,7 +2428,7 @@ type Method struct {
 func (x *Method) Reset() {
 	*x = Method{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_method_proto_msgTypes[33]
+		mi := &file_method_proto_msgTypes[34]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2385,7 +2441,7 @@ func (x *Method) String() string {
 func (*Method) ProtoMessage() {}
 
 func (x *Method) ProtoReflect() protoreflect.Message {
-	mi := &file_method_proto_msgTypes[33]
+	mi := &file_method_proto_msgTypes[34]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2398,7 +2454,7 @@ func (x *Method) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Method.ProtoReflect.Descriptor instead.
 func (*Method) Descriptor() ([]byte, []int) {
-	return file_method_proto_rawDescGZIP(), []int{33}
+	return file_method_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *Method) GetId() *MethodID {
@@ -2564,7 +2620,8 @@ var file_method_proto_rawDesc = []byte{
 	0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6b, 0x65,
 	0x79, 0x12, 0x24, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b,
 	0x32, 0x0e, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x44, 0x61, 0x74, 0x61,
-	0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01, 0x22, 0x0a, 0x0a, 0x08, 0x47,
+	0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01, 0x22, 0x0e, 0x0a, 0x0c, 0x55,
+	0x6e, 0x73, 0x74, 0x72, 0x75, 0x63, 0x74, 0x75, 0x72, 0x65, 0x64, 0x22, 0x0a, 0x0a, 0x08, 0x47,
 	0x52, 0x50, 0x43, 0x4d, 0x65, 0x74, 0x61, 0x22, 0x1c, 0x0a, 0x08, 0x48, 0x54, 0x54, 0x50, 0x50,
 	0x61, 0x74, 0x68, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
 	0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x1d, 0x0a, 0x09, 0x48, 0x54, 0x54, 0x50, 0x51, 0x75, 0x65,
@@ -2633,7 +2690,7 @@ var file_method_proto_rawDesc = []byte{
 	0x74, 0x74, 0x70, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x61, 0x70, 0x69, 0x5f,
 	0x73, 0x70, 0x65, 0x63, 0x2e, 0x48, 0x54, 0x54, 0x50, 0x4d, 0x65, 0x74, 0x61, 0x48, 0x00, 0x52,
 	0x04, 0x68, 0x74, 0x74, 0x70, 0x42, 0x06, 0x0a, 0x04, 0x6d, 0x65, 0x74, 0x61, 0x22, 0x0e, 0x0a,
-	0x0c, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x22, 0xd9, 0x03,
+	0x0c, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x97, 0x04,
 	0x0a, 0x04, 0x44, 0x61, 0x74, 0x61, 0x12, 0x33, 0x0a, 0x09, 0x70, 0x72, 0x69, 0x6d, 0x69, 0x74,
 	0x69, 0x76, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x13, 0x2e, 0x61, 0x70, 0x69, 0x5f,
 	0x73, 0x70, 0x65, 0x63, 0x2e, 0x50, 0x72, 0x69, 0x6d, 0x69, 0x74, 0x69, 0x76, 0x65, 0x48, 0x00,
@@ -2648,70 +2705,74 @@ var file_method_proto_rawDesc = []byte{
 	0x6e, 0x61, 0x6c, 0x48, 0x00, 0x52, 0x08, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x61, 0x6c, 0x12,
 	0x27, 0x0a, 0x05, 0x6f, 0x6e, 0x65, 0x6f, 0x66, 0x18, 0x06, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0f,
 	0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x4f, 0x6e, 0x65, 0x4f, 0x66, 0x48,
-	0x00, 0x52, 0x05, 0x6f, 0x6e, 0x65, 0x6f, 0x66, 0x12, 0x26, 0x0a, 0x04, 0x6d, 0x65, 0x74, 0x61,
-	0x18, 0x05, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65,
-	0x63, 0x2e, 0x44, 0x61, 0x74, 0x61, 0x4d, 0x65, 0x74, 0x61, 0x52, 0x04, 0x6d, 0x65, 0x74, 0x61,
-	0x12, 0x1a, 0x0a, 0x08, 0x6e, 0x75, 0x6c, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x18, 0x07, 0x20, 0x01,
-	0x28, 0x08, 0x52, 0x08, 0x6e, 0x75, 0x6c, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x12, 0x48, 0x0a, 0x0e,
-	0x65, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x73, 0x18, 0x08,
-	0x20, 0x03, 0x28, 0x0b, 0x32, 0x21, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e,
-	0x44, 0x61, 0x74, 0x61, 0x2e, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x56, 0x61, 0x6c, 0x75,
-	0x65, 0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x52, 0x0d, 0x65, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65,
-	0x56, 0x61, 0x6c, 0x75, 0x65, 0x73, 0x1a, 0x58, 0x0a, 0x12, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c,
-	0x65, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03,
-	0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x2c,
-	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16, 0x2e,
-	0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65,
-	0x56, 0x61, 0x6c, 0x75, 0x65, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01,
-	0x42, 0x07, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x4c, 0x0a, 0x08, 0x4d, 0x65, 0x74,
-	0x68, 0x6f, 0x64, 0x49, 0x44, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x2c, 0x0a, 0x08, 0x61, 0x70, 0x69,
-	0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x61, 0x70,
-	0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x41, 0x70, 0x69, 0x54, 0x79, 0x70, 0x65, 0x52, 0x07,
-	0x61, 0x70, 0x69, 0x54, 0x79, 0x70, 0x65, 0x22, 0x10, 0x0a, 0x0e, 0x47, 0x52, 0x50, 0x43, 0x4d,
-	0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65, 0x74, 0x61, 0x22, 0x90, 0x01, 0x0a, 0x0e, 0x48, 0x54,
-	0x54, 0x50, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65, 0x74, 0x61, 0x12, 0x16, 0x0a, 0x06,
-	0x6d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x6d, 0x65,
-	0x74, 0x68, 0x6f, 0x64, 0x12, 0x23, 0x0a, 0x0d, 0x70, 0x61, 0x74, 0x68, 0x5f, 0x74, 0x65, 0x6d,
-	0x70, 0x6c, 0x61, 0x74, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x70, 0x61, 0x74,
-	0x68, 0x54, 0x65, 0x6d, 0x70, 0x6c, 0x61, 0x74, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x68, 0x6f, 0x73,
-	0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x68, 0x6f, 0x73, 0x74, 0x12, 0x2d, 0x0a,
-	0x12, 0x70, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x69, 0x6e, 0x67, 0x5f, 0x6c, 0x61, 0x74, 0x65,
-	0x6e, 0x63, 0x79, 0x18, 0x04, 0x20, 0x01, 0x28, 0x02, 0x52, 0x11, 0x70, 0x72, 0x6f, 0x63, 0x65,
-	0x73, 0x73, 0x69, 0x6e, 0x67, 0x4c, 0x61, 0x74, 0x65, 0x6e, 0x63, 0x79, 0x22, 0x74, 0x0a, 0x0a,
-	0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65, 0x74, 0x61, 0x12, 0x2e, 0x0a, 0x04, 0x67, 0x72,
-	0x70, 0x63, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73,
-	0x70, 0x65, 0x63, 0x2e, 0x47, 0x52, 0x50, 0x43, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65,
-	0x74, 0x61, 0x48, 0x00, 0x52, 0x04, 0x67, 0x72, 0x70, 0x63, 0x12, 0x2e, 0x0a, 0x04, 0x68, 0x74,
-	0x74, 0x70, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73,
-	0x70, 0x65, 0x63, 0x2e, 0x48, 0x54, 0x54, 0x50, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65,
-	0x74, 0x61, 0x48, 0x00, 0x52, 0x04, 0x68, 0x74, 0x74, 0x70, 0x42, 0x06, 0x0a, 0x04, 0x6d, 0x65,
-	0x74, 0x61, 0x22, 0xdc, 0x02, 0x0a, 0x06, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x12, 0x22, 0x0a,
-	0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x61, 0x70, 0x69, 0x5f,
-	0x73, 0x70, 0x65, 0x63, 0x2e, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x49, 0x44, 0x52, 0x02, 0x69,
-	0x64, 0x12, 0x2e, 0x0a, 0x04, 0x61, 0x72, 0x67, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32,
-	0x1a, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x4d, 0x65, 0x74, 0x68, 0x6f,
-	0x64, 0x2e, 0x41, 0x72, 0x67, 0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x52, 0x04, 0x61, 0x72, 0x67,
-	0x73, 0x12, 0x3d, 0x0a, 0x09, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73, 0x18, 0x03,
-	0x20, 0x03, 0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e,
-	0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73,
-	0x45, 0x6e, 0x74, 0x72, 0x79, 0x52, 0x09, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73,
-	0x12, 0x28, 0x0a, 0x04, 0x6d, 0x65, 0x74, 0x61, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x14,
-	0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64,
-	0x4d, 0x65, 0x74, 0x61, 0x52, 0x04, 0x6d, 0x65, 0x74, 0x61, 0x1a, 0x47, 0x0a, 0x09, 0x41, 0x72,
-	0x67, 0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x24, 0x0a, 0x05, 0x76, 0x61, 0x6c,
-	0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73,
-	0x70, 0x65, 0x63, 0x2e, 0x44, 0x61, 0x74, 0x61, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a,
-	0x02, 0x38, 0x01, 0x1a, 0x4c, 0x0a, 0x0e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73,
+	0x00, 0x52, 0x05, 0x6f, 0x6e, 0x65, 0x6f, 0x66, 0x12, 0x3c, 0x0a, 0x0c, 0x75, 0x6e, 0x73, 0x74,
+	0x72, 0x75, 0x63, 0x74, 0x75, 0x72, 0x65, 0x64, 0x18, 0x09, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16,
+	0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x55, 0x6e, 0x73, 0x74, 0x72, 0x75,
+	0x63, 0x74, 0x75, 0x72, 0x65, 0x64, 0x48, 0x00, 0x52, 0x0c, 0x75, 0x6e, 0x73, 0x74, 0x72, 0x75,
+	0x63, 0x74, 0x75, 0x72, 0x65, 0x64, 0x12, 0x26, 0x0a, 0x04, 0x6d, 0x65, 0x74, 0x61, 0x18, 0x05,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e,
+	0x44, 0x61, 0x74, 0x61, 0x4d, 0x65, 0x74, 0x61, 0x52, 0x04, 0x6d, 0x65, 0x74, 0x61, 0x12, 0x1a,
+	0x0a, 0x08, 0x6e, 0x75, 0x6c, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x18, 0x07, 0x20, 0x01, 0x28, 0x08,
+	0x52, 0x08, 0x6e, 0x75, 0x6c, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x12, 0x48, 0x0a, 0x0e, 0x65, 0x78,
+	0x61, 0x6d, 0x70, 0x6c, 0x65, 0x5f, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x73, 0x18, 0x08, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x21, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x44, 0x61,
+	0x74, 0x61, 0x2e, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x73,
+	0x45, 0x6e, 0x74, 0x72, 0x79, 0x52, 0x0d, 0x65, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x56, 0x61,
+	0x6c, 0x75, 0x65, 0x73, 0x1a, 0x58, 0x0a, 0x12, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x56,
+	0x61, 0x6c, 0x75, 0x65, 0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65,
+	0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x2c, 0x0a, 0x05,
+	0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x61, 0x70,
+	0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x45, 0x78, 0x61, 0x6d, 0x70, 0x6c, 0x65, 0x56, 0x61,
+	0x6c, 0x75, 0x65, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01, 0x42, 0x07,
+	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x4c, 0x0a, 0x08, 0x4d, 0x65, 0x74, 0x68, 0x6f,
+	0x64, 0x49, 0x44, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x2c, 0x0a, 0x08, 0x61, 0x70, 0x69, 0x5f, 0x74,
+	0x79, 0x70, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x61, 0x70, 0x69, 0x5f,
+	0x73, 0x70, 0x65, 0x63, 0x2e, 0x41, 0x70, 0x69, 0x54, 0x79, 0x70, 0x65, 0x52, 0x07, 0x61, 0x70,
+	0x69, 0x54, 0x79, 0x70, 0x65, 0x22, 0x10, 0x0a, 0x0e, 0x47, 0x52, 0x50, 0x43, 0x4d, 0x65, 0x74,
+	0x68, 0x6f, 0x64, 0x4d, 0x65, 0x74, 0x61, 0x22, 0x90, 0x01, 0x0a, 0x0e, 0x48, 0x54, 0x54, 0x50,
+	0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65, 0x74, 0x61, 0x12, 0x16, 0x0a, 0x06, 0x6d, 0x65,
+	0x74, 0x68, 0x6f, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x6d, 0x65, 0x74, 0x68,
+	0x6f, 0x64, 0x12, 0x23, 0x0a, 0x0d, 0x70, 0x61, 0x74, 0x68, 0x5f, 0x74, 0x65, 0x6d, 0x70, 0x6c,
+	0x61, 0x74, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x70, 0x61, 0x74, 0x68, 0x54,
+	0x65, 0x6d, 0x70, 0x6c, 0x61, 0x74, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x68, 0x6f, 0x73, 0x74, 0x18,
+	0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x68, 0x6f, 0x73, 0x74, 0x12, 0x2d, 0x0a, 0x12, 0x70,
+	0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x69, 0x6e, 0x67, 0x5f, 0x6c, 0x61, 0x74, 0x65, 0x6e, 0x63,
+	0x79, 0x18, 0x04, 0x20, 0x01, 0x28, 0x02, 0x52, 0x11, 0x70, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73,
+	0x69, 0x6e, 0x67, 0x4c, 0x61, 0x74, 0x65, 0x6e, 0x63, 0x79, 0x22, 0x74, 0x0a, 0x0a, 0x4d, 0x65,
+	0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65, 0x74, 0x61, 0x12, 0x2e, 0x0a, 0x04, 0x67, 0x72, 0x70, 0x63,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65,
+	0x63, 0x2e, 0x47, 0x52, 0x50, 0x43, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65, 0x74, 0x61,
+	0x48, 0x00, 0x52, 0x04, 0x67, 0x72, 0x70, 0x63, 0x12, 0x2e, 0x0a, 0x04, 0x68, 0x74, 0x74, 0x70,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x18, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65,
+	0x63, 0x2e, 0x48, 0x54, 0x54, 0x50, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65, 0x74, 0x61,
+	0x48, 0x00, 0x52, 0x04, 0x68, 0x74, 0x74, 0x70, 0x42, 0x06, 0x0a, 0x04, 0x6d, 0x65, 0x74, 0x61,
+	0x22, 0xdc, 0x02, 0x0a, 0x06, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x12, 0x22, 0x0a, 0x02, 0x69,
+	0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x12, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70,
+	0x65, 0x63, 0x2e, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x49, 0x44, 0x52, 0x02, 0x69, 0x64, 0x12,
+	0x2e, 0x0a, 0x04, 0x61, 0x72, 0x67, 0x73, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x1a, 0x2e,
+	0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x2e,
+	0x41, 0x72, 0x67, 0x73, 0x45, 0x6e, 0x74, 0x72, 0x79, 0x52, 0x04, 0x61, 0x72, 0x67, 0x73, 0x12,
+	0x3d, 0x0a, 0x09, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73, 0x18, 0x03, 0x20, 0x03,
+	0x28, 0x0b, 0x32, 0x1f, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x4d, 0x65,
+	0x74, 0x68, 0x6f, 0x64, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73, 0x45, 0x6e,
+	0x74, 0x72, 0x79, 0x52, 0x09, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73, 0x12, 0x28,
+	0x0a, 0x04, 0x6d, 0x65, 0x74, 0x61, 0x18, 0x04, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x14, 0x2e, 0x61,
+	0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e, 0x4d, 0x65, 0x74, 0x68, 0x6f, 0x64, 0x4d, 0x65,
+	0x74, 0x61, 0x52, 0x04, 0x6d, 0x65, 0x74, 0x61, 0x1a, 0x47, 0x0a, 0x09, 0x41, 0x72, 0x67, 0x73,
 	0x45, 0x6e, 0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01,
 	0x28, 0x09, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x24, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
 	0x18, 0x02, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65,
 	0x63, 0x2e, 0x44, 0x61, 0x74, 0x61, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38,
-	0x01, 0x42, 0x2c, 0x5a, 0x2a, 0x61, 0x6b, 0x69, 0x74, 0x61, 0x73, 0x6f, 0x66, 0x74, 0x77, 0x61,
-	0x72, 0x65, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x75, 0x70, 0x65, 0x72, 0x73, 0x74, 0x61, 0x72,
-	0x2f, 0x70, 0x62, 0x2f, 0x67, 0x6f, 0x2f, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x01, 0x1a, 0x4c, 0x0a, 0x0e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x73, 0x45, 0x6e,
+	0x74, 0x72, 0x79, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x24, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x0e, 0x2e, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x2e,
+	0x44, 0x61, 0x74, 0x61, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x3a, 0x02, 0x38, 0x01, 0x42,
+	0x2c, 0x5a, 0x2a, 0x61, 0x6b, 0x69, 0x74, 0x61, 0x73, 0x6f, 0x66, 0x74, 0x77, 0x61, 0x72, 0x65,
+	0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x75, 0x70, 0x65, 0x72, 0x73, 0x74, 0x61, 0x72, 0x2f, 0x70,
+	0x62, 0x2f, 0x67, 0x6f, 0x2f, 0x61, 0x70, 0x69, 0x5f, 0x73, 0x70, 0x65, 0x63, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2727,7 +2788,7 @@ func file_method_proto_rawDescGZIP() []byte {
 }
 
 var file_method_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_method_proto_msgTypes = make([]protoimpl.MessageInfo, 40)
+var file_method_proto_msgTypes = make([]protoimpl.MessageInfo, 41)
 var file_method_proto_goTypes = []interface{}{
 	(HTTPAuth_HTTPAuthType)(0), // 0: api_spec.HTTPAuth.HTTPAuthType
 	(HTTPBody_ContentType)(0),  // 1: api_spec.HTTPBody.ContentType
@@ -2747,52 +2808,53 @@ var file_method_proto_goTypes = []interface{}{
 	(*None)(nil),               // 15: api_spec.None
 	(*Optional)(nil),           // 16: api_spec.Optional
 	(*OneOf)(nil),              // 17: api_spec.OneOf
-	(*GRPCMeta)(nil),           // 18: api_spec.GRPCMeta
-	(*HTTPPath)(nil),           // 19: api_spec.HTTPPath
-	(*HTTPQuery)(nil),          // 20: api_spec.HTTPQuery
-	(*HTTPHeader)(nil),         // 21: api_spec.HTTPHeader
-	(*HTTPAuth)(nil),           // 22: api_spec.HTTPAuth
-	(*HTTPCookie)(nil),         // 23: api_spec.HTTPCookie
-	(*HTTPBody)(nil),           // 24: api_spec.HTTPBody
-	(*HTTPMultipart)(nil),      // 25: api_spec.HTTPMultipart
-	(*HTTPEmpty)(nil),          // 26: api_spec.HTTPEmpty
-	(*HTTPMeta)(nil),           // 27: api_spec.HTTPMeta
-	(*DataMeta)(nil),           // 28: api_spec.DataMeta
-	(*ExampleValue)(nil),       // 29: api_spec.ExampleValue
-	(*Data)(nil),               // 30: api_spec.Data
-	(*MethodID)(nil),           // 31: api_spec.MethodID
-	(*GRPCMethodMeta)(nil),     // 32: api_spec.GRPCMethodMeta
-	(*HTTPMethodMeta)(nil),     // 33: api_spec.HTTPMethodMeta
-	(*MethodMeta)(nil),         // 34: api_spec.MethodMeta
-	(*Method)(nil),             // 35: api_spec.Method
-	nil,                        // 36: api_spec.Primitive.FormatsEntry
-	nil,                        // 37: api_spec.Struct.FieldsEntry
-	nil,                        // 38: api_spec.OneOf.OptionsEntry
-	nil,                        // 39: api_spec.Data.ExampleValuesEntry
-	nil,                        // 40: api_spec.Method.ArgsEntry
-	nil,                        // 41: api_spec.Method.ResponsesEntry
-	(*BoolType)(nil),           // 42: api_spec.BoolType
-	(*BytesType)(nil),          // 43: api_spec.BytesType
-	(*StringType)(nil),         // 44: api_spec.StringType
-	(*Int32Type)(nil),          // 45: api_spec.Int32Type
-	(*Int64Type)(nil),          // 46: api_spec.Int64Type
-	(*Uint32Type)(nil),         // 47: api_spec.Uint32Type
-	(*Uint64Type)(nil),         // 48: api_spec.Uint64Type
-	(*DoubleType)(nil),         // 49: api_spec.DoubleType
-	(*FloatType)(nil),          // 50: api_spec.FloatType
-	(*AkitaAnnotations)(nil),   // 51: api_spec.AkitaAnnotations
-	(ApiType)(0),               // 52: api_spec.ApiType
+	(*Unstructured)(nil),       // 18: api_spec.Unstructured
+	(*GRPCMeta)(nil),           // 19: api_spec.GRPCMeta
+	(*HTTPPath)(nil),           // 20: api_spec.HTTPPath
+	(*HTTPQuery)(nil),          // 21: api_spec.HTTPQuery
+	(*HTTPHeader)(nil),         // 22: api_spec.HTTPHeader
+	(*HTTPAuth)(nil),           // 23: api_spec.HTTPAuth
+	(*HTTPCookie)(nil),         // 24: api_spec.HTTPCookie
+	(*HTTPBody)(nil),           // 25: api_spec.HTTPBody
+	(*HTTPMultipart)(nil),      // 26: api_spec.HTTPMultipart
+	(*HTTPEmpty)(nil),          // 27: api_spec.HTTPEmpty
+	(*HTTPMeta)(nil),           // 28: api_spec.HTTPMeta
+	(*DataMeta)(nil),           // 29: api_spec.DataMeta
+	(*ExampleValue)(nil),       // 30: api_spec.ExampleValue
+	(*Data)(nil),               // 31: api_spec.Data
+	(*MethodID)(nil),           // 32: api_spec.MethodID
+	(*GRPCMethodMeta)(nil),     // 33: api_spec.GRPCMethodMeta
+	(*HTTPMethodMeta)(nil),     // 34: api_spec.HTTPMethodMeta
+	(*MethodMeta)(nil),         // 35: api_spec.MethodMeta
+	(*Method)(nil),             // 36: api_spec.Method
+	nil,                        // 37: api_spec.Primitive.FormatsEntry
+	nil,                        // 38: api_spec.Struct.FieldsEntry
+	nil,                        // 39: api_spec.OneOf.OptionsEntry
+	nil,                        // 40: api_spec.Data.ExampleValuesEntry
+	nil,                        // 41: api_spec.Method.ArgsEntry
+	nil,                        // 42: api_spec.Method.ResponsesEntry
+	(*BoolType)(nil),           // 43: api_spec.BoolType
+	(*BytesType)(nil),          // 44: api_spec.BytesType
+	(*StringType)(nil),         // 45: api_spec.StringType
+	(*Int32Type)(nil),          // 46: api_spec.Int32Type
+	(*Int64Type)(nil),          // 47: api_spec.Int64Type
+	(*Uint32Type)(nil),         // 48: api_spec.Uint32Type
+	(*Uint64Type)(nil),         // 49: api_spec.Uint64Type
+	(*DoubleType)(nil),         // 50: api_spec.DoubleType
+	(*FloatType)(nil),          // 51: api_spec.FloatType
+	(*AkitaAnnotations)(nil),   // 52: api_spec.AkitaAnnotations
+	(ApiType)(0),               // 53: api_spec.ApiType
 }
 var file_method_proto_depIdxs = []int32{
-	42, // 0: api_spec.Bool.type:type_name -> api_spec.BoolType
-	43, // 1: api_spec.Bytes.type:type_name -> api_spec.BytesType
-	44, // 2: api_spec.String.type:type_name -> api_spec.StringType
-	45, // 3: api_spec.Int32.type:type_name -> api_spec.Int32Type
-	46, // 4: api_spec.Int64.type:type_name -> api_spec.Int64Type
-	47, // 5: api_spec.Uint32.type:type_name -> api_spec.Uint32Type
-	48, // 6: api_spec.Uint64.type:type_name -> api_spec.Uint64Type
-	49, // 7: api_spec.Double.type:type_name -> api_spec.DoubleType
-	50, // 8: api_spec.Float.type:type_name -> api_spec.FloatType
+	43, // 0: api_spec.Bool.type:type_name -> api_spec.BoolType
+	44, // 1: api_spec.Bytes.type:type_name -> api_spec.BytesType
+	45, // 2: api_spec.String.type:type_name -> api_spec.StringType
+	46, // 3: api_spec.Int32.type:type_name -> api_spec.Int32Type
+	47, // 4: api_spec.Int64.type:type_name -> api_spec.Int64Type
+	48, // 5: api_spec.Uint32.type:type_name -> api_spec.Uint32Type
+	49, // 6: api_spec.Uint64.type:type_name -> api_spec.Uint64Type
+	50, // 7: api_spec.Double.type:type_name -> api_spec.DoubleType
+	51, // 8: api_spec.Float.type:type_name -> api_spec.FloatType
 	2,  // 9: api_spec.Primitive.bool_value:type_name -> api_spec.Bool
 	3,  // 10: api_spec.Primitive.bytes_value:type_name -> api_spec.Bytes
 	4,  // 11: api_spec.Primitive.string_value:type_name -> api_spec.String
@@ -2802,52 +2864,53 @@ var file_method_proto_depIdxs = []int32{
 	8,  // 15: api_spec.Primitive.uint64_value:type_name -> api_spec.Uint64
 	9,  // 16: api_spec.Primitive.double_value:type_name -> api_spec.Double
 	10, // 17: api_spec.Primitive.float_value:type_name -> api_spec.Float
-	51, // 18: api_spec.Primitive.akita_annotations:type_name -> api_spec.AkitaAnnotations
-	36, // 19: api_spec.Primitive.formats:type_name -> api_spec.Primitive.FormatsEntry
-	30, // 20: api_spec.List.elems:type_name -> api_spec.Data
-	37, // 21: api_spec.Struct.fields:type_name -> api_spec.Struct.FieldsEntry
+	52, // 18: api_spec.Primitive.akita_annotations:type_name -> api_spec.AkitaAnnotations
+	37, // 19: api_spec.Primitive.formats:type_name -> api_spec.Primitive.FormatsEntry
+	31, // 20: api_spec.List.elems:type_name -> api_spec.Data
+	38, // 21: api_spec.Struct.fields:type_name -> api_spec.Struct.FieldsEntry
 	14, // 22: api_spec.Struct.map_type:type_name -> api_spec.MapData
-	30, // 23: api_spec.MapData.key:type_name -> api_spec.Data
-	30, // 24: api_spec.MapData.value:type_name -> api_spec.Data
-	30, // 25: api_spec.Optional.data:type_name -> api_spec.Data
+	31, // 23: api_spec.MapData.key:type_name -> api_spec.Data
+	31, // 24: api_spec.MapData.value:type_name -> api_spec.Data
+	31, // 25: api_spec.Optional.data:type_name -> api_spec.Data
 	15, // 26: api_spec.Optional.none:type_name -> api_spec.None
-	38, // 27: api_spec.OneOf.options:type_name -> api_spec.OneOf.OptionsEntry
+	39, // 27: api_spec.OneOf.options:type_name -> api_spec.OneOf.OptionsEntry
 	0,  // 28: api_spec.HTTPAuth.type:type_name -> api_spec.HTTPAuth.HTTPAuthType
 	1,  // 29: api_spec.HTTPBody.content_type:type_name -> api_spec.HTTPBody.ContentType
-	19, // 30: api_spec.HTTPMeta.path:type_name -> api_spec.HTTPPath
-	20, // 31: api_spec.HTTPMeta.query:type_name -> api_spec.HTTPQuery
-	21, // 32: api_spec.HTTPMeta.header:type_name -> api_spec.HTTPHeader
-	23, // 33: api_spec.HTTPMeta.cookie:type_name -> api_spec.HTTPCookie
-	24, // 34: api_spec.HTTPMeta.body:type_name -> api_spec.HTTPBody
-	26, // 35: api_spec.HTTPMeta.empty:type_name -> api_spec.HTTPEmpty
-	22, // 36: api_spec.HTTPMeta.auth:type_name -> api_spec.HTTPAuth
-	25, // 37: api_spec.HTTPMeta.multipart:type_name -> api_spec.HTTPMultipart
-	18, // 38: api_spec.DataMeta.grpc:type_name -> api_spec.GRPCMeta
-	27, // 39: api_spec.DataMeta.http:type_name -> api_spec.HTTPMeta
+	20, // 30: api_spec.HTTPMeta.path:type_name -> api_spec.HTTPPath
+	21, // 31: api_spec.HTTPMeta.query:type_name -> api_spec.HTTPQuery
+	22, // 32: api_spec.HTTPMeta.header:type_name -> api_spec.HTTPHeader
+	24, // 33: api_spec.HTTPMeta.cookie:type_name -> api_spec.HTTPCookie
+	25, // 34: api_spec.HTTPMeta.body:type_name -> api_spec.HTTPBody
+	27, // 35: api_spec.HTTPMeta.empty:type_name -> api_spec.HTTPEmpty
+	23, // 36: api_spec.HTTPMeta.auth:type_name -> api_spec.HTTPAuth
+	26, // 37: api_spec.HTTPMeta.multipart:type_name -> api_spec.HTTPMultipart
+	19, // 38: api_spec.DataMeta.grpc:type_name -> api_spec.GRPCMeta
+	28, // 39: api_spec.DataMeta.http:type_name -> api_spec.HTTPMeta
 	11, // 40: api_spec.Data.primitive:type_name -> api_spec.Primitive
 	13, // 41: api_spec.Data.struct:type_name -> api_spec.Struct
 	12, // 42: api_spec.Data.list:type_name -> api_spec.List
 	16, // 43: api_spec.Data.optional:type_name -> api_spec.Optional
 	17, // 44: api_spec.Data.oneof:type_name -> api_spec.OneOf
-	28, // 45: api_spec.Data.meta:type_name -> api_spec.DataMeta
-	39, // 46: api_spec.Data.example_values:type_name -> api_spec.Data.ExampleValuesEntry
-	52, // 47: api_spec.MethodID.api_type:type_name -> api_spec.ApiType
-	32, // 48: api_spec.MethodMeta.grpc:type_name -> api_spec.GRPCMethodMeta
-	33, // 49: api_spec.MethodMeta.http:type_name -> api_spec.HTTPMethodMeta
-	31, // 50: api_spec.Method.id:type_name -> api_spec.MethodID
-	40, // 51: api_spec.Method.args:type_name -> api_spec.Method.ArgsEntry
-	41, // 52: api_spec.Method.responses:type_name -> api_spec.Method.ResponsesEntry
-	34, // 53: api_spec.Method.meta:type_name -> api_spec.MethodMeta
-	30, // 54: api_spec.Struct.FieldsEntry.value:type_name -> api_spec.Data
-	30, // 55: api_spec.OneOf.OptionsEntry.value:type_name -> api_spec.Data
-	29, // 56: api_spec.Data.ExampleValuesEntry.value:type_name -> api_spec.ExampleValue
-	30, // 57: api_spec.Method.ArgsEntry.value:type_name -> api_spec.Data
-	30, // 58: api_spec.Method.ResponsesEntry.value:type_name -> api_spec.Data
-	59, // [59:59] is the sub-list for method output_type
-	59, // [59:59] is the sub-list for method input_type
-	59, // [59:59] is the sub-list for extension type_name
-	59, // [59:59] is the sub-list for extension extendee
-	0,  // [0:59] is the sub-list for field type_name
+	18, // 45: api_spec.Data.unstructured:type_name -> api_spec.Unstructured
+	29, // 46: api_spec.Data.meta:type_name -> api_spec.DataMeta
+	40, // 47: api_spec.Data.example_values:type_name -> api_spec.Data.ExampleValuesEntry
+	53, // 48: api_spec.MethodID.api_type:type_name -> api_spec.ApiType
+	33, // 49: api_spec.MethodMeta.grpc:type_name -> api_spec.GRPCMethodMeta
+	34, // 50: api_spec.MethodMeta.http:type_name -> api_spec.HTTPMethodMeta
+	32, // 51: api_spec.Method.id:type_name -> api_spec.MethodID
+	41, // 52: api_spec.Method.args:type_name -> api_spec.Method.ArgsEntry
+	42, // 53: api_spec.Method.responses:type_name -> api_spec.Method.ResponsesEntry
+	35, // 54: api_spec.Method.meta:type_name -> api_spec.MethodMeta
+	31, // 55: api_spec.Struct.FieldsEntry.value:type_name -> api_spec.Data
+	31, // 56: api_spec.OneOf.OptionsEntry.value:type_name -> api_spec.Data
+	30, // 57: api_spec.Data.ExampleValuesEntry.value:type_name -> api_spec.ExampleValue
+	31, // 58: api_spec.Method.ArgsEntry.value:type_name -> api_spec.Data
+	31, // 59: api_spec.Method.ResponsesEntry.value:type_name -> api_spec.Data
+	60, // [60:60] is the sub-list for method output_type
+	60, // [60:60] is the sub-list for method input_type
+	60, // [60:60] is the sub-list for extension type_name
+	60, // [60:60] is the sub-list for extension extendee
+	0,  // [0:60] is the sub-list for field type_name
 }
 
 func init() { file_method_proto_init() }
@@ -3051,7 +3114,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GRPCMeta); i {
+			switch v := v.(*Unstructured); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3063,7 +3126,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPPath); i {
+			switch v := v.(*GRPCMeta); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3075,7 +3138,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPQuery); i {
+			switch v := v.(*HTTPPath); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3087,7 +3150,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPHeader); i {
+			switch v := v.(*HTTPQuery); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3099,7 +3162,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPAuth); i {
+			switch v := v.(*HTTPHeader); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3111,7 +3174,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPCookie); i {
+			switch v := v.(*HTTPAuth); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3123,7 +3186,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPBody); i {
+			switch v := v.(*HTTPCookie); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3135,7 +3198,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPMultipart); i {
+			switch v := v.(*HTTPBody); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3147,7 +3210,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPEmpty); i {
+			switch v := v.(*HTTPMultipart); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3159,7 +3222,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPMeta); i {
+			switch v := v.(*HTTPEmpty); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3171,7 +3234,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DataMeta); i {
+			switch v := v.(*HTTPMeta); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3183,7 +3246,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ExampleValue); i {
+			switch v := v.(*DataMeta); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3195,7 +3258,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Data); i {
+			switch v := v.(*ExampleValue); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3207,7 +3270,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MethodID); i {
+			switch v := v.(*Data); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3219,7 +3282,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GRPCMethodMeta); i {
+			switch v := v.(*MethodID); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3231,7 +3294,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*HTTPMethodMeta); i {
+			switch v := v.(*GRPCMethodMeta); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3243,7 +3306,7 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*MethodMeta); i {
+			switch v := v.(*HTTPMethodMeta); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3255,6 +3318,18 @@ func file_method_proto_init() {
 			}
 		}
 		file_method_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*MethodMeta); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_method_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Method); i {
 			case 0:
 				return &v.state
@@ -3282,7 +3357,7 @@ func file_method_proto_init() {
 		(*Optional_Data)(nil),
 		(*Optional_None)(nil),
 	}
-	file_method_proto_msgTypes[25].OneofWrappers = []interface{}{
+	file_method_proto_msgTypes[26].OneofWrappers = []interface{}{
 		(*HTTPMeta_Path)(nil),
 		(*HTTPMeta_Query)(nil),
 		(*HTTPMeta_Header)(nil),
@@ -3292,18 +3367,19 @@ func file_method_proto_init() {
 		(*HTTPMeta_Auth)(nil),
 		(*HTTPMeta_Multipart)(nil),
 	}
-	file_method_proto_msgTypes[26].OneofWrappers = []interface{}{
+	file_method_proto_msgTypes[27].OneofWrappers = []interface{}{
 		(*DataMeta_Grpc)(nil),
 		(*DataMeta_Http)(nil),
 	}
-	file_method_proto_msgTypes[28].OneofWrappers = []interface{}{
+	file_method_proto_msgTypes[29].OneofWrappers = []interface{}{
 		(*Data_Primitive)(nil),
 		(*Data_Struct)(nil),
 		(*Data_List)(nil),
 		(*Data_Optional)(nil),
 		(*Data_Oneof)(nil),
+		(*Data_Unstructured)(nil),
 	}
-	file_method_proto_msgTypes[32].OneofWrappers = []interface{}{
+	file_method_proto_msgTypes[33].OneofWrappers = []interface{}{
 		(*MethodMeta_Grpc)(nil),
 		(*MethodMeta_Http)(nil),
 	}
@@ -3313,7 +3389,7 @@ func file_method_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_method_proto_rawDesc,
 			NumEnums:      2,
-			NumMessages:   40,
+			NumMessages:   41,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
