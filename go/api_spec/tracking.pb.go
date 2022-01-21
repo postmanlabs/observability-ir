@@ -28,7 +28,7 @@ type AkitaWitnessTracking struct {
 
 	// Earliest recorded occurrence, inclusive.
 	FirstSeen *timestamppb.Timestamp `protobuf:"bytes,1,opt,name=first_seen,json=firstSeen,proto3" json:"first_seen,omitempty"`
-	// Last recorded occurrence, inclusive.
+	// Most recent recorded occurrence, inclusive.
 	LastSeen *timestamppb.Timestamp `protobuf:"bytes,2,opt,name=last_seen,json=lastSeen,proto3" json:"last_seen,omitempty"`
 	// Total number of occurrences.
 	Count int64 `protobuf:"varint,3,opt,name=count,proto3" json:"count,omitempty"`
