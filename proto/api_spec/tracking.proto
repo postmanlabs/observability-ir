@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package api_spec;
+
+option go_package = "akitasoftware.com/superstar/pb/go/api_spec";
+
+import "google/protobuf/timestamp.proto";
+
+message AkitaWitnessTracking {
+  // Earliest recorded occurrence, inclusive.
+  google.protobuf.Timestamp first_seen = 1;
+
+  // Last recorded occurrence, inclusive.
+  google.protobuf.Timestamp last_seen = 2;
+
+  // Total number of occurrences.
+  int64 count = 3;
+}

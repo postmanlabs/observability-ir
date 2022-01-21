@@ -16,9 +16,10 @@ tooling without having to worry about invoking the protoc compiler.
 - Update `akita-libs` with the new version of the Go package
 - In `akita-libs/spec_utils/ir_hash`, update `gen.go` with any new message
 	types, or new inner structs from oneof types. Then run `make` in that
-	directory to generate a new set of hash functions. (If you add a new 
-	file, add that file to the list in `gen.go` so that it will be checked 
-	for version mismatch.)
+	directory to generate a new set of hash functions. 
+    - If you add a new file, add that file to the list in `gen.go` so that
+      it will be checked for version mismatch.
+    - To ignore a field, add an `AddIgnoredField` call.
 
 ## Directory Structure
 
