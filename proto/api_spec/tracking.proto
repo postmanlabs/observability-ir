@@ -10,7 +10,7 @@ message AkitaWitnessTracking {
   // Earliest recorded occurrence, inclusive.
   google.protobuf.Timestamp first_seen = 1;
 
-  // Last recorded occurrence, inclusive.
+  // Most recent recorded occurrence, inclusive.
   google.protobuf.Timestamp last_seen = 2;
 
   // Total number of occurrences.
