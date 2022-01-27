@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z*akitasoftware.com/superstar/pb/go/api_spec',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0cmethod.proto\x12\x08\x61pi_spec\x1a\x0e\x61pi_type.proto\x1a\x0etracking.proto\x1a\x0btypes.proto\"7\n\x04\x42ool\x12 \n\x04type\x18\x01 \x01(\x0b\x32\x12.api_spec.BoolType\x12\r\n\x05value\x18\x02 \x01(\x08\"9\n\x05\x42ytes\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.BytesType\x12\r\n\x05value\x18\x02 \x01(\x0c\";\n\x06String\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.StringType\x12\r\n\x05value\x18\x02 \x01(\t\"9\n\x05Int32\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int32Type\x12\r\n\x05value\x18\x02 \x01(\x05\"9\n\x05Int64\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int64Type\x12\r\n\x05value\x18\x02 \x01(\x03\";\n\x06Uint32\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint32Type\x12\r\n\x05value\x18\x02 \x01(\r\";\n\x06Uint64\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint64Type\x12\r\n\x05value\x18\x02 \x01(\x04\";\n\x06\x44ouble\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.DoubleType\x12\r\n\x05value\x18\x02 \x01(\x01\"9\n\x05\x46loat\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.FloatType\x12\r\n\x05value\x18\x02 \x01(\x02\"\x99\x06\n\tPrimitive\x12\x11\n\ttype_hint\x18\x01 \x01(\t\x12$\n\nbool_value\x18\x02 \x01(\x0b\x32\x0e.api_spec.BoolH\x00\x12&\n\x0b\x62ytes_value\x18\x03 \x01(\x0b\x32\x0f.api_spec.BytesH\x00\x12(\n\x0cstring_value\x18\x04 \x01(\x0b\x32\x10.api_spec.StringH\x00\x12&\n\x0bint32_value\x18\x05 \x01(\x0b\x32\x0f.api_spec.Int32H\x00\x12&\n\x0bint64_value\x18\x06 \x01(\x0b\x32\x0f.api_spec.Int64H\x00\x12(\n\x0cuint32_value\x18\x07 \x01(\x0b\x32\x10.api_spec.Uint32H\x00\x12(\n\x0cuint64_value\x18\x08 \x01(\x0b\x32\x10.api_spec.Uint64H\x00\x12(\n\x0c\x64ouble_value\x18\t \x01(\x0b\x32\x10.api_spec.DoubleH\x00\x12&\n\x0b\x66loat_value\x18\n \x01(\x0b\x32\x0f.api_spec.FloatH\x00\x12\x35\n\x11\x61kita_annotations\x18\x0b \x01(\x0b\x32\x1a.api_spec.AkitaAnnotations\x12\x1d\n\x15\x63ontains_random_value\x18\x0c \x01(\x08\x12\x31\n\x07\x66ormats\x18\r \x03(\x0b\x32 .api_spec.Primitive.FormatsEntry\x12\x13\n\x0b\x66ormat_kind\x18\x0e \x01(\t\x12H\n\x14\x63ount_by_data_format\x18\x0f \x03(\x0b\x32*.api_spec.Primitive.CountByDataFormatEntry\x12\x30\n\x08tracking\x18\x10 \x01(\x0b\x32\x1e.api_spec.AkitaWitnessTracking\x1a.\n\x0c\x46ormatsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08:\x02\x38\x01\x1a\x38\n\x16\x43ountByDataFormatEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x42\x07\n\x05value\"%\n\x04List\x12\x1d\n\x05\x65lems\x18\x01 \x03(\x0b\x32\x0e.api_spec.Data\"\x9a\x01\n\x06Struct\x12,\n\x06\x66ields\x18\x01 \x03(\x0b\x32\x1c.api_spec.Struct.FieldsEntry\x12#\n\x08map_type\x18\x02 \x01(\x0b\x32\x11.api_spec.MapData\x1a=\n\x0b\x46ieldsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"E\n\x07MapData\x12\x1b\n\x03key\x18\x01 \x01(\x0b\x32\x0e.api_spec.Data\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data\"\x06\n\x04None\"S\n\x08Optional\x12\x1e\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0e.api_spec.DataH\x00\x12\x1e\n\x04none\x18\x02 \x01(\x0b\x32\x0e.api_spec.NoneH\x00\x42\x07\n\x05value\"\x92\x01\n\x05OneOf\x12-\n\x07options\x18\x01 \x03(\x0b\x32\x1c.api_spec.OneOf.OptionsEntry\x12\x1a\n\x12potential_conflict\x18\x02 \x01(\x08\x1a>\n\x0cOptionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"\n\n\x08GRPCMeta\"\x17\n\x08HTTPPath\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x18\n\tHTTPQuery\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x19\n\nHTTPHeader\x12\x0b\n\x03key\x18\x01 \x01(\t\"m\n\x08HTTPAuth\x12-\n\x04type\x18\x01 \x01(\x0e\x32\x1f.api_spec.HTTPAuth.HTTPAuthType\"2\n\x0cHTTPAuthType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x42\x41SIC\x10\x01\x12\n\n\x06\x42\x45\x41RER\x10\x02\"\x19\n\nHTTPCookie\x12\x0b\n\x03key\x18\x01 \x01(\t\"\xe0\x01\n\x08HTTPBody\x12\x34\n\x0c\x63ontent_type\x18\x01 \x01(\x0e\x32\x1e.api_spec.HTTPBody.ContentType\x12\x12\n\nother_type\x18\x02 \x01(\t\"\x89\x01\n\x0b\x43ontentType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x14\n\x10\x46ORM_URL_ENCODED\x10\x02\x12\x10\n\x0cOCTET_STREAM\x10\x03\x12\x07\n\x03PDF\x10\x04\x12\x0e\n\nTEXT_PLAIN\x10\x05\x12\x08\n\x04YAML\x10\x06\x12\r\n\tTEXT_HTML\x10\x07\x12\t\n\x05OTHER\x10\x08\"\x1d\n\rHTTPMultipart\x12\x0c\n\x04type\x18\x01 \x01(\t\"\x0b\n\tHTTPEmpty\"\xe3\x02\n\x08HTTPMeta\x12\"\n\x04path\x18\x01 \x01(\x0b\x32\x12.api_spec.HTTPPathH\x00\x12$\n\x05query\x18\x02 \x01(\x0b\x32\x13.api_spec.HTTPQueryH\x00\x12&\n\x06header\x18\x03 \x01(\x0b\x32\x14.api_spec.HTTPHeaderH\x00\x12&\n\x06\x63ookie\x18\x04 \x01(\x0b\x32\x14.api_spec.HTTPCookieH\x00\x12\"\n\x04\x62ody\x18\x05 \x01(\x0b\x32\x12.api_spec.HTTPBodyH\x00\x12$\n\x05\x65mpty\x18\x06 \x01(\x0b\x32\x13.api_spec.HTTPEmptyH\x00\x12\"\n\x04\x61uth\x18\x08 \x01(\x0b\x32\x12.api_spec.HTTPAuthH\x00\x12,\n\tmultipart\x18\t \x01(\x0b\x32\x17.api_spec.HTTPMultipartH\x00\x12\x15\n\rresponse_code\x18\x07 \x01(\x05\x42\n\n\x08location\"Z\n\x08\x44\x61taMeta\x12\"\n\x04grpc\x18\x01 \x01(\x0b\x32\x12.api_spec.GRPCMetaH\x00\x12\"\n\x04http\x18\x02 \x01(\x0b\x32\x12.api_spec.HTTPMetaH\x00\x42\x06\n\x04meta\"\x0e\n\x0c\x45xampleValue\"\x84\x03\n\x04\x44\x61ta\x12(\n\tprimitive\x18\x01 \x01(\x0b\x32\x13.api_spec.PrimitiveH\x00\x12\"\n\x06struct\x18\x02 \x01(\x0b\x32\x10.api_spec.StructH\x00\x12\x1e\n\x04list\x18\x03 \x01(\x0b\x32\x0e.api_spec.ListH\x00\x12&\n\x08optional\x18\x04 \x01(\x0b\x32\x12.api_spec.OptionalH\x00\x12 \n\x05oneof\x18\x06 \x01(\x0b\x32\x0f.api_spec.OneOfH\x00\x12 \n\x04meta\x18\x05 \x01(\x0b\x32\x12.api_spec.DataMeta\x12\x10\n\x08nullable\x18\x07 \x01(\x08\x12\x39\n\x0e\x65xample_values\x18\x08 \x03(\x0b\x32!.api_spec.Data.ExampleValuesEntry\x1aL\n\x12\x45xampleValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.api_spec.ExampleValue:\x02\x38\x01\x42\x07\n\x05value\"=\n\x08MethodID\x12\x0c\n\x04name\x18\x01 \x01(\t\x12#\n\x08\x61pi_type\x18\x02 \x01(\x0e\x32\x11.api_spec.ApiType\"\x10\n\x0eGRPCMethodMeta\"a\n\x0eHTTPMethodMeta\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\x15\n\rpath_template\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\x12\x1a\n\x12processing_latency\x18\x04 \x01(\x02\"h\n\nMethodMeta\x12(\n\x04grpc\x18\x01 \x01(\x0b\x32\x18.api_spec.GRPCMethodMetaH\x00\x12(\n\x04http\x18\x02 \x01(\x0b\x32\x18.api_spec.HTTPMethodMetaH\x00\x42\x06\n\x04meta\"\xa9\x02\n\x06Method\x12\x1e\n\x02id\x18\x01 \x01(\x0b\x32\x12.api_spec.MethodID\x12(\n\x04\x61rgs\x18\x02 \x03(\x0b\x32\x1a.api_spec.Method.ArgsEntry\x12\x32\n\tresponses\x18\x03 \x03(\x0b\x32\x1f.api_spec.Method.ResponsesEntry\x12\"\n\x04meta\x18\x04 \x01(\x0b\x32\x14.api_spec.MethodMeta\x1a;\n\tArgsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x1a@\n\x0eResponsesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
+  serialized_pb=b'\n\x0cmethod.proto\x12\x08\x61pi_spec\x1a\x0e\x61pi_type.proto\x1a\x0etracking.proto\x1a\x0btypes.proto\"7\n\x04\x42ool\x12 \n\x04type\x18\x01 \x01(\x0b\x32\x12.api_spec.BoolType\x12\r\n\x05value\x18\x02 \x01(\x08\"9\n\x05\x42ytes\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.BytesType\x12\r\n\x05value\x18\x02 \x01(\x0c\";\n\x06String\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.StringType\x12\r\n\x05value\x18\x02 \x01(\t\"9\n\x05Int32\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int32Type\x12\r\n\x05value\x18\x02 \x01(\x05\"9\n\x05Int64\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int64Type\x12\r\n\x05value\x18\x02 \x01(\x03\";\n\x06Uint32\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint32Type\x12\r\n\x05value\x18\x02 \x01(\r\";\n\x06Uint64\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint64Type\x12\r\n\x05value\x18\x02 \x01(\x04\";\n\x06\x44ouble\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.DoubleType\x12\r\n\x05value\x18\x02 \x01(\x01\"9\n\x05\x46loat\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.FloatType\x12\r\n\x05value\x18\x02 \x01(\x02\"\xb9\x06\n\tPrimitive\x12\x11\n\ttype_hint\x18\x01 \x01(\t\x12$\n\nbool_value\x18\x02 \x01(\x0b\x32\x0e.api_spec.BoolH\x00\x12&\n\x0b\x62ytes_value\x18\x03 \x01(\x0b\x32\x0f.api_spec.BytesH\x00\x12(\n\x0cstring_value\x18\x04 \x01(\x0b\x32\x10.api_spec.StringH\x00\x12&\n\x0bint32_value\x18\x05 \x01(\x0b\x32\x0f.api_spec.Int32H\x00\x12&\n\x0bint64_value\x18\x06 \x01(\x0b\x32\x0f.api_spec.Int64H\x00\x12(\n\x0cuint32_value\x18\x07 \x01(\x0b\x32\x10.api_spec.Uint32H\x00\x12(\n\x0cuint64_value\x18\x08 \x01(\x0b\x32\x10.api_spec.Uint64H\x00\x12(\n\x0c\x64ouble_value\x18\t \x01(\x0b\x32\x10.api_spec.DoubleH\x00\x12&\n\x0b\x66loat_value\x18\n \x01(\x0b\x32\x0f.api_spec.FloatH\x00\x12\x35\n\x11\x61kita_annotations\x18\x0b \x01(\x0b\x32\x1a.api_spec.AkitaAnnotations\x12\x1d\n\x15\x63ontains_random_value\x18\x0c \x01(\x08\x12\x31\n\x07\x66ormats\x18\r \x03(\x0b\x32 .api_spec.Primitive.FormatsEntry\x12\x13\n\x0b\x66ormat_kind\x18\x0e \x01(\t\x12H\n\x14\x63ount_by_data_format\x18\x0f \x03(\x0b\x32*.api_spec.Primitive.CountByDataFormatEntry\x12\x30\n\x08tracking\x18\x10 \x01(\x0b\x32\x1e.api_spec.AkitaWitnessTracking\x1a.\n\x0c\x46ormatsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08:\x02\x38\x01\x1aX\n\x16\x43ountByDataFormatEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12-\n\x05value\x18\x02 \x01(\x0b\x32\x1e.api_spec.AkitaWitnessTracking:\x02\x38\x01\x42\x07\n\x05value\"%\n\x04List\x12\x1d\n\x05\x65lems\x18\x01 \x03(\x0b\x32\x0e.api_spec.Data\"\x9a\x01\n\x06Struct\x12,\n\x06\x66ields\x18\x01 \x03(\x0b\x32\x1c.api_spec.Struct.FieldsEntry\x12#\n\x08map_type\x18\x02 \x01(\x0b\x32\x11.api_spec.MapData\x1a=\n\x0b\x46ieldsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"E\n\x07MapData\x12\x1b\n\x03key\x18\x01 \x01(\x0b\x32\x0e.api_spec.Data\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data\"\x06\n\x04None\"S\n\x08Optional\x12\x1e\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0e.api_spec.DataH\x00\x12\x1e\n\x04none\x18\x02 \x01(\x0b\x32\x0e.api_spec.NoneH\x00\x42\x07\n\x05value\"\x92\x01\n\x05OneOf\x12-\n\x07options\x18\x01 \x03(\x0b\x32\x1c.api_spec.OneOf.OptionsEntry\x12\x1a\n\x12potential_conflict\x18\x02 \x01(\x08\x1a>\n\x0cOptionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"\n\n\x08GRPCMeta\"\x17\n\x08HTTPPath\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x18\n\tHTTPQuery\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x19\n\nHTTPHeader\x12\x0b\n\x03key\x18\x01 \x01(\t\"m\n\x08HTTPAuth\x12-\n\x04type\x18\x01 \x01(\x0e\x32\x1f.api_spec.HTTPAuth.HTTPAuthType\"2\n\x0cHTTPAuthType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x42\x41SIC\x10\x01\x12\n\n\x06\x42\x45\x41RER\x10\x02\"\x19\n\nHTTPCookie\x12\x0b\n\x03key\x18\x01 \x01(\t\"\xe0\x01\n\x08HTTPBody\x12\x34\n\x0c\x63ontent_type\x18\x01 \x01(\x0e\x32\x1e.api_spec.HTTPBody.ContentType\x12\x12\n\nother_type\x18\x02 \x01(\t\"\x89\x01\n\x0b\x43ontentType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x14\n\x10\x46ORM_URL_ENCODED\x10\x02\x12\x10\n\x0cOCTET_STREAM\x10\x03\x12\x07\n\x03PDF\x10\x04\x12\x0e\n\nTEXT_PLAIN\x10\x05\x12\x08\n\x04YAML\x10\x06\x12\r\n\tTEXT_HTML\x10\x07\x12\t\n\x05OTHER\x10\x08\"\x1d\n\rHTTPMultipart\x12\x0c\n\x04type\x18\x01 \x01(\t\"\x0b\n\tHTTPEmpty\"\xe3\x02\n\x08HTTPMeta\x12\"\n\x04path\x18\x01 \x01(\x0b\x32\x12.api_spec.HTTPPathH\x00\x12$\n\x05query\x18\x02 \x01(\x0b\x32\x13.api_spec.HTTPQueryH\x00\x12&\n\x06header\x18\x03 \x01(\x0b\x32\x14.api_spec.HTTPHeaderH\x00\x12&\n\x06\x63ookie\x18\x04 \x01(\x0b\x32\x14.api_spec.HTTPCookieH\x00\x12\"\n\x04\x62ody\x18\x05 \x01(\x0b\x32\x12.api_spec.HTTPBodyH\x00\x12$\n\x05\x65mpty\x18\x06 \x01(\x0b\x32\x13.api_spec.HTTPEmptyH\x00\x12\"\n\x04\x61uth\x18\x08 \x01(\x0b\x32\x12.api_spec.HTTPAuthH\x00\x12,\n\tmultipart\x18\t \x01(\x0b\x32\x17.api_spec.HTTPMultipartH\x00\x12\x15\n\rresponse_code\x18\x07 \x01(\x05\x42\n\n\x08location\"Z\n\x08\x44\x61taMeta\x12\"\n\x04grpc\x18\x01 \x01(\x0b\x32\x12.api_spec.GRPCMetaH\x00\x12\"\n\x04http\x18\x02 \x01(\x0b\x32\x12.api_spec.HTTPMetaH\x00\x42\x06\n\x04meta\"\x0e\n\x0c\x45xampleValue\"\x84\x03\n\x04\x44\x61ta\x12(\n\tprimitive\x18\x01 \x01(\x0b\x32\x13.api_spec.PrimitiveH\x00\x12\"\n\x06struct\x18\x02 \x01(\x0b\x32\x10.api_spec.StructH\x00\x12\x1e\n\x04list\x18\x03 \x01(\x0b\x32\x0e.api_spec.ListH\x00\x12&\n\x08optional\x18\x04 \x01(\x0b\x32\x12.api_spec.OptionalH\x00\x12 \n\x05oneof\x18\x06 \x01(\x0b\x32\x0f.api_spec.OneOfH\x00\x12 \n\x04meta\x18\x05 \x01(\x0b\x32\x12.api_spec.DataMeta\x12\x10\n\x08nullable\x18\x07 \x01(\x08\x12\x39\n\x0e\x65xample_values\x18\x08 \x03(\x0b\x32!.api_spec.Data.ExampleValuesEntry\x1aL\n\x12\x45xampleValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.api_spec.ExampleValue:\x02\x38\x01\x42\x07\n\x05value\"=\n\x08MethodID\x12\x0c\n\x04name\x18\x01 \x01(\t\x12#\n\x08\x61pi_type\x18\x02 \x01(\x0e\x32\x11.api_spec.ApiType\"\x10\n\x0eGRPCMethodMeta\"a\n\x0eHTTPMethodMeta\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\x15\n\rpath_template\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\x12\x1a\n\x12processing_latency\x18\x04 \x01(\x02\"h\n\nMethodMeta\x12(\n\x04grpc\x18\x01 \x01(\x0b\x32\x18.api_spec.GRPCMethodMetaH\x00\x12(\n\x04http\x18\x02 \x01(\x0b\x32\x18.api_spec.HTTPMethodMetaH\x00\x42\x06\n\x04meta\"\xa9\x02\n\x06Method\x12\x1e\n\x02id\x18\x01 \x01(\x0b\x32\x12.api_spec.MethodID\x12(\n\x04\x61rgs\x18\x02 \x03(\x0b\x32\x1a.api_spec.Method.ArgsEntry\x12\x32\n\tresponses\x18\x03 \x03(\x0b\x32\x1f.api_spec.Method.ResponsesEntry\x12\"\n\x04meta\x18\x04 \x01(\x0b\x32\x14.api_spec.MethodMeta\x1a;\n\tArgsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x1a@\n\x0eResponsesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
   ,
   dependencies=[api__type__pb2.DESCRIPTOR,tracking__pb2.DESCRIPTOR,types__pb2.DESCRIPTOR,])
 
@@ -53,8 +53,8 @@ _HTTPAUTH_HTTPAUTHTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2062,
-  serialized_end=2112,
+  serialized_start=2094,
+  serialized_end=2144,
 )
 _sym_db.RegisterEnumDescriptor(_HTTPAUTH_HTTPAUTHTYPE)
 
@@ -113,8 +113,8 @@ _HTTPBODY_CONTENTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2229,
-  serialized_end=2366,
+  serialized_start=2261,
+  serialized_end=2398,
 )
 _sym_db.RegisterEnumDescriptor(_HTTPBODY_CONTENTTYPE)
 
@@ -525,8 +525,8 @@ _PRIMITIVE_COUNTBYDATAFORMATENTRY = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='value', full_name='api_spec.Primitive.CountByDataFormatEntry.value', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -543,7 +543,7 @@ _PRIMITIVE_COUNTBYDATAFORMATENTRY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1337,
-  serialized_end=1393,
+  serialized_end=1425,
 )
 
 _PRIMITIVE = _descriptor.Descriptor(
@@ -684,7 +684,7 @@ _PRIMITIVE = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=609,
-  serialized_end=1402,
+  serialized_end=1434,
 )
 
 
@@ -715,8 +715,8 @@ _LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1404,
-  serialized_end=1441,
+  serialized_start=1436,
+  serialized_end=1473,
 )
 
 
@@ -754,8 +754,8 @@ _STRUCT_FIELDSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1537,
-  serialized_end=1598,
+  serialized_start=1569,
+  serialized_end=1630,
 )
 
 _STRUCT = _descriptor.Descriptor(
@@ -792,8 +792,8 @@ _STRUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1444,
-  serialized_end=1598,
+  serialized_start=1476,
+  serialized_end=1630,
 )
 
 
@@ -831,8 +831,8 @@ _MAPDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1600,
-  serialized_end=1669,
+  serialized_start=1632,
+  serialized_end=1701,
 )
 
 
@@ -856,8 +856,8 @@ _NONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1671,
-  serialized_end=1677,
+  serialized_start=1703,
+  serialized_end=1709,
 )
 
 
@@ -900,8 +900,8 @@ _OPTIONAL = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1679,
-  serialized_end=1762,
+  serialized_start=1711,
+  serialized_end=1794,
 )
 
 
@@ -939,8 +939,8 @@ _ONEOF_OPTIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1849,
-  serialized_end=1911,
+  serialized_start=1881,
+  serialized_end=1943,
 )
 
 _ONEOF = _descriptor.Descriptor(
@@ -977,8 +977,8 @@ _ONEOF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1765,
-  serialized_end=1911,
+  serialized_start=1797,
+  serialized_end=1943,
 )
 
 
@@ -1002,8 +1002,8 @@ _GRPCMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1913,
-  serialized_end=1923,
+  serialized_start=1945,
+  serialized_end=1955,
 )
 
 
@@ -1034,8 +1034,8 @@ _HTTPPATH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1925,
-  serialized_end=1948,
+  serialized_start=1957,
+  serialized_end=1980,
 )
 
 
@@ -1066,8 +1066,8 @@ _HTTPQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1950,
-  serialized_end=1974,
+  serialized_start=1982,
+  serialized_end=2006,
 )
 
 
@@ -1098,8 +1098,8 @@ _HTTPHEADER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1976,
-  serialized_end=2001,
+  serialized_start=2008,
+  serialized_end=2033,
 )
 
 
@@ -1131,8 +1131,8 @@ _HTTPAUTH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2003,
-  serialized_end=2112,
+  serialized_start=2035,
+  serialized_end=2144,
 )
 
 
@@ -1163,8 +1163,8 @@ _HTTPCOOKIE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2114,
-  serialized_end=2139,
+  serialized_start=2146,
+  serialized_end=2171,
 )
 
 
@@ -1203,8 +1203,8 @@ _HTTPBODY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2142,
-  serialized_end=2366,
+  serialized_start=2174,
+  serialized_end=2398,
 )
 
 
@@ -1235,8 +1235,8 @@ _HTTPMULTIPART = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2368,
-  serialized_end=2397,
+  serialized_start=2400,
+  serialized_end=2429,
 )
 
 
@@ -1260,8 +1260,8 @@ _HTTPEMPTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2399,
-  serialized_end=2410,
+  serialized_start=2431,
+  serialized_end=2442,
 )
 
 
@@ -1353,8 +1353,8 @@ _HTTPMETA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2413,
-  serialized_end=2768,
+  serialized_start=2445,
+  serialized_end=2800,
 )
 
 
@@ -1397,8 +1397,8 @@ _DATAMETA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2770,
-  serialized_end=2860,
+  serialized_start=2802,
+  serialized_end=2892,
 )
 
 
@@ -1422,8 +1422,8 @@ _EXAMPLEVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2862,
-  serialized_end=2876,
+  serialized_start=2894,
+  serialized_end=2908,
 )
 
 
@@ -1461,8 +1461,8 @@ _DATA_EXAMPLEVALUESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3182,
-  serialized_end=3258,
+  serialized_start=3214,
+  serialized_end=3290,
 )
 
 _DATA = _descriptor.Descriptor(
@@ -1546,8 +1546,8 @@ _DATA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2879,
-  serialized_end=3267,
+  serialized_start=2911,
+  serialized_end=3299,
 )
 
 
@@ -1585,8 +1585,8 @@ _METHODID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3269,
-  serialized_end=3330,
+  serialized_start=3301,
+  serialized_end=3362,
 )
 
 
@@ -1610,8 +1610,8 @@ _GRPCMETHODMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3332,
-  serialized_end=3348,
+  serialized_start=3364,
+  serialized_end=3380,
 )
 
 
@@ -1663,8 +1663,8 @@ _HTTPMETHODMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3350,
-  serialized_end=3447,
+  serialized_start=3382,
+  serialized_end=3479,
 )
 
 
@@ -1707,8 +1707,8 @@ _METHODMETA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=3449,
-  serialized_end=3553,
+  serialized_start=3481,
+  serialized_end=3585,
 )
 
 
@@ -1746,8 +1746,8 @@ _METHOD_ARGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3728,
-  serialized_end=3787,
+  serialized_start=3760,
+  serialized_end=3819,
 )
 
 _METHOD_RESPONSESENTRY = _descriptor.Descriptor(
@@ -1784,8 +1784,8 @@ _METHOD_RESPONSESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3789,
-  serialized_end=3853,
+  serialized_start=3821,
+  serialized_end=3885,
 )
 
 _METHOD = _descriptor.Descriptor(
@@ -1836,8 +1836,8 @@ _METHOD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3556,
-  serialized_end=3853,
+  serialized_start=3588,
+  serialized_end=3885,
 )
 
 _BOOL.fields_by_name['type'].message_type = types__pb2._BOOLTYPE
@@ -1850,6 +1850,7 @@ _UINT64.fields_by_name['type'].message_type = types__pb2._UINT64TYPE
 _DOUBLE.fields_by_name['type'].message_type = types__pb2._DOUBLETYPE
 _FLOAT.fields_by_name['type'].message_type = types__pb2._FLOATTYPE
 _PRIMITIVE_FORMATSENTRY.containing_type = _PRIMITIVE
+_PRIMITIVE_COUNTBYDATAFORMATENTRY.fields_by_name['value'].message_type = tracking__pb2._AKITAWITNESSTRACKING
 _PRIMITIVE_COUNTBYDATAFORMATENTRY.containing_type = _PRIMITIVE
 _PRIMITIVE.fields_by_name['bool_value'].message_type = _BOOL
 _PRIMITIVE.fields_by_name['bytes_value'].message_type = _BYTES

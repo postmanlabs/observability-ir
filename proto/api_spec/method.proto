@@ -99,7 +99,7 @@ message Primitive {
   string format_kind = 14;
 
   // Tracks the number of values witnessed of each data format, if any.
-  map<string, int64> count_by_data_format = 15;
+  map<string, AkitaWitnessTracking> count_by_data_format = 15;
 
   // Tracks information about the witnesses used to make this model.
   AkitaWitnessTracking tracking = 16;
