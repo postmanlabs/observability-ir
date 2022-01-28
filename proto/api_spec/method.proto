@@ -98,7 +98,10 @@ message Primitive {
   // https://github.com/akitasoftware/test-service/blob/master/lib/data_formats/data_formats.go
   string format_kind = 14;
 
-  // Tracks the number of values witnessed of each data format, if any.
+  // Tracks the number of values witnessed of each data format, if any.  Note that the `formats`
+  // field indicates the type of this primitive, whereas `count_by_data_format` counts any
+  // data formats witnessed.  In other words, this field may be populated while `formats` is
+  // empty.
   map<string, AkitaWitnessTracking> count_by_data_format = 15;
 
   // Tracks information about the witnesses used to make this model.
