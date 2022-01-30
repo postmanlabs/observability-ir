@@ -103,9 +103,6 @@ message Primitive {
   // data formats witnessed.  In other words, this field may be populated while `formats` is
   // empty.
   map<string, AkitaWitnessTracking> count_by_data_format = 15;
-
-  // Tracks information about the witnesses used to make this model.
-  AkitaWitnessTracking tracking = 16;
 }
 
 message List {
@@ -283,6 +280,9 @@ message Data {
   // purpose only, so we use string to encode values and this field is not
   // included in pbhash.
   map<string, ExampleValue> example_values = 8;
+
+  // Tracks information about the witnesses used to make this model.
+  AkitaWitnessTracking tracking = 16;
 }
 
 message MethodID {
@@ -337,4 +337,6 @@ message Method {
   map<string, Data> responses = 3;
 
   MethodMeta meta = 4;
+
+  AkitaWitnessTracking tracking = 5;
 }
