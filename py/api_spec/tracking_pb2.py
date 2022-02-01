@@ -11,7 +11,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z*akitasoftware.com/superstar/pb/go/api_spec',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0etracking.proto\x12\x08\x61pi_spec\x1a\x1fgoogle/protobuf/timestamp.proto\"w\n\x14\x41kitaWitnessTracking\x12.\n\nfirst_seen\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12 \n\x18last_seen_offset_seconds\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\x04\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
-  ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  serialized_pb=b'\n\x0etracking.proto\x12\x08\x61pi_spec\"[\n\x14\x41kitaWitnessTracking\x12\x12\n\nfirst_seen\x18\x01 \x01(\r\x12 \n\x18last_seen_offset_seconds\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\x04\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
+)
 
 
 
@@ -37,8 +35,8 @@ _AKITAWITNESSTRACKING = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='first_seen', full_name='api_spec.AkitaWitnessTracking.first_seen', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
@@ -68,11 +66,10 @@ _AKITAWITNESSTRACKING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61,
-  serialized_end=180,
+  serialized_start=28,
+  serialized_end=119,
 )
 
-_AKITAWITNESSTRACKING.fields_by_name['first_seen'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 DESCRIPTOR.message_types_by_name['AkitaWitnessTracking'] = _AKITAWITNESSTRACKING
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

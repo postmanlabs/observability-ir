@@ -4,16 +4,21 @@ package api_spec;
 
 option go_package = "akitasoftware.com/superstar/pb/go/api_spec";
 
-import "google/protobuf/timestamp.proto";
-
 message AkitaWitnessTracking {
-  // Earliest recorded occurrence, inclusive.
-  google.protobuf.Timestamp first_seen = 1;
+  // Earliest recorded occurrence, inclusive, as an offset in seconds
+  // from Feb 1, 2022, chosen because it is the first date we started
+  // collecting this information.
+  uint32 first_seen = 1;
 
   // Most recent recorded occurrence, inclusive, as an offset in seconds
-  // from first_seen.
+  // from first_seen.  Using an offset rather than a timestamp saves space in
+  // two ways: it's 32 bits vs. 64 bits for a timestamp, and when the last
+  // seen time is the same as first seen (e.g. for every witness), the offset
+  // will be zero and encoded by omission.
   uint32 last_seen_offset_seconds = 2;
 
   // Total number of occurrences.
+  // XXX(cns): Count == 0 is treated as count == 1.  This saves space in the
+  //  common case, because zero is encoded by omission in the serialization.
   uint64 count = 3;
 }
