@@ -45,7 +45,7 @@ for d in proto/*; do
     -v ${js_out}:/js_out \
     --entrypoint /bin/sh \
     ${PROTOC_VERSION} \
-    -c '/usr/local/bin/protoc -I /opt/include -I /defs --js_out /js_out /defs/*.proto'
+    -c '/usr/local/bin/protoc -I /opt/include -I /defs --js_out=import_style=commonjs:/js_out /defs/*.proto'
 done
 
 popd > /dev/null

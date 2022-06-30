@@ -11,8 +11,11 @@
 /* eslint-disable */
 // @ts-nocheck
 
-goog.provide('proto.api_spec.ApiType');
+var jspb = require('google-protobuf');
+var goog = jspb;
+var global = Function('return this')();
 
+goog.exportSymbol('proto.api_spec.ApiType', null, global);
 /**
  * @enum {number}
  */
@@ -21,3 +24,4 @@ proto.api_spec.ApiType = {
   HTTP_REST: 1
 };
 
+goog.object.extend(exports, proto.api_spec);
