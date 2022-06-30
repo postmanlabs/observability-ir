@@ -15,11 +15,13 @@ for d in proto/*; do
   pkg=$(basename ${d})
   mkdir -p go/${pkg}
   mkdir -p py/${pkg}
+  mkdir -p js/${pkg}
 
   # Use absolute path because docker volume likes that.
   proto_dir=$(cd ${d}; pwd)
   go_out=$(cd go/${pkg}; pwd)
   py_out=$(cd py/${pkg}; pwd)
+  js_out=$(cd js/${pkg}; pwd)
 
   docker run --rm \
     -u $(id -u ${USER}):$(id -g ${USER}) \
@@ -36,6 +38,14 @@ for d in proto/*; do
     --entrypoint /bin/sh \
     ${PROTOC_VERSION} \
     -c '/usr/local/bin/protoc -I /opt/include -I /defs --python_out /py_out /defs/*.proto'
+
+  docker run --rm \
+    -u $(id -u ${USER}):$(id -g ${USER}) \
+    -v ${proto_dir}:/defs \
+    -v ${js_out}:/js_out \
+    --entrypoint /bin/sh \
+    ${PROTOC_VERSION} \
+    -c '/usr/local/bin/protoc -I /opt/include -I /defs --js_out /js_out /defs/*.proto'
 done
 
 popd > /dev/null
