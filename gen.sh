@@ -24,12 +24,6 @@ for d in proto/*; do
   py_out=$(cd py/${pkg}; pwd)
   ts_out=$(cd ts/${pkg}; pwd)
 
-  docker run \
-    -u $(id -u ${USER}):$(id -g ${USER}) \
-    -v ${proto_dir}:/defs \
-    -v ${ts_out}:/ts_out \
-    ${PROTOC_VERSION_FOR_TYPESCRIPT} -d . -o /ts_out -l node --with-typescript
-
   docker run --rm \
     -u $(id -u ${USER}):$(id -g ${USER}) \
     -v ${proto_dir}:/defs \
@@ -45,6 +39,12 @@ for d in proto/*; do
     --entrypoint /bin/sh \
     ${PROTOC_VERSION} \
     -c '/usr/local/bin/protoc -I /opt/include -I /defs --python_out /py_out /defs/*.proto'
+
+  docker run \
+    -u $(id -u ${USER}):$(id -g ${USER}) \
+    -v ${proto_dir}:/defs \
+    -v ${ts_out}:/ts_out \
+    ${PROTOC_VERSION_FOR_TYPESCRIPT} -d . -o /ts_out -l node --with-typescript
 done
 
 popd > /dev/null
