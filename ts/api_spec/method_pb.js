@@ -13,7 +13,13 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() {
+  if (this) { return this; }
+  if (typeof window !== 'undefined') { return window; }
+  if (typeof global !== 'undefined') { return global; }
+  if (typeof self !== 'undefined') { return self; }
+  return Function('return this')();
+}.call(null));
 
 var api_type_pb = require('./api_type_pb.js');
 goog.object.extend(proto, api_type_pb);
@@ -1121,10 +1127,10 @@ proto.api_spec.Bytes.prototype.hasType = function() {
 
 /**
  * optional bytes value = 2;
- * @return {string}
+ * @return {!(string|Uint8Array)}
  */
 proto.api_spec.Bytes.prototype.getValue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
