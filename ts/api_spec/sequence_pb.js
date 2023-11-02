@@ -13,13 +13,13 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = (function() {
-  if (this) { return this; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  if (typeof self !== 'undefined') { return self; }
-  return Function('return this')();
-}.call(null));
+var global =
+    (typeof globalThis !== 'undefined' && globalThis) ||
+    (typeof window !== 'undefined' && window) ||
+    (typeof global !== 'undefined' && global) ||
+    (typeof self !== 'undefined' && self) ||
+    (function () { return this; }).call(null) ||
+    Function('return this')();
 
 var method_pb = require('./method_pb.js');
 goog.object.extend(proto, method_pb);
@@ -2714,7 +2714,8 @@ proto.api_spec.StructTemplate.prototype.getFieldTemplatesMap = function(opt_noLa
  */
 proto.api_spec.StructTemplate.prototype.clearFieldTemplatesMap = function() {
   this.getFieldTemplatesMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -3699,7 +3700,8 @@ proto.api_spec.MethodTemplate.prototype.getArgTemplatesMap = function(opt_noLazy
  */
 proto.api_spec.MethodTemplate.prototype.clearArgTemplatesMap = function() {
   this.getArgTemplatesMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -3721,7 +3723,8 @@ proto.api_spec.MethodTemplate.prototype.getResponsesMap = function(opt_noLazyCre
  */
 proto.api_spec.MethodTemplate.prototype.clearResponsesMap = function() {
   this.getResponsesMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**

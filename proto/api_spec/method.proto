@@ -308,11 +308,39 @@ message HTTPMethodMeta {
   float processing_latency = 4;  
 }
 
+message HTTPMethodError {
+  // Defines the possible error states we can reach while trying to generate a witness (request+response pair)
+  enum errorType {
+    // Represents the case where the agent timed out before it could create a complete witness.
+    AGENT_TIMEOUT = 0;
+
+    // Represents the case where the agent could not parse the packet as expected.
+    AGENT_PARSING_ERROR = 1;
+
+    // Represents the case where the client timed out waiting for a response from the server.
+    CLIENT_TIMEOUT = 2;
+
+    // Represents the case where the server timed out before it could send the response back.
+    SERVER_TIMEOUT = 3;
+
+    // Represents when one of the parties decides to abruptly terminate the connection.
+    // A reset is usually indicative of a problem, similar to a timeout, but the underlying causes can be different.
+    CONNECTION_RESET = 4;
+
+    // Other unknown error observed while generating a witness.
+    OTHER = 5;
+  }
+
+  errorType type = 1;
+  string message = 2;
+}
+
 message MethodMeta {
   oneof meta {
     GRPCMethodMeta grpc = 1;
     HTTPMethodMeta http = 2;
   }
+  repeated HTTPMethodError errors = 3;
 }
 
 message Method {

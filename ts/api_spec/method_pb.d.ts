@@ -987,6 +987,39 @@ export namespace HTTPMethodMeta {
     }
 }
 
+export class HTTPMethodError extends jspb.Message { 
+    getType(): HTTPMethodError.errorType;
+    setType(value: HTTPMethodError.errorType): HTTPMethodError;
+    getMessage(): string;
+    setMessage(value: string): HTTPMethodError;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): HTTPMethodError.AsObject;
+    static toObject(includeInstance: boolean, msg: HTTPMethodError): HTTPMethodError.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: HTTPMethodError, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): HTTPMethodError;
+    static deserializeBinaryFromReader(message: HTTPMethodError, reader: jspb.BinaryReader): HTTPMethodError;
+}
+
+export namespace HTTPMethodError {
+    export type AsObject = {
+        type: HTTPMethodError.errorType,
+        message: string,
+    }
+
+    export enum errorType {
+    AGENT_TIMEOUT = 0,
+    AGENT_PARSING_ERROR = 1,
+    CLIENT_TIMEOUT = 2,
+    SERVER_TIMEOUT = 3,
+    CONNECTION_RESET = 4,
+    OTHER = 5,
+    }
+
+}
+
 export class MethodMeta extends jspb.Message { 
 
     hasGrpc(): boolean;
@@ -998,6 +1031,10 @@ export class MethodMeta extends jspb.Message {
     clearHttp(): void;
     getHttp(): HTTPMethodMeta | undefined;
     setHttp(value?: HTTPMethodMeta): MethodMeta;
+    clearErrorsList(): void;
+    getErrorsList(): Array<HTTPMethodError>;
+    setErrorsList(value: Array<HTTPMethodError>): MethodMeta;
+    addErrors(value?: HTTPMethodError, index?: number): HTTPMethodError;
 
     getMetaCase(): MethodMeta.MetaCase;
 
@@ -1015,6 +1052,7 @@ export namespace MethodMeta {
     export type AsObject = {
         grpc?: GRPCMethodMeta.AsObject,
         http?: HTTPMethodMeta.AsObject,
+        errorsList: Array<HTTPMethodError.AsObject>,
     }
 
     export enum MetaCase {
