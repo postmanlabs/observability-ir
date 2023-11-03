@@ -7437,11 +7437,10 @@ proto.api_spec.HTTPMethodError.serializeBinaryToWriter = function(message, write
  * @enum {number}
  */
 proto.api_spec.HTTPMethodError.errorType = {
-  AGENT_TIMEOUT: 0,
+  AGENT_TIMED_OUT: 0,
   AGENT_PARSING_ERROR: 1,
-  CLIENT_TIMEOUT: 2,
-  SERVER_TIMEOUT: 3,
-  CONNECTION_RESET: 4,
+  CLIENT_CLOSED: 2,
+  SERVER_CLOSED: 3,
   OTHER: 5
 };
 
