@@ -308,11 +308,37 @@ message HTTPMethodMeta {
   float processing_latency = 4;  
 }
 
+message HTTPMethodError {
+  // Defines the possible error states we can reach while trying to generate a witness (request+response pair)
+  enum errorType {
+    // Represents the case where the agent timed out before it could create a complete witness.
+    AGENT_TIMED_OUT = 0;
+
+    // Represents the case where the agent could not parse the packet as expected.
+    AGENT_PARSING_ERROR = 1;
+
+    // Represents the case where the client closed the connection before the complete witness was generated.
+    // This could be due to a timeout, abrupt temination of the connection, etc.
+    CLIENT_CLOSED = 2;
+
+    // Represents the case where the server closed the connection before the complete witness was generated.
+    // This could be due to a timeout, abrupt temination of the connection, etc.
+    SERVER_CLOSED = 3;
+
+    // Other unknown error observed while generating a witness.
+    OTHER = 5;
+  }
+
+  errorType type = 1;
+  string message = 2;
+}
+
 message MethodMeta {
   oneof meta {
     GRPCMethodMeta grpc = 1;
     HTTPMethodMeta http = 2;
   }
+  repeated HTTPMethodError errors = 3;
 }
 
 message Method {
