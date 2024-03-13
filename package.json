@@ -1,5 +1,23 @@
 {
+  "name": "@postman/akita-ir",
+  "version": "0.1.0",
   "dependencies": {
+    "google-protobuf": "^3.21.2",
     "ts-proto": "1.115.5"
+  },
+  "description": "Intermediate Representation for Akita APIs",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akitasoftware/akita-ir.git"
+  },
+  "author": "Postman Observability Team",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/akitasoftware/akita-ir/issues"
+  },
+  "homepage": "https://github.com/akitasoftware/akita-ir#readme",
+  "devDependencies": {
+    "@types/google-protobuf": "^3.15.12"
   }
 }
