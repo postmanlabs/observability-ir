@@ -967,6 +967,8 @@ export class HTTPMethodMeta extends jspb.Message {
     setHost(value: string): HTTPMethodMeta;
     getProcessingLatency(): number;
     setProcessingLatency(value: number): HTTPMethodMeta;
+    getPathParamAlg(): HTTPMethodMeta.PathParameterInferenceAlgorithm;
+    setPathParamAlg(value: HTTPMethodMeta.PathParameterInferenceAlgorithm): HTTPMethodMeta;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): HTTPMethodMeta.AsObject;
@@ -984,7 +986,16 @@ export namespace HTTPMethodMeta {
         pathTemplate: string,
         host: string,
         processingLatency: number,
+        pathParamAlg: HTTPMethodMeta.PathParameterInferenceAlgorithm,
     }
+
+    export enum PathParameterInferenceAlgorithm {
+    UNKNOWN = 0,
+    V1 = 1,
+    V2 = 2,
+    V3 = 3,
+    }
+
 }
 
 export class MethodMeta extends jspb.Message { 

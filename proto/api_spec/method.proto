@@ -306,6 +306,18 @@ message HTTPMethodMeta {
   // This measurement is from the last byte of the HTTP request to the
   // first byte of the HTTP response, ignoring time spent in transmission.
   float processing_latency = 4;  
+
+  // Identifies the path parameter inference algorithm used to create this
+  // method. This is `unknown` for witnesses (which do not have any associated
+  // inference algorithm) and for methods that were created before the
+  // introduction of this field.
+  enum PathParameterInferenceAlgorithm {
+    UNKNOWN = 0;
+    v1 = 1;
+    v2 = 2;
+    v3 = 3;
+  }
+  PathParameterInferenceAlgorithm path_param_alg = 5;
 }
 
 message MethodMeta {
