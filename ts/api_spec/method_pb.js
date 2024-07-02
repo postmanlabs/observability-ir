@@ -13,13 +13,13 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = (function() {
-  if (this) { return this; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  if (typeof self !== 'undefined') { return self; }
-  return Function('return this')();
-}.call(null));
+var global =
+    (typeof globalThis !== 'undefined' && globalThis) ||
+    (typeof window !== 'undefined' && window) ||
+    (typeof global !== 'undefined' && global) ||
+    (typeof self !== 'undefined' && self) ||
+    (function () { return this; }).call(null) ||
+    Function('return this')();
 
 var api_type_pb = require('./api_type_pb.js');
 goog.object.extend(proto, api_type_pb);
@@ -46,6 +46,7 @@ goog.exportSymbol('proto.api_spec.HTTPHeader', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMeta', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMeta.LocationCase', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMethodMeta', null, global);
+goog.exportSymbol('proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMultipart', null, global);
 goog.exportSymbol('proto.api_spec.HTTPPath', null, global);
 goog.exportSymbol('proto.api_spec.HTTPQuery', null, global);
@@ -3179,7 +3180,8 @@ proto.api_spec.Primitive.prototype.getFormatsMap = function(opt_noLazyCreate) {
  */
 proto.api_spec.Primitive.prototype.clearFormatsMap = function() {
   this.getFormatsMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -3504,7 +3506,8 @@ proto.api_spec.Struct.prototype.getFieldsMap = function(opt_noLazyCreate) {
  */
 proto.api_spec.Struct.prototype.clearFieldsMap = function() {
   this.getFieldsMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -4217,7 +4220,8 @@ proto.api_spec.OneOf.prototype.getOptionsMap = function(opt_noLazyCreate) {
  */
 proto.api_spec.OneOf.prototype.clearOptionsMap = function() {
   this.getOptionsMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -6798,7 +6802,8 @@ proto.api_spec.Data.prototype.getExampleValuesMap = function(opt_noLazyCreate) {
  */
 proto.api_spec.Data.prototype.clearExampleValuesMap = function() {
   this.getExampleValuesMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -7097,7 +7102,8 @@ proto.api_spec.HTTPMethodMeta.toObject = function(includeInstance, msg) {
     method: jspb.Message.getFieldWithDefault(msg, 1, ""),
     pathTemplate: jspb.Message.getFieldWithDefault(msg, 2, ""),
     host: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    processingLatency: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0)
+    processingLatency: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
+    pathParamAlg: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -7149,6 +7155,10 @@ proto.api_spec.HTTPMethodMeta.deserializeBinaryFromReader = function(msg, reader
     case 4:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setProcessingLatency(value);
+      break;
+    case 5:
+      var value = /** @type {!proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm} */ (reader.readEnum());
+      msg.setPathParamAlg(value);
       break;
     default:
       reader.skipField();
@@ -7207,8 +7217,25 @@ proto.api_spec.HTTPMethodMeta.serializeBinaryToWriter = function(message, writer
       f
     );
   }
+  f = message.getPathParamAlg();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      5,
+      f
+    );
+  }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm = {
+  UNKNOWN: 0,
+  V1: 1,
+  V2: 2,
+  V3: 3
+};
 
 /**
  * optional string method = 1;
@@ -7279,6 +7306,24 @@ proto.api_spec.HTTPMethodMeta.prototype.getProcessingLatency = function() {
  */
 proto.api_spec.HTTPMethodMeta.prototype.setProcessingLatency = function(value) {
   return jspb.Message.setProto3FloatField(this, 4, value);
+};
+
+
+/**
+ * optional PathParameterInferenceAlgorithm path_param_alg = 5;
+ * @return {!proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm}
+ */
+proto.api_spec.HTTPMethodMeta.prototype.getPathParamAlg = function() {
+  return /** @type {!proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {!proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm} value
+ * @return {!proto.api_spec.HTTPMethodMeta} returns this
+ */
+proto.api_spec.HTTPMethodMeta.prototype.setPathParamAlg = function(value) {
+  return jspb.Message.setProto3EnumField(this, 5, value);
 };
 
 
@@ -7716,7 +7761,8 @@ proto.api_spec.Method.prototype.getArgsMap = function(opt_noLazyCreate) {
  */
 proto.api_spec.Method.prototype.clearArgsMap = function() {
   this.getArgsMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -7738,7 +7784,8 @@ proto.api_spec.Method.prototype.getResponsesMap = function(opt_noLazyCreate) {
  */
 proto.api_spec.Method.prototype.clearResponsesMap = function() {
   this.getResponsesMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
