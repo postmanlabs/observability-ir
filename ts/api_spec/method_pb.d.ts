@@ -1000,8 +1000,8 @@ export namespace HTTPMethodMeta {
     }
 
     export enum Obfuscation {
-    NONE = 0,
-    ZERO_VALUE = 1,
+    ZERO_VALUE = 0,
+    NONE = 1,
     }
 
 }

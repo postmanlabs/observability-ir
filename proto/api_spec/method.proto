@@ -320,11 +320,12 @@ message HTTPMethodMeta {
   PathParameterInferenceAlgorithm path_param_alg = 5;
 
   enum Obfuscation {
-    // No obfuscation is applied.
-    NONE = 0;
-
     // The value is replaced with zero value.
-    ZERO_VALUE = 1;
+    // This is default value to ensure backward compatibility.
+    ZERO_VALUE = 0;
+
+    // No obfuscation is applied.
+    NONE = 1;
   }
   Obfuscation obfuscation = 6;
 }
