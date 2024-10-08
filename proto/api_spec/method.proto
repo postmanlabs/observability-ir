@@ -318,6 +318,16 @@ message HTTPMethodMeta {
     v3 = 3;
   }
   PathParameterInferenceAlgorithm path_param_alg = 5;
+
+  enum Obfuscation {
+    // Header values, body values, and query parameter values are replaced with the zero value.  
+    // This is default value to ensure backward compatibility.
+    ZERO_VALUE = 0;
+
+    // No obfuscation is applied.
+    NONE = 1;
+  }
+  Obfuscation obfuscation = 6;
 }
 
 message MethodMeta {

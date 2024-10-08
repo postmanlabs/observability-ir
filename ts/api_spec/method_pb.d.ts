@@ -969,6 +969,8 @@ export class HTTPMethodMeta extends jspb.Message {
     setProcessingLatency(value: number): HTTPMethodMeta;
     getPathParamAlg(): HTTPMethodMeta.PathParameterInferenceAlgorithm;
     setPathParamAlg(value: HTTPMethodMeta.PathParameterInferenceAlgorithm): HTTPMethodMeta;
+    getObfuscation(): HTTPMethodMeta.Obfuscation;
+    setObfuscation(value: HTTPMethodMeta.Obfuscation): HTTPMethodMeta;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): HTTPMethodMeta.AsObject;
@@ -987,6 +989,7 @@ export namespace HTTPMethodMeta {
         host: string,
         processingLatency: number,
         pathParamAlg: HTTPMethodMeta.PathParameterInferenceAlgorithm,
+        obfuscation: HTTPMethodMeta.Obfuscation,
     }
 
     export enum PathParameterInferenceAlgorithm {
@@ -994,6 +997,11 @@ export namespace HTTPMethodMeta {
     V1 = 1,
     V2 = 2,
     V3 = 3,
+    }
+
+    export enum Obfuscation {
+    ZERO_VALUE = 0,
+    NONE = 1,
     }
 
 }
