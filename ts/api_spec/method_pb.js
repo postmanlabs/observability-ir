@@ -46,6 +46,7 @@ goog.exportSymbol('proto.api_spec.HTTPHeader', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMeta', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMeta.LocationCase', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMethodMeta', null, global);
+goog.exportSymbol('proto.api_spec.HTTPMethodMeta.Obfuscation', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm', null, global);
 goog.exportSymbol('proto.api_spec.HTTPMultipart', null, global);
 goog.exportSymbol('proto.api_spec.HTTPPath', null, global);
@@ -7103,7 +7104,8 @@ proto.api_spec.HTTPMethodMeta.toObject = function(includeInstance, msg) {
     pathTemplate: jspb.Message.getFieldWithDefault(msg, 2, ""),
     host: jspb.Message.getFieldWithDefault(msg, 3, ""),
     processingLatency: jspb.Message.getFloatingPointFieldWithDefault(msg, 4, 0.0),
-    pathParamAlg: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    pathParamAlg: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    obfuscation: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -7159,6 +7161,10 @@ proto.api_spec.HTTPMethodMeta.deserializeBinaryFromReader = function(msg, reader
     case 5:
       var value = /** @type {!proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm} */ (reader.readEnum());
       msg.setPathParamAlg(value);
+      break;
+    case 6:
+      var value = /** @type {!proto.api_spec.HTTPMethodMeta.Obfuscation} */ (reader.readEnum());
+      msg.setObfuscation(value);
       break;
     default:
       reader.skipField();
@@ -7224,6 +7230,13 @@ proto.api_spec.HTTPMethodMeta.serializeBinaryToWriter = function(message, writer
       f
     );
   }
+  f = message.getObfuscation();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      6,
+      f
+    );
+  }
 };
 
 
@@ -7235,6 +7248,14 @@ proto.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm = {
   V1: 1,
   V2: 2,
   V3: 3
+};
+
+/**
+ * @enum {number}
+ */
+proto.api_spec.HTTPMethodMeta.Obfuscation = {
+  NONE: 0,
+  ZERO_VALUE: 1
 };
 
 /**
@@ -7324,6 +7345,24 @@ proto.api_spec.HTTPMethodMeta.prototype.getPathParamAlg = function() {
  */
 proto.api_spec.HTTPMethodMeta.prototype.setPathParamAlg = function(value) {
   return jspb.Message.setProto3EnumField(this, 5, value);
+};
+
+
+/**
+ * optional Obfuscation obfuscation = 6;
+ * @return {!proto.api_spec.HTTPMethodMeta.Obfuscation}
+ */
+proto.api_spec.HTTPMethodMeta.prototype.getObfuscation = function() {
+  return /** @type {!proto.api_spec.HTTPMethodMeta.Obfuscation} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {!proto.api_spec.HTTPMethodMeta.Obfuscation} value
+ * @return {!proto.api_spec.HTTPMethodMeta} returns this
+ */
+proto.api_spec.HTTPMethodMeta.prototype.setObfuscation = function(value) {
+  return jspb.Message.setProto3EnumField(this, 6, value);
 };
 
 

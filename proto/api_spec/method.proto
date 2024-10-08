@@ -318,6 +318,15 @@ message HTTPMethodMeta {
     v3 = 3;
   }
   PathParameterInferenceAlgorithm path_param_alg = 5;
+
+  enum Obfuscation {
+    // No obfuscation is applied.
+    NONE = 0;
+
+    // The value is replaced with zero value.
+    ZERO_VALUE = 1;
+  }
+  Obfuscation obfuscation = 6;
 }
 
 message MethodMeta {
