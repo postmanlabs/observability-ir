@@ -195,7 +195,7 @@ func (HTTPMethodMeta_PathParameterInferenceAlgorithm) EnumDescriptor() ([]byte, 
 type HTTPMethodMeta_Obfuscation int32
 
 const (
-	// The value is replaced with zero value.
+	// Header values, body values, and query parameter values are replaced with the zero value.
 	// This is default value to ensure backward compatibility.
 	HTTPMethodMeta_ZERO_VALUE HTTPMethodMeta_Obfuscation = 0
 	// No obfuscation is applied.
