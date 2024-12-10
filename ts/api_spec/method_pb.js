@@ -40,6 +40,7 @@ goog.exportSymbol('proto.api_spec.HTTPAuth', null, global);
 goog.exportSymbol('proto.api_spec.HTTPAuth.HTTPAuthType', null, global);
 goog.exportSymbol('proto.api_spec.HTTPBody', null, global);
 goog.exportSymbol('proto.api_spec.HTTPBody.ContentType', null, global);
+goog.exportSymbol('proto.api_spec.HTTPBody.Errors', null, global);
 goog.exportSymbol('proto.api_spec.HTTPCookie', null, global);
 goog.exportSymbol('proto.api_spec.HTTPEmpty', null, global);
 goog.exportSymbol('proto.api_spec.HTTPHeader', null, global);
@@ -5036,7 +5037,8 @@ proto.api_spec.HTTPBody.prototype.toObject = function(opt_includeInstance) {
 proto.api_spec.HTTPBody.toObject = function(includeInstance, msg) {
   var f, obj = {
     contentType: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    otherType: jspb.Message.getFieldWithDefault(msg, 2, "")
+    otherType: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    errors: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -5081,6 +5083,10 @@ proto.api_spec.HTTPBody.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setOtherType(value);
       break;
+    case 3:
+      var value = /** @type {!proto.api_spec.HTTPBody.Errors} */ (reader.readEnum());
+      msg.setErrors(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -5124,6 +5130,13 @@ proto.api_spec.HTTPBody.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = message.getErrors();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -5140,6 +5153,14 @@ proto.api_spec.HTTPBody.ContentType = {
   YAML: 6,
   TEXT_HTML: 7,
   OTHER: 8
+};
+
+/**
+ * @enum {number}
+ */
+proto.api_spec.HTTPBody.Errors = {
+  UNKNOWN_ERROR: 0,
+  PARSING_ERROR: 1
 };
 
 /**
@@ -5175,6 +5196,24 @@ proto.api_spec.HTTPBody.prototype.getOtherType = function() {
  */
 proto.api_spec.HTTPBody.prototype.setOtherType = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional Errors errors = 3;
+ * @return {!proto.api_spec.HTTPBody.Errors}
+ */
+proto.api_spec.HTTPBody.prototype.getErrors = function() {
+  return /** @type {!proto.api_spec.HTTPBody.Errors} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {!proto.api_spec.HTTPBody.Errors} value
+ * @return {!proto.api_spec.HTTPBody} returns this
+ */
+proto.api_spec.HTTPBody.prototype.setErrors = function(value) {
+  return jspb.Message.setProto3EnumField(this, 3, value);
 };
 
 
