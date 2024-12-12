@@ -192,8 +192,9 @@ message HTTPBody {
   string other_type = 2;
 
   enum Errors {
-    UNKNOWN_ERROR = 0;
+    NO_ERROR = 0;
     PARSING_ERROR = 1;
+    TRUNCATION_ERROR = 2;
   }
 
   Errors errors = 3;

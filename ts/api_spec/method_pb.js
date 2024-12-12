@@ -5159,8 +5159,9 @@ proto.api_spec.HTTPBody.ContentType = {
  * @enum {number}
  */
 proto.api_spec.HTTPBody.Errors = {
-  UNKNOWN_ERROR: 0,
-  PARSING_ERROR: 1
+  NO_ERROR: 0,
+  PARSING_ERROR: 1,
+  TRUNCATION_ERROR: 2
 };
 
 /**

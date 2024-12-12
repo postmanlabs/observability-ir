@@ -672,8 +672,9 @@ export namespace HTTPBody {
     }
 
     export enum Errors {
-    UNKNOWN_ERROR = 0,
+    NO_ERROR = 0,
     PARSING_ERROR = 1,
+    TRUNCATION_ERROR = 2,
     }
 
 }
