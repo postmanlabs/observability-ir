@@ -639,6 +639,8 @@ export class HTTPBody extends jspb.Message {
     setContentType(value: HTTPBody.ContentType): HTTPBody;
     getOtherType(): string;
     setOtherType(value: string): HTTPBody;
+    getErrors(): HTTPBody.Errors;
+    setErrors(value: HTTPBody.Errors): HTTPBody;
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): HTTPBody.AsObject;
@@ -654,6 +656,7 @@ export namespace HTTPBody {
     export type AsObject = {
         contentType: HTTPBody.ContentType,
         otherType: string,
+        errors: HTTPBody.Errors,
     }
 
     export enum ContentType {
@@ -666,6 +669,12 @@ export namespace HTTPBody {
     YAML = 6,
     TEXT_HTML = 7,
     OTHER = 8,
+    }
+
+    export enum Errors {
+    NO_ERROR = 0,
+    PARSING_ERROR = 1,
+    TRUNCATION_ERROR = 2,
     }
 
 }

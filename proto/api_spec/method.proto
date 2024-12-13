@@ -190,6 +190,14 @@ message HTTPBody {
 
   // Preserve original value if "other"
   string other_type = 2;
+
+  enum Errors {
+    NO_ERROR = 0;
+    PARSING_ERROR = 1;
+    TRUNCATION_ERROR = 2;
+  }
+
+  Errors errors = 3;
 }
 
 message HTTPMultipart {
