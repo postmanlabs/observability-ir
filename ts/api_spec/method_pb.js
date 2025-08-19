@@ -5152,7 +5152,8 @@ proto.api_spec.HTTPBody.ContentType = {
   TEXT_PLAIN: 5,
   YAML: 6,
   TEXT_HTML: 7,
-  OTHER: 8
+  OTHER: 8,
+  EVENT_STREAM: 9
 };
 
 /**

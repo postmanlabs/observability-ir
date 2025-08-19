@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z*akitasoftware.com/superstar/pb/go/api_spec',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0cmethod.proto\x12\x08\x61pi_spec\x1a\x0e\x61pi_type.proto\x1a\x0btypes.proto\"7\n\x04\x42ool\x12 \n\x04type\x18\x01 \x01(\x0b\x32\x12.api_spec.BoolType\x12\r\n\x05value\x18\x02 \x01(\x08\"9\n\x05\x42ytes\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.BytesType\x12\r\n\x05value\x18\x02 \x01(\x0c\";\n\x06String\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.StringType\x12\r\n\x05value\x18\x02 \x01(\t\"9\n\x05Int32\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int32Type\x12\r\n\x05value\x18\x02 \x01(\x05\"9\n\x05Int64\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int64Type\x12\r\n\x05value\x18\x02 \x01(\x03\";\n\x06Uint32\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint32Type\x12\r\n\x05value\x18\x02 \x01(\r\";\n\x06Uint64\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint64Type\x12\r\n\x05value\x18\x02 \x01(\x04\";\n\x06\x44ouble\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.DoubleType\x12\r\n\x05value\x18\x02 \x01(\x01\"9\n\x05\x46loat\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.FloatType\x12\r\n\x05value\x18\x02 \x01(\x02\"\xe3\x04\n\tPrimitive\x12\x11\n\ttype_hint\x18\x01 \x01(\t\x12$\n\nbool_value\x18\x02 \x01(\x0b\x32\x0e.api_spec.BoolH\x00\x12&\n\x0b\x62ytes_value\x18\x03 \x01(\x0b\x32\x0f.api_spec.BytesH\x00\x12(\n\x0cstring_value\x18\x04 \x01(\x0b\x32\x10.api_spec.StringH\x00\x12&\n\x0bint32_value\x18\x05 \x01(\x0b\x32\x0f.api_spec.Int32H\x00\x12&\n\x0bint64_value\x18\x06 \x01(\x0b\x32\x0f.api_spec.Int64H\x00\x12(\n\x0cuint32_value\x18\x07 \x01(\x0b\x32\x10.api_spec.Uint32H\x00\x12(\n\x0cuint64_value\x18\x08 \x01(\x0b\x32\x10.api_spec.Uint64H\x00\x12(\n\x0c\x64ouble_value\x18\t \x01(\x0b\x32\x10.api_spec.DoubleH\x00\x12&\n\x0b\x66loat_value\x18\n \x01(\x0b\x32\x0f.api_spec.FloatH\x00\x12\x35\n\x11\x61kita_annotations\x18\x0b \x01(\x0b\x32\x1a.api_spec.AkitaAnnotations\x12\x1d\n\x15\x63ontains_random_value\x18\x0c \x01(\x08\x12\x31\n\x07\x66ormats\x18\r \x03(\x0b\x32 .api_spec.Primitive.FormatsEntry\x12\x13\n\x0b\x66ormat_kind\x18\x0e \x01(\t\x1a.\n\x0c\x46ormatsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08:\x02\x38\x01\x42\x07\n\x05value\"%\n\x04List\x12\x1d\n\x05\x65lems\x18\x01 \x03(\x0b\x32\x0e.api_spec.Data\"\x9a\x01\n\x06Struct\x12,\n\x06\x66ields\x18\x01 \x03(\x0b\x32\x1c.api_spec.Struct.FieldsEntry\x12#\n\x08map_type\x18\x02 \x01(\x0b\x32\x11.api_spec.MapData\x1a=\n\x0b\x46ieldsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"E\n\x07MapData\x12\x1b\n\x03key\x18\x01 \x01(\x0b\x32\x0e.api_spec.Data\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data\"\x06\n\x04None\"S\n\x08Optional\x12\x1e\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0e.api_spec.DataH\x00\x12\x1e\n\x04none\x18\x02 \x01(\x0b\x32\x0e.api_spec.NoneH\x00\x42\x07\n\x05value\"\x92\x01\n\x05OneOf\x12-\n\x07options\x18\x01 \x03(\x0b\x32\x1c.api_spec.OneOf.OptionsEntry\x12\x1a\n\x12potential_conflict\x18\x02 \x01(\x08\x1a>\n\x0cOptionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"\n\n\x08GRPCMeta\"\x17\n\x08HTTPPath\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x18\n\tHTTPQuery\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x19\n\nHTTPHeader\x12\x0b\n\x03key\x18\x01 \x01(\t\"m\n\x08HTTPAuth\x12-\n\x04type\x18\x01 \x01(\x0e\x32\x1f.api_spec.HTTPAuth.HTTPAuthType\"2\n\x0cHTTPAuthType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x42\x41SIC\x10\x01\x12\n\n\x06\x42\x45\x41RER\x10\x02\"\x19\n\nHTTPCookie\x12\x0b\n\x03key\x18\x01 \x01(\t\"\xcc\x02\n\x08HTTPBody\x12\x34\n\x0c\x63ontent_type\x18\x01 \x01(\x0e\x32\x1e.api_spec.HTTPBody.ContentType\x12\x12\n\nother_type\x18\x02 \x01(\t\x12)\n\x06\x65rrors\x18\x03 \x01(\x0e\x32\x19.api_spec.HTTPBody.Errors\"\x89\x01\n\x0b\x43ontentType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x14\n\x10\x46ORM_URL_ENCODED\x10\x02\x12\x10\n\x0cOCTET_STREAM\x10\x03\x12\x07\n\x03PDF\x10\x04\x12\x0e\n\nTEXT_PLAIN\x10\x05\x12\x08\n\x04YAML\x10\x06\x12\r\n\tTEXT_HTML\x10\x07\x12\t\n\x05OTHER\x10\x08\"?\n\x06\x45rrors\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x11\n\rPARSING_ERROR\x10\x01\x12\x14\n\x10TRUNCATION_ERROR\x10\x02\"\x1d\n\rHTTPMultipart\x12\x0c\n\x04type\x18\x01 \x01(\t\"\x0b\n\tHTTPEmpty\"\xe3\x02\n\x08HTTPMeta\x12\"\n\x04path\x18\x01 \x01(\x0b\x32\x12.api_spec.HTTPPathH\x00\x12$\n\x05query\x18\x02 \x01(\x0b\x32\x13.api_spec.HTTPQueryH\x00\x12&\n\x06header\x18\x03 \x01(\x0b\x32\x14.api_spec.HTTPHeaderH\x00\x12&\n\x06\x63ookie\x18\x04 \x01(\x0b\x32\x14.api_spec.HTTPCookieH\x00\x12\"\n\x04\x62ody\x18\x05 \x01(\x0b\x32\x12.api_spec.HTTPBodyH\x00\x12$\n\x05\x65mpty\x18\x06 \x01(\x0b\x32\x13.api_spec.HTTPEmptyH\x00\x12\"\n\x04\x61uth\x18\x08 \x01(\x0b\x32\x12.api_spec.HTTPAuthH\x00\x12,\n\tmultipart\x18\t \x01(\x0b\x32\x17.api_spec.HTTPMultipartH\x00\x12\x15\n\rresponse_code\x18\x07 \x01(\x05\x42\n\n\x08location\"Z\n\x08\x44\x61taMeta\x12\"\n\x04grpc\x18\x01 \x01(\x0b\x32\x12.api_spec.GRPCMetaH\x00\x12\"\n\x04http\x18\x02 \x01(\x0b\x32\x12.api_spec.HTTPMetaH\x00\x42\x06\n\x04meta\"\x0e\n\x0c\x45xampleValue\"\x84\x03\n\x04\x44\x61ta\x12(\n\tprimitive\x18\x01 \x01(\x0b\x32\x13.api_spec.PrimitiveH\x00\x12\"\n\x06struct\x18\x02 \x01(\x0b\x32\x10.api_spec.StructH\x00\x12\x1e\n\x04list\x18\x03 \x01(\x0b\x32\x0e.api_spec.ListH\x00\x12&\n\x08optional\x18\x04 \x01(\x0b\x32\x12.api_spec.OptionalH\x00\x12 \n\x05oneof\x18\x06 \x01(\x0b\x32\x0f.api_spec.OneOfH\x00\x12 \n\x04meta\x18\x05 \x01(\x0b\x32\x12.api_spec.DataMeta\x12\x10\n\x08nullable\x18\x07 \x01(\x08\x12\x39\n\x0e\x65xample_values\x18\x08 \x03(\x0b\x32!.api_spec.Data.ExampleValuesEntry\x1aL\n\x12\x45xampleValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.api_spec.ExampleValue:\x02\x38\x01\x42\x07\n\x05value\"=\n\x08MethodID\x12\x0c\n\x04name\x18\x01 \x01(\t\x12#\n\x08\x61pi_type\x18\x02 \x01(\x0e\x32\x11.api_spec.ApiType\"\x10\n\x0eGRPCMethodMeta\"\xdf\x02\n\x0eHTTPMethodMeta\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\x15\n\rpath_template\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\x12\x1a\n\x12processing_latency\x18\x04 \x01(\x02\x12P\n\x0epath_param_alg\x18\x05 \x01(\x0e\x32\x38.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm\x12\x39\n\x0bobfuscation\x18\x06 \x01(\x0e\x32$.api_spec.HTTPMethodMeta.Obfuscation\"F\n\x1fPathParameterInferenceAlgorithm\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02v1\x10\x01\x12\x06\n\x02v2\x10\x02\x12\x06\n\x02v3\x10\x03\"\'\n\x0bObfuscation\x12\x0e\n\nZERO_VALUE\x10\x00\x12\x08\n\x04NONE\x10\x01\"h\n\nMethodMeta\x12(\n\x04grpc\x18\x01 \x01(\x0b\x32\x18.api_spec.GRPCMethodMetaH\x00\x12(\n\x04http\x18\x02 \x01(\x0b\x32\x18.api_spec.HTTPMethodMetaH\x00\x42\x06\n\x04meta\"\xa9\x02\n\x06Method\x12\x1e\n\x02id\x18\x01 \x01(\x0b\x32\x12.api_spec.MethodID\x12(\n\x04\x61rgs\x18\x02 \x03(\x0b\x32\x1a.api_spec.Method.ArgsEntry\x12\x32\n\tresponses\x18\x03 \x03(\x0b\x32\x1f.api_spec.Method.ResponsesEntry\x12\"\n\x04meta\x18\x04 \x01(\x0b\x32\x14.api_spec.MethodMeta\x1a;\n\tArgsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x1a@\n\x0eResponsesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
+  serialized_pb=b'\n\x0cmethod.proto\x12\x08\x61pi_spec\x1a\x0e\x61pi_type.proto\x1a\x0btypes.proto\"7\n\x04\x42ool\x12 \n\x04type\x18\x01 \x01(\x0b\x32\x12.api_spec.BoolType\x12\r\n\x05value\x18\x02 \x01(\x08\"9\n\x05\x42ytes\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.BytesType\x12\r\n\x05value\x18\x02 \x01(\x0c\";\n\x06String\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.StringType\x12\r\n\x05value\x18\x02 \x01(\t\"9\n\x05Int32\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int32Type\x12\r\n\x05value\x18\x02 \x01(\x05\"9\n\x05Int64\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int64Type\x12\r\n\x05value\x18\x02 \x01(\x03\";\n\x06Uint32\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint32Type\x12\r\n\x05value\x18\x02 \x01(\r\";\n\x06Uint64\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint64Type\x12\r\n\x05value\x18\x02 \x01(\x04\";\n\x06\x44ouble\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.DoubleType\x12\r\n\x05value\x18\x02 \x01(\x01\"9\n\x05\x46loat\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.FloatType\x12\r\n\x05value\x18\x02 \x01(\x02\"\xe3\x04\n\tPrimitive\x12\x11\n\ttype_hint\x18\x01 \x01(\t\x12$\n\nbool_value\x18\x02 \x01(\x0b\x32\x0e.api_spec.BoolH\x00\x12&\n\x0b\x62ytes_value\x18\x03 \x01(\x0b\x32\x0f.api_spec.BytesH\x00\x12(\n\x0cstring_value\x18\x04 \x01(\x0b\x32\x10.api_spec.StringH\x00\x12&\n\x0bint32_value\x18\x05 \x01(\x0b\x32\x0f.api_spec.Int32H\x00\x12&\n\x0bint64_value\x18\x06 \x01(\x0b\x32\x0f.api_spec.Int64H\x00\x12(\n\x0cuint32_value\x18\x07 \x01(\x0b\x32\x10.api_spec.Uint32H\x00\x12(\n\x0cuint64_value\x18\x08 \x01(\x0b\x32\x10.api_spec.Uint64H\x00\x12(\n\x0c\x64ouble_value\x18\t \x01(\x0b\x32\x10.api_spec.DoubleH\x00\x12&\n\x0b\x66loat_value\x18\n \x01(\x0b\x32\x0f.api_spec.FloatH\x00\x12\x35\n\x11\x61kita_annotations\x18\x0b \x01(\x0b\x32\x1a.api_spec.AkitaAnnotations\x12\x1d\n\x15\x63ontains_random_value\x18\x0c \x01(\x08\x12\x31\n\x07\x66ormats\x18\r \x03(\x0b\x32 .api_spec.Primitive.FormatsEntry\x12\x13\n\x0b\x66ormat_kind\x18\x0e \x01(\t\x1a.\n\x0c\x46ormatsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08:\x02\x38\x01\x42\x07\n\x05value\"%\n\x04List\x12\x1d\n\x05\x65lems\x18\x01 \x03(\x0b\x32\x0e.api_spec.Data\"\x9a\x01\n\x06Struct\x12,\n\x06\x66ields\x18\x01 \x03(\x0b\x32\x1c.api_spec.Struct.FieldsEntry\x12#\n\x08map_type\x18\x02 \x01(\x0b\x32\x11.api_spec.MapData\x1a=\n\x0b\x46ieldsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"E\n\x07MapData\x12\x1b\n\x03key\x18\x01 \x01(\x0b\x32\x0e.api_spec.Data\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data\"\x06\n\x04None\"S\n\x08Optional\x12\x1e\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0e.api_spec.DataH\x00\x12\x1e\n\x04none\x18\x02 \x01(\x0b\x32\x0e.api_spec.NoneH\x00\x42\x07\n\x05value\"\x92\x01\n\x05OneOf\x12-\n\x07options\x18\x01 \x03(\x0b\x32\x1c.api_spec.OneOf.OptionsEntry\x12\x1a\n\x12potential_conflict\x18\x02 \x01(\x08\x1a>\n\x0cOptionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"\n\n\x08GRPCMeta\"\x17\n\x08HTTPPath\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x18\n\tHTTPQuery\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x19\n\nHTTPHeader\x12\x0b\n\x03key\x18\x01 \x01(\t\"m\n\x08HTTPAuth\x12-\n\x04type\x18\x01 \x01(\x0e\x32\x1f.api_spec.HTTPAuth.HTTPAuthType\"2\n\x0cHTTPAuthType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x42\x41SIC\x10\x01\x12\n\n\x06\x42\x45\x41RER\x10\x02\"\x19\n\nHTTPCookie\x12\x0b\n\x03key\x18\x01 \x01(\t\"\xde\x02\n\x08HTTPBody\x12\x34\n\x0c\x63ontent_type\x18\x01 \x01(\x0e\x32\x1e.api_spec.HTTPBody.ContentType\x12\x12\n\nother_type\x18\x02 \x01(\t\x12)\n\x06\x65rrors\x18\x03 \x01(\x0e\x32\x19.api_spec.HTTPBody.Errors\"\x9b\x01\n\x0b\x43ontentType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x14\n\x10\x46ORM_URL_ENCODED\x10\x02\x12\x10\n\x0cOCTET_STREAM\x10\x03\x12\x07\n\x03PDF\x10\x04\x12\x0e\n\nTEXT_PLAIN\x10\x05\x12\x08\n\x04YAML\x10\x06\x12\r\n\tTEXT_HTML\x10\x07\x12\t\n\x05OTHER\x10\x08\x12\x10\n\x0c\x45VENT_STREAM\x10\t\"?\n\x06\x45rrors\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x11\n\rPARSING_ERROR\x10\x01\x12\x14\n\x10TRUNCATION_ERROR\x10\x02\"\x1d\n\rHTTPMultipart\x12\x0c\n\x04type\x18\x01 \x01(\t\"\x0b\n\tHTTPEmpty\"\xe3\x02\n\x08HTTPMeta\x12\"\n\x04path\x18\x01 \x01(\x0b\x32\x12.api_spec.HTTPPathH\x00\x12$\n\x05query\x18\x02 \x01(\x0b\x32\x13.api_spec.HTTPQueryH\x00\x12&\n\x06header\x18\x03 \x01(\x0b\x32\x14.api_spec.HTTPHeaderH\x00\x12&\n\x06\x63ookie\x18\x04 \x01(\x0b\x32\x14.api_spec.HTTPCookieH\x00\x12\"\n\x04\x62ody\x18\x05 \x01(\x0b\x32\x12.api_spec.HTTPBodyH\x00\x12$\n\x05\x65mpty\x18\x06 \x01(\x0b\x32\x13.api_spec.HTTPEmptyH\x00\x12\"\n\x04\x61uth\x18\x08 \x01(\x0b\x32\x12.api_spec.HTTPAuthH\x00\x12,\n\tmultipart\x18\t \x01(\x0b\x32\x17.api_spec.HTTPMultipartH\x00\x12\x15\n\rresponse_code\x18\x07 \x01(\x05\x42\n\n\x08location\"Z\n\x08\x44\x61taMeta\x12\"\n\x04grpc\x18\x01 \x01(\x0b\x32\x12.api_spec.GRPCMetaH\x00\x12\"\n\x04http\x18\x02 \x01(\x0b\x32\x12.api_spec.HTTPMetaH\x00\x42\x06\n\x04meta\"\x0e\n\x0c\x45xampleValue\"\x84\x03\n\x04\x44\x61ta\x12(\n\tprimitive\x18\x01 \x01(\x0b\x32\x13.api_spec.PrimitiveH\x00\x12\"\n\x06struct\x18\x02 \x01(\x0b\x32\x10.api_spec.StructH\x00\x12\x1e\n\x04list\x18\x03 \x01(\x0b\x32\x0e.api_spec.ListH\x00\x12&\n\x08optional\x18\x04 \x01(\x0b\x32\x12.api_spec.OptionalH\x00\x12 \n\x05oneof\x18\x06 \x01(\x0b\x32\x0f.api_spec.OneOfH\x00\x12 \n\x04meta\x18\x05 \x01(\x0b\x32\x12.api_spec.DataMeta\x12\x10\n\x08nullable\x18\x07 \x01(\x08\x12\x39\n\x0e\x65xample_values\x18\x08 \x03(\x0b\x32!.api_spec.Data.ExampleValuesEntry\x1aL\n\x12\x45xampleValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.api_spec.ExampleValue:\x02\x38\x01\x42\x07\n\x05value\"=\n\x08MethodID\x12\x0c\n\x04name\x18\x01 \x01(\t\x12#\n\x08\x61pi_type\x18\x02 \x01(\x0e\x32\x11.api_spec.ApiType\"\x10\n\x0eGRPCMethodMeta\"\xdf\x02\n\x0eHTTPMethodMeta\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\x15\n\rpath_template\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\x12\x1a\n\x12processing_latency\x18\x04 \x01(\x02\x12P\n\x0epath_param_alg\x18\x05 \x01(\x0e\x32\x38.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm\x12\x39\n\x0bobfuscation\x18\x06 \x01(\x0e\x32$.api_spec.HTTPMethodMeta.Obfuscation\"F\n\x1fPathParameterInferenceAlgorithm\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02v1\x10\x01\x12\x06\n\x02v2\x10\x02\x12\x06\n\x02v3\x10\x03\"\'\n\x0bObfuscation\x12\x0e\n\nZERO_VALUE\x10\x00\x12\x08\n\x04NONE\x10\x01\"h\n\nMethodMeta\x12(\n\x04grpc\x18\x01 \x01(\x0b\x32\x18.api_spec.GRPCMethodMetaH\x00\x12(\n\x04http\x18\x02 \x01(\x0b\x32\x18.api_spec.HTTPMethodMetaH\x00\x42\x06\n\x04meta\"\xa9\x02\n\x06Method\x12\x1e\n\x02id\x18\x01 \x01(\x0b\x32\x12.api_spec.MethodID\x12(\n\x04\x61rgs\x18\x02 \x03(\x0b\x32\x1a.api_spec.Method.ArgsEntry\x12\x32\n\tresponses\x18\x03 \x03(\x0b\x32\x1f.api_spec.Method.ResponsesEntry\x12\"\n\x04meta\x18\x04 \x01(\x0b\x32\x14.api_spec.MethodMeta\x1a;\n\tArgsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x1a@\n\x0eResponsesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
   ,
   dependencies=[api__type__pb2.DESCRIPTOR,types__pb2.DESCRIPTOR,])
 
@@ -109,11 +109,16 @@ _HTTPBODY_CONTENTTYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None,
       create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EVENT_STREAM', index=9, number=9,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=2074,
-  serialized_end=2211,
+  serialized_end=2229,
 )
 _sym_db.RegisterEnumDescriptor(_HTTPBODY_CONTENTTYPE)
 
@@ -142,8 +147,8 @@ _HTTPBODY_ERRORS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2213,
-  serialized_end=2276,
+  serialized_start=2231,
+  serialized_end=2294,
 )
 _sym_db.RegisterEnumDescriptor(_HTTPBODY_ERRORS)
 
@@ -177,8 +182,8 @@ _HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3501,
-  serialized_end=3571,
+  serialized_start=3519,
+  serialized_end=3589,
 )
 _sym_db.RegisterEnumDescriptor(_HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM)
 
@@ -202,8 +207,8 @@ _HTTPMETHODMETA_OBFUSCATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3573,
-  serialized_end=3612,
+  serialized_start=3591,
+  serialized_end=3630,
 )
 _sym_db.RegisterEnumDescriptor(_HTTPMETHODMETA_OBFUSCATION)
 
@@ -1249,7 +1254,7 @@ _HTTPBODY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1944,
-  serialized_end=2276,
+  serialized_end=2294,
 )
 
 
@@ -1280,8 +1285,8 @@ _HTTPMULTIPART = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2278,
-  serialized_end=2307,
+  serialized_start=2296,
+  serialized_end=2325,
 )
 
 
@@ -1305,8 +1310,8 @@ _HTTPEMPTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2309,
-  serialized_end=2320,
+  serialized_start=2327,
+  serialized_end=2338,
 )
 
 
@@ -1398,8 +1403,8 @@ _HTTPMETA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2323,
-  serialized_end=2678,
+  serialized_start=2341,
+  serialized_end=2696,
 )
 
 
@@ -1442,8 +1447,8 @@ _DATAMETA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2680,
-  serialized_end=2770,
+  serialized_start=2698,
+  serialized_end=2788,
 )
 
 
@@ -1467,8 +1472,8 @@ _EXAMPLEVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2772,
-  serialized_end=2786,
+  serialized_start=2790,
+  serialized_end=2804,
 )
 
 
@@ -1506,8 +1511,8 @@ _DATA_EXAMPLEVALUESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3092,
-  serialized_end=3168,
+  serialized_start=3110,
+  serialized_end=3186,
 )
 
 _DATA = _descriptor.Descriptor(
@@ -1591,8 +1596,8 @@ _DATA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2789,
-  serialized_end=3177,
+  serialized_start=2807,
+  serialized_end=3195,
 )
 
 
@@ -1630,8 +1635,8 @@ _METHODID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3179,
-  serialized_end=3240,
+  serialized_start=3197,
+  serialized_end=3258,
 )
 
 
@@ -1655,8 +1660,8 @@ _GRPCMETHODMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3242,
-  serialized_end=3258,
+  serialized_start=3260,
+  serialized_end=3276,
 )
 
 
@@ -1724,8 +1729,8 @@ _HTTPMETHODMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3261,
-  serialized_end=3612,
+  serialized_start=3279,
+  serialized_end=3630,
 )
 
 
@@ -1768,8 +1773,8 @@ _METHODMETA = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=3614,
-  serialized_end=3718,
+  serialized_start=3632,
+  serialized_end=3736,
 )
 
 
@@ -1807,8 +1812,8 @@ _METHOD_ARGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3893,
-  serialized_end=3952,
+  serialized_start=3911,
+  serialized_end=3970,
 )
 
 _METHOD_RESPONSESENTRY = _descriptor.Descriptor(
@@ -1845,8 +1850,8 @@ _METHOD_RESPONSESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3954,
-  serialized_end=4018,
+  serialized_start=3972,
+  serialized_end=4036,
 )
 
 _METHOD = _descriptor.Descriptor(
@@ -1897,8 +1902,8 @@ _METHOD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3721,
-  serialized_end=4018,
+  serialized_start=3739,
+  serialized_end=4036,
 )
 
 _BOOL.fields_by_name['type'].message_type = types__pb2._BOOLTYPE

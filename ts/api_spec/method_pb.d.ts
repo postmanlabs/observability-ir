@@ -669,6 +669,7 @@ export namespace HTTPBody {
     YAML = 6,
     TEXT_HTML = 7,
     OTHER = 8,
+    EVENT_STREAM = 9,
     }
 
     export enum Errors {
