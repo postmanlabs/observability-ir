@@ -7,7 +7,7 @@ SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 # Using namely/protoc:1.39_0 to output go code using
 # golang protobuf APIv2.
 # Previously used 1:26_1 to use golang api v1.
-PROTOC_VERSION=namely/protoc:1.39_0
+PROTOC_VERSION=namely/protoc:1.44_0
 PROTOC_VERSION_FOR_TYPESCRIPT=namely/protoc-all
 
 pushd ${SCRIPTPATH} > /dev/null
