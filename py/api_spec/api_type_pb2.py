@@ -4,7 +4,6 @@
 """Generated protocol buffer code."""
 from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
-from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
@@ -15,18 +14,48 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0e\x61pi_type.proto\x12\x08\x61pi_spec*\"\n\x07\x41piType\x12\x08\n\x04GRPC\x10\x00\x12\r\n\tHTTP_REST\x10\x01\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3')
+DESCRIPTOR = _descriptor.FileDescriptor(
+  name='api_type.proto',
+  package='api_spec',
+  syntax='proto3',
+  serialized_options=b'Z*akitasoftware.com/superstar/pb/go/api_spec',
+  create_key=_descriptor._internal_create_key,
+  serialized_pb=b'\n\x0e\x61pi_type.proto\x12\x08\x61pi_spec*\"\n\x07\x41piType\x12\x08\n\x04GRPC\x10\x00\x12\r\n\tHTTP_REST\x10\x01\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
+)
 
-_APITYPE = DESCRIPTOR.enum_types_by_name['ApiType']
+_APITYPE = _descriptor.EnumDescriptor(
+  name='ApiType',
+  full_name='api_spec.ApiType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='GRPC', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='HTTP_REST', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=28,
+  serialized_end=62,
+)
+_sym_db.RegisterEnumDescriptor(_APITYPE)
+
 ApiType = enum_type_wrapper.EnumTypeWrapper(_APITYPE)
 GRPC = 0
 HTTP_REST = 1
 
 
-if _descriptor._USE_C_DESCRIPTORS == False:
+DESCRIPTOR.enum_types_by_name['ApiType'] = _APITYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-  DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z*akitasoftware.com/superstar/pb/go/api_spec'
-  _APITYPE._serialized_start=28
-  _APITYPE._serialized_end=62
+
+DESCRIPTOR._options = None
 # @@protoc_insertion_point(module_scope)

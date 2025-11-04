@@ -3,7 +3,6 @@
 # source: method.proto
 """Generated protocol buffer code."""
 from google.protobuf import descriptor as _descriptor
-from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
@@ -16,55 +15,2090 @@ import api_type_pb2 as api__type__pb2
 import types_pb2 as types__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0cmethod.proto\x12\x08\x61pi_spec\x1a\x0e\x61pi_type.proto\x1a\x0btypes.proto\"7\n\x04\x42ool\x12 \n\x04type\x18\x01 \x01(\x0b\x32\x12.api_spec.BoolType\x12\r\n\x05value\x18\x02 \x01(\x08\"9\n\x05\x42ytes\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.BytesType\x12\r\n\x05value\x18\x02 \x01(\x0c\";\n\x06String\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.StringType\x12\r\n\x05value\x18\x02 \x01(\t\"9\n\x05Int32\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int32Type\x12\r\n\x05value\x18\x02 \x01(\x05\"9\n\x05Int64\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int64Type\x12\r\n\x05value\x18\x02 \x01(\x03\";\n\x06Uint32\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint32Type\x12\r\n\x05value\x18\x02 \x01(\r\";\n\x06Uint64\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint64Type\x12\r\n\x05value\x18\x02 \x01(\x04\";\n\x06\x44ouble\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.DoubleType\x12\r\n\x05value\x18\x02 \x01(\x01\"9\n\x05\x46loat\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.FloatType\x12\r\n\x05value\x18\x02 \x01(\x02\"\xe3\x04\n\tPrimitive\x12\x11\n\ttype_hint\x18\x01 \x01(\t\x12$\n\nbool_value\x18\x02 \x01(\x0b\x32\x0e.api_spec.BoolH\x00\x12&\n\x0b\x62ytes_value\x18\x03 \x01(\x0b\x32\x0f.api_spec.BytesH\x00\x12(\n\x0cstring_value\x18\x04 \x01(\x0b\x32\x10.api_spec.StringH\x00\x12&\n\x0bint32_value\x18\x05 \x01(\x0b\x32\x0f.api_spec.Int32H\x00\x12&\n\x0bint64_value\x18\x06 \x01(\x0b\x32\x0f.api_spec.Int64H\x00\x12(\n\x0cuint32_value\x18\x07 \x01(\x0b\x32\x10.api_spec.Uint32H\x00\x12(\n\x0cuint64_value\x18\x08 \x01(\x0b\x32\x10.api_spec.Uint64H\x00\x12(\n\x0c\x64ouble_value\x18\t \x01(\x0b\x32\x10.api_spec.DoubleH\x00\x12&\n\x0b\x66loat_value\x18\n \x01(\x0b\x32\x0f.api_spec.FloatH\x00\x12\x35\n\x11\x61kita_annotations\x18\x0b \x01(\x0b\x32\x1a.api_spec.AkitaAnnotations\x12\x1d\n\x15\x63ontains_random_value\x18\x0c \x01(\x08\x12\x31\n\x07\x66ormats\x18\r \x03(\x0b\x32 .api_spec.Primitive.FormatsEntry\x12\x13\n\x0b\x66ormat_kind\x18\x0e \x01(\t\x1a.\n\x0c\x46ormatsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08:\x02\x38\x01\x42\x07\n\x05value\"%\n\x04List\x12\x1d\n\x05\x65lems\x18\x01 \x03(\x0b\x32\x0e.api_spec.Data\"\x9a\x01\n\x06Struct\x12,\n\x06\x66ields\x18\x01 \x03(\x0b\x32\x1c.api_spec.Struct.FieldsEntry\x12#\n\x08map_type\x18\x02 \x01(\x0b\x32\x11.api_spec.MapData\x1a=\n\x0b\x46ieldsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"E\n\x07MapData\x12\x1b\n\x03key\x18\x01 \x01(\x0b\x32\x0e.api_spec.Data\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data\"\x06\n\x04None\"S\n\x08Optional\x12\x1e\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0e.api_spec.DataH\x00\x12\x1e\n\x04none\x18\x02 \x01(\x0b\x32\x0e.api_spec.NoneH\x00\x42\x07\n\x05value\"\x92\x01\n\x05OneOf\x12-\n\x07options\x18\x01 \x03(\x0b\x32\x1c.api_spec.OneOf.OptionsEntry\x12\x1a\n\x12potential_conflict\x18\x02 \x01(\x08\x1a>\n\x0cOptionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"\n\n\x08GRPCMeta\"\x17\n\x08HTTPPath\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x18\n\tHTTPQuery\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x19\n\nHTTPHeader\x12\x0b\n\x03key\x18\x01 \x01(\t\"m\n\x08HTTPAuth\x12-\n\x04type\x18\x01 \x01(\x0e\x32\x1f.api_spec.HTTPAuth.HTTPAuthType\"2\n\x0cHTTPAuthType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x42\x41SIC\x10\x01\x12\n\n\x06\x42\x45\x41RER\x10\x02\"\x19\n\nHTTPCookie\x12\x0b\n\x03key\x18\x01 \x01(\t\"\xde\x02\n\x08HTTPBody\x12\x34\n\x0c\x63ontent_type\x18\x01 \x01(\x0e\x32\x1e.api_spec.HTTPBody.ContentType\x12\x12\n\nother_type\x18\x02 \x01(\t\x12)\n\x06\x65rrors\x18\x03 \x01(\x0e\x32\x19.api_spec.HTTPBody.Errors\"\x9b\x01\n\x0b\x43ontentType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x14\n\x10\x46ORM_URL_ENCODED\x10\x02\x12\x10\n\x0cOCTET_STREAM\x10\x03\x12\x07\n\x03PDF\x10\x04\x12\x0e\n\nTEXT_PLAIN\x10\x05\x12\x08\n\x04YAML\x10\x06\x12\r\n\tTEXT_HTML\x10\x07\x12\t\n\x05OTHER\x10\x08\x12\x10\n\x0c\x45VENT_STREAM\x10\t\"?\n\x06\x45rrors\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x11\n\rPARSING_ERROR\x10\x01\x12\x14\n\x10TRUNCATION_ERROR\x10\x02\"\x1d\n\rHTTPMultipart\x12\x0c\n\x04type\x18\x01 \x01(\t\"\x0b\n\tHTTPEmpty\"\xe3\x02\n\x08HTTPMeta\x12\"\n\x04path\x18\x01 \x01(\x0b\x32\x12.api_spec.HTTPPathH\x00\x12$\n\x05query\x18\x02 \x01(\x0b\x32\x13.api_spec.HTTPQueryH\x00\x12&\n\x06header\x18\x03 \x01(\x0b\x32\x14.api_spec.HTTPHeaderH\x00\x12&\n\x06\x63ookie\x18\x04 \x01(\x0b\x32\x14.api_spec.HTTPCookieH\x00\x12\"\n\x04\x62ody\x18\x05 \x01(\x0b\x32\x12.api_spec.HTTPBodyH\x00\x12$\n\x05\x65mpty\x18\x06 \x01(\x0b\x32\x13.api_spec.HTTPEmptyH\x00\x12\"\n\x04\x61uth\x18\x08 \x01(\x0b\x32\x12.api_spec.HTTPAuthH\x00\x12,\n\tmultipart\x18\t \x01(\x0b\x32\x17.api_spec.HTTPMultipartH\x00\x12\x15\n\rresponse_code\x18\x07 \x01(\x05\x42\n\n\x08location\"Z\n\x08\x44\x61taMeta\x12\"\n\x04grpc\x18\x01 \x01(\x0b\x32\x12.api_spec.GRPCMetaH\x00\x12\"\n\x04http\x18\x02 \x01(\x0b\x32\x12.api_spec.HTTPMetaH\x00\x42\x06\n\x04meta\"\x0e\n\x0c\x45xampleValue\"\x84\x03\n\x04\x44\x61ta\x12(\n\tprimitive\x18\x01 \x01(\x0b\x32\x13.api_spec.PrimitiveH\x00\x12\"\n\x06struct\x18\x02 \x01(\x0b\x32\x10.api_spec.StructH\x00\x12\x1e\n\x04list\x18\x03 \x01(\x0b\x32\x0e.api_spec.ListH\x00\x12&\n\x08optional\x18\x04 \x01(\x0b\x32\x12.api_spec.OptionalH\x00\x12 \n\x05oneof\x18\x06 \x01(\x0b\x32\x0f.api_spec.OneOfH\x00\x12 \n\x04meta\x18\x05 \x01(\x0b\x32\x12.api_spec.DataMeta\x12\x10\n\x08nullable\x18\x07 \x01(\x08\x12\x39\n\x0e\x65xample_values\x18\x08 \x03(\x0b\x32!.api_spec.Data.ExampleValuesEntry\x1aL\n\x12\x45xampleValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.api_spec.ExampleValue:\x02\x38\x01\x42\x07\n\x05value\"=\n\x08MethodID\x12\x0c\n\x04name\x18\x01 \x01(\t\x12#\n\x08\x61pi_type\x18\x02 \x01(\x0e\x32\x11.api_spec.ApiType\"\x10\n\x0eGRPCMethodMeta\"\xdf\x02\n\x0eHTTPMethodMeta\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\x15\n\rpath_template\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\x12\x1a\n\x12processing_latency\x18\x04 \x01(\x02\x12P\n\x0epath_param_alg\x18\x05 \x01(\x0e\x32\x38.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm\x12\x39\n\x0bobfuscation\x18\x06 \x01(\x0e\x32$.api_spec.HTTPMethodMeta.Obfuscation\"F\n\x1fPathParameterInferenceAlgorithm\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02v1\x10\x01\x12\x06\n\x02v2\x10\x02\x12\x06\n\x02v3\x10\x03\"\'\n\x0bObfuscation\x12\x0e\n\nZERO_VALUE\x10\x00\x12\x08\n\x04NONE\x10\x01\"h\n\nMethodMeta\x12(\n\x04grpc\x18\x01 \x01(\x0b\x32\x18.api_spec.GRPCMethodMetaH\x00\x12(\n\x04http\x18\x02 \x01(\x0b\x32\x18.api_spec.HTTPMethodMetaH\x00\x42\x06\n\x04meta\"\xa9\x02\n\x06Method\x12\x1e\n\x02id\x18\x01 \x01(\x0b\x32\x12.api_spec.MethodID\x12(\n\x04\x61rgs\x18\x02 \x03(\x0b\x32\x1a.api_spec.Method.ArgsEntry\x12\x32\n\tresponses\x18\x03 \x03(\x0b\x32\x1f.api_spec.Method.ResponsesEntry\x12\"\n\x04meta\x18\x04 \x01(\x0b\x32\x14.api_spec.MethodMeta\x1a;\n\tArgsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x1a@\n\x0eResponsesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3')
+DESCRIPTOR = _descriptor.FileDescriptor(
+  name='method.proto',
+  package='api_spec',
+  syntax='proto3',
+  serialized_options=b'Z*akitasoftware.com/superstar/pb/go/api_spec',
+  create_key=_descriptor._internal_create_key,
+  serialized_pb=b'\n\x0cmethod.proto\x12\x08\x61pi_spec\x1a\x0e\x61pi_type.proto\x1a\x0btypes.proto\"7\n\x04\x42ool\x12 \n\x04type\x18\x01 \x01(\x0b\x32\x12.api_spec.BoolType\x12\r\n\x05value\x18\x02 \x01(\x08\"9\n\x05\x42ytes\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.BytesType\x12\r\n\x05value\x18\x02 \x01(\x0c\";\n\x06String\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.StringType\x12\r\n\x05value\x18\x02 \x01(\t\"9\n\x05Int32\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int32Type\x12\r\n\x05value\x18\x02 \x01(\x05\"9\n\x05Int64\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.Int64Type\x12\r\n\x05value\x18\x02 \x01(\x03\";\n\x06Uint32\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint32Type\x12\r\n\x05value\x18\x02 \x01(\r\";\n\x06Uint64\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.Uint64Type\x12\r\n\x05value\x18\x02 \x01(\x04\";\n\x06\x44ouble\x12\"\n\x04type\x18\x01 \x01(\x0b\x32\x14.api_spec.DoubleType\x12\r\n\x05value\x18\x02 \x01(\x01\"9\n\x05\x46loat\x12!\n\x04type\x18\x01 \x01(\x0b\x32\x13.api_spec.FloatType\x12\r\n\x05value\x18\x02 \x01(\x02\"\xe3\x04\n\tPrimitive\x12\x11\n\ttype_hint\x18\x01 \x01(\t\x12$\n\nbool_value\x18\x02 \x01(\x0b\x32\x0e.api_spec.BoolH\x00\x12&\n\x0b\x62ytes_value\x18\x03 \x01(\x0b\x32\x0f.api_spec.BytesH\x00\x12(\n\x0cstring_value\x18\x04 \x01(\x0b\x32\x10.api_spec.StringH\x00\x12&\n\x0bint32_value\x18\x05 \x01(\x0b\x32\x0f.api_spec.Int32H\x00\x12&\n\x0bint64_value\x18\x06 \x01(\x0b\x32\x0f.api_spec.Int64H\x00\x12(\n\x0cuint32_value\x18\x07 \x01(\x0b\x32\x10.api_spec.Uint32H\x00\x12(\n\x0cuint64_value\x18\x08 \x01(\x0b\x32\x10.api_spec.Uint64H\x00\x12(\n\x0c\x64ouble_value\x18\t \x01(\x0b\x32\x10.api_spec.DoubleH\x00\x12&\n\x0b\x66loat_value\x18\n \x01(\x0b\x32\x0f.api_spec.FloatH\x00\x12\x35\n\x11\x61kita_annotations\x18\x0b \x01(\x0b\x32\x1a.api_spec.AkitaAnnotations\x12\x1d\n\x15\x63ontains_random_value\x18\x0c \x01(\x08\x12\x31\n\x07\x66ormats\x18\r \x03(\x0b\x32 .api_spec.Primitive.FormatsEntry\x12\x13\n\x0b\x66ormat_kind\x18\x0e \x01(\t\x1a.\n\x0c\x46ormatsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x08:\x02\x38\x01\x42\x07\n\x05value\"%\n\x04List\x12\x1d\n\x05\x65lems\x18\x01 \x03(\x0b\x32\x0e.api_spec.Data\"\x9a\x01\n\x06Struct\x12,\n\x06\x66ields\x18\x01 \x03(\x0b\x32\x1c.api_spec.Struct.FieldsEntry\x12#\n\x08map_type\x18\x02 \x01(\x0b\x32\x11.api_spec.MapData\x1a=\n\x0b\x46ieldsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"E\n\x07MapData\x12\x1b\n\x03key\x18\x01 \x01(\x0b\x32\x0e.api_spec.Data\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data\"\x06\n\x04None\"S\n\x08Optional\x12\x1e\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0e.api_spec.DataH\x00\x12\x1e\n\x04none\x18\x02 \x01(\x0b\x32\x0e.api_spec.NoneH\x00\x42\x07\n\x05value\"\x92\x01\n\x05OneOf\x12-\n\x07options\x18\x01 \x03(\x0b\x32\x1c.api_spec.OneOf.OptionsEntry\x12\x1a\n\x12potential_conflict\x18\x02 \x01(\x08\x1a>\n\x0cOptionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\"\n\n\x08GRPCMeta\"\x17\n\x08HTTPPath\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x18\n\tHTTPQuery\x12\x0b\n\x03key\x18\x01 \x01(\t\"\x19\n\nHTTPHeader\x12\x0b\n\x03key\x18\x01 \x01(\t\"m\n\x08HTTPAuth\x12-\n\x04type\x18\x01 \x01(\x0e\x32\x1f.api_spec.HTTPAuth.HTTPAuthType\"2\n\x0cHTTPAuthType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x42\x41SIC\x10\x01\x12\n\n\x06\x42\x45\x41RER\x10\x02\"\x19\n\nHTTPCookie\x12\x0b\n\x03key\x18\x01 \x01(\t\"\xde\x02\n\x08HTTPBody\x12\x34\n\x0c\x63ontent_type\x18\x01 \x01(\x0e\x32\x1e.api_spec.HTTPBody.ContentType\x12\x12\n\nother_type\x18\x02 \x01(\t\x12)\n\x06\x65rrors\x18\x03 \x01(\x0e\x32\x19.api_spec.HTTPBody.Errors\"\x9b\x01\n\x0b\x43ontentType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04JSON\x10\x01\x12\x14\n\x10\x46ORM_URL_ENCODED\x10\x02\x12\x10\n\x0cOCTET_STREAM\x10\x03\x12\x07\n\x03PDF\x10\x04\x12\x0e\n\nTEXT_PLAIN\x10\x05\x12\x08\n\x04YAML\x10\x06\x12\r\n\tTEXT_HTML\x10\x07\x12\t\n\x05OTHER\x10\x08\x12\x10\n\x0c\x45VENT_STREAM\x10\t\"?\n\x06\x45rrors\x12\x0c\n\x08NO_ERROR\x10\x00\x12\x11\n\rPARSING_ERROR\x10\x01\x12\x14\n\x10TRUNCATION_ERROR\x10\x02\"\x1d\n\rHTTPMultipart\x12\x0c\n\x04type\x18\x01 \x01(\t\"\x0b\n\tHTTPEmpty\"\xe3\x02\n\x08HTTPMeta\x12\"\n\x04path\x18\x01 \x01(\x0b\x32\x12.api_spec.HTTPPathH\x00\x12$\n\x05query\x18\x02 \x01(\x0b\x32\x13.api_spec.HTTPQueryH\x00\x12&\n\x06header\x18\x03 \x01(\x0b\x32\x14.api_spec.HTTPHeaderH\x00\x12&\n\x06\x63ookie\x18\x04 \x01(\x0b\x32\x14.api_spec.HTTPCookieH\x00\x12\"\n\x04\x62ody\x18\x05 \x01(\x0b\x32\x12.api_spec.HTTPBodyH\x00\x12$\n\x05\x65mpty\x18\x06 \x01(\x0b\x32\x13.api_spec.HTTPEmptyH\x00\x12\"\n\x04\x61uth\x18\x08 \x01(\x0b\x32\x12.api_spec.HTTPAuthH\x00\x12,\n\tmultipart\x18\t \x01(\x0b\x32\x17.api_spec.HTTPMultipartH\x00\x12\x15\n\rresponse_code\x18\x07 \x01(\x05\x42\n\n\x08location\"Z\n\x08\x44\x61taMeta\x12\"\n\x04grpc\x18\x01 \x01(\x0b\x32\x12.api_spec.GRPCMetaH\x00\x12\"\n\x04http\x18\x02 \x01(\x0b\x32\x12.api_spec.HTTPMetaH\x00\x42\x06\n\x04meta\"\x0e\n\x0c\x45xampleValue\"\x84\x03\n\x04\x44\x61ta\x12(\n\tprimitive\x18\x01 \x01(\x0b\x32\x13.api_spec.PrimitiveH\x00\x12\"\n\x06struct\x18\x02 \x01(\x0b\x32\x10.api_spec.StructH\x00\x12\x1e\n\x04list\x18\x03 \x01(\x0b\x32\x0e.api_spec.ListH\x00\x12&\n\x08optional\x18\x04 \x01(\x0b\x32\x12.api_spec.OptionalH\x00\x12 \n\x05oneof\x18\x06 \x01(\x0b\x32\x0f.api_spec.OneOfH\x00\x12 \n\x04meta\x18\x05 \x01(\x0b\x32\x12.api_spec.DataMeta\x12\x10\n\x08nullable\x18\x07 \x01(\x08\x12\x39\n\x0e\x65xample_values\x18\x08 \x03(\x0b\x32!.api_spec.Data.ExampleValuesEntry\x1aL\n\x12\x45xampleValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12%\n\x05value\x18\x02 \x01(\x0b\x32\x16.api_spec.ExampleValue:\x02\x38\x01\x42\x07\n\x05value\"=\n\x08MethodID\x12\x0c\n\x04name\x18\x01 \x01(\t\x12#\n\x08\x61pi_type\x18\x02 \x01(\x0e\x32\x11.api_spec.ApiType\"\x10\n\x0eGRPCMethodMeta\"\xdf\x02\n\x0eHTTPMethodMeta\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\x15\n\rpath_template\x18\x02 \x01(\t\x12\x0c\n\x04host\x18\x03 \x01(\t\x12\x1a\n\x12processing_latency\x18\x04 \x01(\x02\x12P\n\x0epath_param_alg\x18\x05 \x01(\x0e\x32\x38.api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm\x12\x39\n\x0bobfuscation\x18\x06 \x01(\x0e\x32$.api_spec.HTTPMethodMeta.Obfuscation\"F\n\x1fPathParameterInferenceAlgorithm\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x06\n\x02v1\x10\x01\x12\x06\n\x02v2\x10\x02\x12\x06\n\x02v3\x10\x03\"\'\n\x0bObfuscation\x12\x0e\n\nZERO_VALUE\x10\x00\x12\x08\n\x04NONE\x10\x01\"h\n\nMethodMeta\x12(\n\x04grpc\x18\x01 \x01(\x0b\x32\x18.api_spec.GRPCMethodMetaH\x00\x12(\n\x04http\x18\x02 \x01(\x0b\x32\x18.api_spec.HTTPMethodMetaH\x00\x42\x06\n\x04meta\"\xa9\x02\n\x06Method\x12\x1e\n\x02id\x18\x01 \x01(\x0b\x32\x12.api_spec.MethodID\x12(\n\x04\x61rgs\x18\x02 \x03(\x0b\x32\x1a.api_spec.Method.ArgsEntry\x12\x32\n\tresponses\x18\x03 \x03(\x0b\x32\x1f.api_spec.Method.ResponsesEntry\x12\"\n\x04meta\x18\x04 \x01(\x0b\x32\x14.api_spec.MethodMeta\x1a;\n\tArgsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x1a@\n\x0eResponsesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x1d\n\x05value\x18\x02 \x01(\x0b\x32\x0e.api_spec.Data:\x02\x38\x01\x42,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
+  ,
+  dependencies=[api__type__pb2.DESCRIPTOR,types__pb2.DESCRIPTOR,])
 
 
 
-_BOOL = DESCRIPTOR.message_types_by_name['Bool']
-_BYTES = DESCRIPTOR.message_types_by_name['Bytes']
-_STRING = DESCRIPTOR.message_types_by_name['String']
-_INT32 = DESCRIPTOR.message_types_by_name['Int32']
-_INT64 = DESCRIPTOR.message_types_by_name['Int64']
-_UINT32 = DESCRIPTOR.message_types_by_name['Uint32']
-_UINT64 = DESCRIPTOR.message_types_by_name['Uint64']
-_DOUBLE = DESCRIPTOR.message_types_by_name['Double']
-_FLOAT = DESCRIPTOR.message_types_by_name['Float']
-_PRIMITIVE = DESCRIPTOR.message_types_by_name['Primitive']
-_PRIMITIVE_FORMATSENTRY = _PRIMITIVE.nested_types_by_name['FormatsEntry']
-_LIST = DESCRIPTOR.message_types_by_name['List']
-_STRUCT = DESCRIPTOR.message_types_by_name['Struct']
-_STRUCT_FIELDSENTRY = _STRUCT.nested_types_by_name['FieldsEntry']
-_MAPDATA = DESCRIPTOR.message_types_by_name['MapData']
-_NONE = DESCRIPTOR.message_types_by_name['None']
-_OPTIONAL = DESCRIPTOR.message_types_by_name['Optional']
-_ONEOF = DESCRIPTOR.message_types_by_name['OneOf']
-_ONEOF_OPTIONSENTRY = _ONEOF.nested_types_by_name['OptionsEntry']
-_GRPCMETA = DESCRIPTOR.message_types_by_name['GRPCMeta']
-_HTTPPATH = DESCRIPTOR.message_types_by_name['HTTPPath']
-_HTTPQUERY = DESCRIPTOR.message_types_by_name['HTTPQuery']
-_HTTPHEADER = DESCRIPTOR.message_types_by_name['HTTPHeader']
-_HTTPAUTH = DESCRIPTOR.message_types_by_name['HTTPAuth']
-_HTTPCOOKIE = DESCRIPTOR.message_types_by_name['HTTPCookie']
-_HTTPBODY = DESCRIPTOR.message_types_by_name['HTTPBody']
-_HTTPMULTIPART = DESCRIPTOR.message_types_by_name['HTTPMultipart']
-_HTTPEMPTY = DESCRIPTOR.message_types_by_name['HTTPEmpty']
-_HTTPMETA = DESCRIPTOR.message_types_by_name['HTTPMeta']
-_DATAMETA = DESCRIPTOR.message_types_by_name['DataMeta']
-_EXAMPLEVALUE = DESCRIPTOR.message_types_by_name['ExampleValue']
-_DATA = DESCRIPTOR.message_types_by_name['Data']
-_DATA_EXAMPLEVALUESENTRY = _DATA.nested_types_by_name['ExampleValuesEntry']
-_METHODID = DESCRIPTOR.message_types_by_name['MethodID']
-_GRPCMETHODMETA = DESCRIPTOR.message_types_by_name['GRPCMethodMeta']
-_HTTPMETHODMETA = DESCRIPTOR.message_types_by_name['HTTPMethodMeta']
-_METHODMETA = DESCRIPTOR.message_types_by_name['MethodMeta']
-_METHOD = DESCRIPTOR.message_types_by_name['Method']
-_METHOD_ARGSENTRY = _METHOD.nested_types_by_name['ArgsEntry']
-_METHOD_RESPONSESENTRY = _METHOD.nested_types_by_name['ResponsesEntry']
-_HTTPAUTH_HTTPAUTHTYPE = _HTTPAUTH.enum_types_by_name['HTTPAuthType']
-_HTTPBODY_CONTENTTYPE = _HTTPBODY.enum_types_by_name['ContentType']
-_HTTPBODY_ERRORS = _HTTPBODY.enum_types_by_name['Errors']
-_HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM = _HTTPMETHODMETA.enum_types_by_name['PathParameterInferenceAlgorithm']
-_HTTPMETHODMETA_OBFUSCATION = _HTTPMETHODMETA.enum_types_by_name['Obfuscation']
+_HTTPAUTH_HTTPAUTHTYPE = _descriptor.EnumDescriptor(
+  name='HTTPAuthType',
+  full_name='api_spec.HTTPAuth.HTTPAuthType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='BASIC', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='BEARER', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1864,
+  serialized_end=1914,
+)
+_sym_db.RegisterEnumDescriptor(_HTTPAUTH_HTTPAUTHTYPE)
+
+_HTTPBODY_CONTENTTYPE = _descriptor.EnumDescriptor(
+  name='ContentType',
+  full_name='api_spec.HTTPBody.ContentType',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='JSON', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='FORM_URL_ENCODED', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OCTET_STREAM', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PDF', index=4, number=4,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEXT_PLAIN', index=5, number=5,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='YAML', index=6, number=6,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TEXT_HTML', index=7, number=7,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='OTHER', index=8, number=8,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='EVENT_STREAM', index=9, number=9,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=2074,
+  serialized_end=2229,
+)
+_sym_db.RegisterEnumDescriptor(_HTTPBODY_CONTENTTYPE)
+
+_HTTPBODY_ERRORS = _descriptor.EnumDescriptor(
+  name='Errors',
+  full_name='api_spec.HTTPBody.Errors',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NO_ERROR', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='PARSING_ERROR', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='TRUNCATION_ERROR', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=2231,
+  serialized_end=2294,
+)
+_sym_db.RegisterEnumDescriptor(_HTTPBODY_ERRORS)
+
+_HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM = _descriptor.EnumDescriptor(
+  name='PathParameterInferenceAlgorithm',
+  full_name='api_spec.HTTPMethodMeta.PathParameterInferenceAlgorithm',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='v1', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='v2', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='v3', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=3519,
+  serialized_end=3589,
+)
+_sym_db.RegisterEnumDescriptor(_HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM)
+
+_HTTPMETHODMETA_OBFUSCATION = _descriptor.EnumDescriptor(
+  name='Obfuscation',
+  full_name='api_spec.HTTPMethodMeta.Obfuscation',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ZERO_VALUE', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='NONE', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=3591,
+  serialized_end=3630,
+)
+_sym_db.RegisterEnumDescriptor(_HTTPMETHODMETA_OBFUSCATION)
+
+
+_BOOL = _descriptor.Descriptor(
+  name='Bool',
+  full_name='api_spec.Bool',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.Bool.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Bool.value', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=55,
+  serialized_end=110,
+)
+
+
+_BYTES = _descriptor.Descriptor(
+  name='Bytes',
+  full_name='api_spec.Bytes',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.Bytes.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Bytes.value', index=1,
+      number=2, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"",
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=112,
+  serialized_end=169,
+)
+
+
+_STRING = _descriptor.Descriptor(
+  name='String',
+  full_name='api_spec.String',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.String.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.String.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=171,
+  serialized_end=230,
+)
+
+
+_INT32 = _descriptor.Descriptor(
+  name='Int32',
+  full_name='api_spec.Int32',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.Int32.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Int32.value', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=232,
+  serialized_end=289,
+)
+
+
+_INT64 = _descriptor.Descriptor(
+  name='Int64',
+  full_name='api_spec.Int64',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.Int64.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Int64.value', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=291,
+  serialized_end=348,
+)
+
+
+_UINT32 = _descriptor.Descriptor(
+  name='Uint32',
+  full_name='api_spec.Uint32',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.Uint32.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Uint32.value', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=350,
+  serialized_end=409,
+)
+
+
+_UINT64 = _descriptor.Descriptor(
+  name='Uint64',
+  full_name='api_spec.Uint64',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.Uint64.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Uint64.value', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=411,
+  serialized_end=470,
+)
+
+
+_DOUBLE = _descriptor.Descriptor(
+  name='Double',
+  full_name='api_spec.Double',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.Double.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Double.value', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=472,
+  serialized_end=531,
+)
+
+
+_FLOAT = _descriptor.Descriptor(
+  name='Float',
+  full_name='api_spec.Float',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.Float.type', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Float.value', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=533,
+  serialized_end=590,
+)
+
+
+_PRIMITIVE_FORMATSENTRY = _descriptor.Descriptor(
+  name='FormatsEntry',
+  full_name='api_spec.Primitive.FormatsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.Primitive.FormatsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Primitive.FormatsEntry.value', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1149,
+  serialized_end=1195,
+)
+
+_PRIMITIVE = _descriptor.Descriptor(
+  name='Primitive',
+  full_name='api_spec.Primitive',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type_hint', full_name='api_spec.Primitive.type_hint', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='bool_value', full_name='api_spec.Primitive.bool_value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='bytes_value', full_name='api_spec.Primitive.bytes_value', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='string_value', full_name='api_spec.Primitive.string_value', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='int32_value', full_name='api_spec.Primitive.int32_value', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='int64_value', full_name='api_spec.Primitive.int64_value', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='uint32_value', full_name='api_spec.Primitive.uint32_value', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='uint64_value', full_name='api_spec.Primitive.uint64_value', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='double_value', full_name='api_spec.Primitive.double_value', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='float_value', full_name='api_spec.Primitive.float_value', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='akita_annotations', full_name='api_spec.Primitive.akita_annotations', index=10,
+      number=11, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='contains_random_value', full_name='api_spec.Primitive.contains_random_value', index=11,
+      number=12, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='formats', full_name='api_spec.Primitive.formats', index=12,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='format_kind', full_name='api_spec.Primitive.format_kind', index=13,
+      number=14, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_PRIMITIVE_FORMATSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='value', full_name='api_spec.Primitive.value',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=593,
+  serialized_end=1204,
+)
+
+
+_LIST = _descriptor.Descriptor(
+  name='List',
+  full_name='api_spec.List',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='elems', full_name='api_spec.List.elems', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1206,
+  serialized_end=1243,
+)
+
+
+_STRUCT_FIELDSENTRY = _descriptor.Descriptor(
+  name='FieldsEntry',
+  full_name='api_spec.Struct.FieldsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.Struct.FieldsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Struct.FieldsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1339,
+  serialized_end=1400,
+)
+
+_STRUCT = _descriptor.Descriptor(
+  name='Struct',
+  full_name='api_spec.Struct',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='fields', full_name='api_spec.Struct.fields', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='map_type', full_name='api_spec.Struct.map_type', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_STRUCT_FIELDSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1246,
+  serialized_end=1400,
+)
+
+
+_MAPDATA = _descriptor.Descriptor(
+  name='MapData',
+  full_name='api_spec.MapData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.MapData.key', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.MapData.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1402,
+  serialized_end=1471,
+)
+
+
+_NONE = _descriptor.Descriptor(
+  name='None',
+  full_name='api_spec.None',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1473,
+  serialized_end=1479,
+)
+
+
+_OPTIONAL = _descriptor.Descriptor(
+  name='Optional',
+  full_name='api_spec.Optional',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='api_spec.Optional.data', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='none', full_name='api_spec.Optional.none', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='value', full_name='api_spec.Optional.value',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=1481,
+  serialized_end=1564,
+)
+
+
+_ONEOF_OPTIONSENTRY = _descriptor.Descriptor(
+  name='OptionsEntry',
+  full_name='api_spec.OneOf.OptionsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.OneOf.OptionsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.OneOf.OptionsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1651,
+  serialized_end=1713,
+)
+
+_ONEOF = _descriptor.Descriptor(
+  name='OneOf',
+  full_name='api_spec.OneOf',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='options', full_name='api_spec.OneOf.options', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='potential_conflict', full_name='api_spec.OneOf.potential_conflict', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_ONEOF_OPTIONSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1567,
+  serialized_end=1713,
+)
+
+
+_GRPCMETA = _descriptor.Descriptor(
+  name='GRPCMeta',
+  full_name='api_spec.GRPCMeta',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1715,
+  serialized_end=1725,
+)
+
+
+_HTTPPATH = _descriptor.Descriptor(
+  name='HTTPPath',
+  full_name='api_spec.HTTPPath',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.HTTPPath.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1727,
+  serialized_end=1750,
+)
+
+
+_HTTPQUERY = _descriptor.Descriptor(
+  name='HTTPQuery',
+  full_name='api_spec.HTTPQuery',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.HTTPQuery.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1752,
+  serialized_end=1776,
+)
+
+
+_HTTPHEADER = _descriptor.Descriptor(
+  name='HTTPHeader',
+  full_name='api_spec.HTTPHeader',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.HTTPHeader.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1778,
+  serialized_end=1803,
+)
+
+
+_HTTPAUTH = _descriptor.Descriptor(
+  name='HTTPAuth',
+  full_name='api_spec.HTTPAuth',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.HTTPAuth.type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _HTTPAUTH_HTTPAUTHTYPE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1805,
+  serialized_end=1914,
+)
+
+
+_HTTPCOOKIE = _descriptor.Descriptor(
+  name='HTTPCookie',
+  full_name='api_spec.HTTPCookie',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.HTTPCookie.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1916,
+  serialized_end=1941,
+)
+
+
+_HTTPBODY = _descriptor.Descriptor(
+  name='HTTPBody',
+  full_name='api_spec.HTTPBody',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='content_type', full_name='api_spec.HTTPBody.content_type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='other_type', full_name='api_spec.HTTPBody.other_type', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='errors', full_name='api_spec.HTTPBody.errors', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _HTTPBODY_CONTENTTYPE,
+    _HTTPBODY_ERRORS,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1944,
+  serialized_end=2294,
+)
+
+
+_HTTPMULTIPART = _descriptor.Descriptor(
+  name='HTTPMultipart',
+  full_name='api_spec.HTTPMultipart',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='api_spec.HTTPMultipart.type', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2296,
+  serialized_end=2325,
+)
+
+
+_HTTPEMPTY = _descriptor.Descriptor(
+  name='HTTPEmpty',
+  full_name='api_spec.HTTPEmpty',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2327,
+  serialized_end=2338,
+)
+
+
+_HTTPMETA = _descriptor.Descriptor(
+  name='HTTPMeta',
+  full_name='api_spec.HTTPMeta',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='path', full_name='api_spec.HTTPMeta.path', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='query', full_name='api_spec.HTTPMeta.query', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='header', full_name='api_spec.HTTPMeta.header', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='cookie', full_name='api_spec.HTTPMeta.cookie', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='body', full_name='api_spec.HTTPMeta.body', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='empty', full_name='api_spec.HTTPMeta.empty', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='auth', full_name='api_spec.HTTPMeta.auth', index=6,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='multipart', full_name='api_spec.HTTPMeta.multipart', index=7,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='response_code', full_name='api_spec.HTTPMeta.response_code', index=8,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='location', full_name='api_spec.HTTPMeta.location',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=2341,
+  serialized_end=2696,
+)
+
+
+_DATAMETA = _descriptor.Descriptor(
+  name='DataMeta',
+  full_name='api_spec.DataMeta',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='grpc', full_name='api_spec.DataMeta.grpc', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='http', full_name='api_spec.DataMeta.http', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='meta', full_name='api_spec.DataMeta.meta',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=2698,
+  serialized_end=2788,
+)
+
+
+_EXAMPLEVALUE = _descriptor.Descriptor(
+  name='ExampleValue',
+  full_name='api_spec.ExampleValue',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2790,
+  serialized_end=2804,
+)
+
+
+_DATA_EXAMPLEVALUESENTRY = _descriptor.Descriptor(
+  name='ExampleValuesEntry',
+  full_name='api_spec.Data.ExampleValuesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.Data.ExampleValuesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Data.ExampleValuesEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3110,
+  serialized_end=3186,
+)
+
+_DATA = _descriptor.Descriptor(
+  name='Data',
+  full_name='api_spec.Data',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='primitive', full_name='api_spec.Data.primitive', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='struct', full_name='api_spec.Data.struct', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='list', full_name='api_spec.Data.list', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='optional', full_name='api_spec.Data.optional', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='oneof', full_name='api_spec.Data.oneof', index=4,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='meta', full_name='api_spec.Data.meta', index=5,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='nullable', full_name='api_spec.Data.nullable', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='example_values', full_name='api_spec.Data.example_values', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_DATA_EXAMPLEVALUESENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='value', full_name='api_spec.Data.value',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=2807,
+  serialized_end=3195,
+)
+
+
+_METHODID = _descriptor.Descriptor(
+  name='MethodID',
+  full_name='api_spec.MethodID',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='api_spec.MethodID.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='api_type', full_name='api_spec.MethodID.api_type', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3197,
+  serialized_end=3258,
+)
+
+
+_GRPCMETHODMETA = _descriptor.Descriptor(
+  name='GRPCMethodMeta',
+  full_name='api_spec.GRPCMethodMeta',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3260,
+  serialized_end=3276,
+)
+
+
+_HTTPMETHODMETA = _descriptor.Descriptor(
+  name='HTTPMethodMeta',
+  full_name='api_spec.HTTPMethodMeta',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='method', full_name='api_spec.HTTPMethodMeta.method', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='path_template', full_name='api_spec.HTTPMethodMeta.path_template', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='host', full_name='api_spec.HTTPMethodMeta.host', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='processing_latency', full_name='api_spec.HTTPMethodMeta.processing_latency', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='path_param_alg', full_name='api_spec.HTTPMethodMeta.path_param_alg', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='obfuscation', full_name='api_spec.HTTPMethodMeta.obfuscation', index=5,
+      number=6, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM,
+    _HTTPMETHODMETA_OBFUSCATION,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3279,
+  serialized_end=3630,
+)
+
+
+_METHODMETA = _descriptor.Descriptor(
+  name='MethodMeta',
+  full_name='api_spec.MethodMeta',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='grpc', full_name='api_spec.MethodMeta.grpc', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='http', full_name='api_spec.MethodMeta.http', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='meta', full_name='api_spec.MethodMeta.meta',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=3632,
+  serialized_end=3736,
+)
+
+
+_METHOD_ARGSENTRY = _descriptor.Descriptor(
+  name='ArgsEntry',
+  full_name='api_spec.Method.ArgsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.Method.ArgsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Method.ArgsEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3911,
+  serialized_end=3970,
+)
+
+_METHOD_RESPONSESENTRY = _descriptor.Descriptor(
+  name='ResponsesEntry',
+  full_name='api_spec.Method.ResponsesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.Method.ResponsesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.Method.ResponsesEntry.value', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3972,
+  serialized_end=4036,
+)
+
+_METHOD = _descriptor.Descriptor(
+  name='Method',
+  full_name='api_spec.Method',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='api_spec.Method.id', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='args', full_name='api_spec.Method.args', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='responses', full_name='api_spec.Method.responses', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='meta', full_name='api_spec.Method.meta', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_METHOD_ARGSENTRY, _METHOD_RESPONSESENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3739,
+  serialized_end=4036,
+)
+
+_BOOL.fields_by_name['type'].message_type = types__pb2._BOOLTYPE
+_BYTES.fields_by_name['type'].message_type = types__pb2._BYTESTYPE
+_STRING.fields_by_name['type'].message_type = types__pb2._STRINGTYPE
+_INT32.fields_by_name['type'].message_type = types__pb2._INT32TYPE
+_INT64.fields_by_name['type'].message_type = types__pb2._INT64TYPE
+_UINT32.fields_by_name['type'].message_type = types__pb2._UINT32TYPE
+_UINT64.fields_by_name['type'].message_type = types__pb2._UINT64TYPE
+_DOUBLE.fields_by_name['type'].message_type = types__pb2._DOUBLETYPE
+_FLOAT.fields_by_name['type'].message_type = types__pb2._FLOATTYPE
+_PRIMITIVE_FORMATSENTRY.containing_type = _PRIMITIVE
+_PRIMITIVE.fields_by_name['bool_value'].message_type = _BOOL
+_PRIMITIVE.fields_by_name['bytes_value'].message_type = _BYTES
+_PRIMITIVE.fields_by_name['string_value'].message_type = _STRING
+_PRIMITIVE.fields_by_name['int32_value'].message_type = _INT32
+_PRIMITIVE.fields_by_name['int64_value'].message_type = _INT64
+_PRIMITIVE.fields_by_name['uint32_value'].message_type = _UINT32
+_PRIMITIVE.fields_by_name['uint64_value'].message_type = _UINT64
+_PRIMITIVE.fields_by_name['double_value'].message_type = _DOUBLE
+_PRIMITIVE.fields_by_name['float_value'].message_type = _FLOAT
+_PRIMITIVE.fields_by_name['akita_annotations'].message_type = types__pb2._AKITAANNOTATIONS
+_PRIMITIVE.fields_by_name['formats'].message_type = _PRIMITIVE_FORMATSENTRY
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['bool_value'])
+_PRIMITIVE.fields_by_name['bool_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['bytes_value'])
+_PRIMITIVE.fields_by_name['bytes_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['string_value'])
+_PRIMITIVE.fields_by_name['string_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['int32_value'])
+_PRIMITIVE.fields_by_name['int32_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['int64_value'])
+_PRIMITIVE.fields_by_name['int64_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['uint32_value'])
+_PRIMITIVE.fields_by_name['uint32_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['uint64_value'])
+_PRIMITIVE.fields_by_name['uint64_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['double_value'])
+_PRIMITIVE.fields_by_name['double_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_PRIMITIVE.oneofs_by_name['value'].fields.append(
+  _PRIMITIVE.fields_by_name['float_value'])
+_PRIMITIVE.fields_by_name['float_value'].containing_oneof = _PRIMITIVE.oneofs_by_name['value']
+_LIST.fields_by_name['elems'].message_type = _DATA
+_STRUCT_FIELDSENTRY.fields_by_name['value'].message_type = _DATA
+_STRUCT_FIELDSENTRY.containing_type = _STRUCT
+_STRUCT.fields_by_name['fields'].message_type = _STRUCT_FIELDSENTRY
+_STRUCT.fields_by_name['map_type'].message_type = _MAPDATA
+_MAPDATA.fields_by_name['key'].message_type = _DATA
+_MAPDATA.fields_by_name['value'].message_type = _DATA
+_OPTIONAL.fields_by_name['data'].message_type = _DATA
+_OPTIONAL.fields_by_name['none'].message_type = _NONE
+_OPTIONAL.oneofs_by_name['value'].fields.append(
+  _OPTIONAL.fields_by_name['data'])
+_OPTIONAL.fields_by_name['data'].containing_oneof = _OPTIONAL.oneofs_by_name['value']
+_OPTIONAL.oneofs_by_name['value'].fields.append(
+  _OPTIONAL.fields_by_name['none'])
+_OPTIONAL.fields_by_name['none'].containing_oneof = _OPTIONAL.oneofs_by_name['value']
+_ONEOF_OPTIONSENTRY.fields_by_name['value'].message_type = _DATA
+_ONEOF_OPTIONSENTRY.containing_type = _ONEOF
+_ONEOF.fields_by_name['options'].message_type = _ONEOF_OPTIONSENTRY
+_HTTPAUTH.fields_by_name['type'].enum_type = _HTTPAUTH_HTTPAUTHTYPE
+_HTTPAUTH_HTTPAUTHTYPE.containing_type = _HTTPAUTH
+_HTTPBODY.fields_by_name['content_type'].enum_type = _HTTPBODY_CONTENTTYPE
+_HTTPBODY.fields_by_name['errors'].enum_type = _HTTPBODY_ERRORS
+_HTTPBODY_CONTENTTYPE.containing_type = _HTTPBODY
+_HTTPBODY_ERRORS.containing_type = _HTTPBODY
+_HTTPMETA.fields_by_name['path'].message_type = _HTTPPATH
+_HTTPMETA.fields_by_name['query'].message_type = _HTTPQUERY
+_HTTPMETA.fields_by_name['header'].message_type = _HTTPHEADER
+_HTTPMETA.fields_by_name['cookie'].message_type = _HTTPCOOKIE
+_HTTPMETA.fields_by_name['body'].message_type = _HTTPBODY
+_HTTPMETA.fields_by_name['empty'].message_type = _HTTPEMPTY
+_HTTPMETA.fields_by_name['auth'].message_type = _HTTPAUTH
+_HTTPMETA.fields_by_name['multipart'].message_type = _HTTPMULTIPART
+_HTTPMETA.oneofs_by_name['location'].fields.append(
+  _HTTPMETA.fields_by_name['path'])
+_HTTPMETA.fields_by_name['path'].containing_oneof = _HTTPMETA.oneofs_by_name['location']
+_HTTPMETA.oneofs_by_name['location'].fields.append(
+  _HTTPMETA.fields_by_name['query'])
+_HTTPMETA.fields_by_name['query'].containing_oneof = _HTTPMETA.oneofs_by_name['location']
+_HTTPMETA.oneofs_by_name['location'].fields.append(
+  _HTTPMETA.fields_by_name['header'])
+_HTTPMETA.fields_by_name['header'].containing_oneof = _HTTPMETA.oneofs_by_name['location']
+_HTTPMETA.oneofs_by_name['location'].fields.append(
+  _HTTPMETA.fields_by_name['cookie'])
+_HTTPMETA.fields_by_name['cookie'].containing_oneof = _HTTPMETA.oneofs_by_name['location']
+_HTTPMETA.oneofs_by_name['location'].fields.append(
+  _HTTPMETA.fields_by_name['body'])
+_HTTPMETA.fields_by_name['body'].containing_oneof = _HTTPMETA.oneofs_by_name['location']
+_HTTPMETA.oneofs_by_name['location'].fields.append(
+  _HTTPMETA.fields_by_name['empty'])
+_HTTPMETA.fields_by_name['empty'].containing_oneof = _HTTPMETA.oneofs_by_name['location']
+_HTTPMETA.oneofs_by_name['location'].fields.append(
+  _HTTPMETA.fields_by_name['auth'])
+_HTTPMETA.fields_by_name['auth'].containing_oneof = _HTTPMETA.oneofs_by_name['location']
+_HTTPMETA.oneofs_by_name['location'].fields.append(
+  _HTTPMETA.fields_by_name['multipart'])
+_HTTPMETA.fields_by_name['multipart'].containing_oneof = _HTTPMETA.oneofs_by_name['location']
+_DATAMETA.fields_by_name['grpc'].message_type = _GRPCMETA
+_DATAMETA.fields_by_name['http'].message_type = _HTTPMETA
+_DATAMETA.oneofs_by_name['meta'].fields.append(
+  _DATAMETA.fields_by_name['grpc'])
+_DATAMETA.fields_by_name['grpc'].containing_oneof = _DATAMETA.oneofs_by_name['meta']
+_DATAMETA.oneofs_by_name['meta'].fields.append(
+  _DATAMETA.fields_by_name['http'])
+_DATAMETA.fields_by_name['http'].containing_oneof = _DATAMETA.oneofs_by_name['meta']
+_DATA_EXAMPLEVALUESENTRY.fields_by_name['value'].message_type = _EXAMPLEVALUE
+_DATA_EXAMPLEVALUESENTRY.containing_type = _DATA
+_DATA.fields_by_name['primitive'].message_type = _PRIMITIVE
+_DATA.fields_by_name['struct'].message_type = _STRUCT
+_DATA.fields_by_name['list'].message_type = _LIST
+_DATA.fields_by_name['optional'].message_type = _OPTIONAL
+_DATA.fields_by_name['oneof'].message_type = _ONEOF
+_DATA.fields_by_name['meta'].message_type = _DATAMETA
+_DATA.fields_by_name['example_values'].message_type = _DATA_EXAMPLEVALUESENTRY
+_DATA.oneofs_by_name['value'].fields.append(
+  _DATA.fields_by_name['primitive'])
+_DATA.fields_by_name['primitive'].containing_oneof = _DATA.oneofs_by_name['value']
+_DATA.oneofs_by_name['value'].fields.append(
+  _DATA.fields_by_name['struct'])
+_DATA.fields_by_name['struct'].containing_oneof = _DATA.oneofs_by_name['value']
+_DATA.oneofs_by_name['value'].fields.append(
+  _DATA.fields_by_name['list'])
+_DATA.fields_by_name['list'].containing_oneof = _DATA.oneofs_by_name['value']
+_DATA.oneofs_by_name['value'].fields.append(
+  _DATA.fields_by_name['optional'])
+_DATA.fields_by_name['optional'].containing_oneof = _DATA.oneofs_by_name['value']
+_DATA.oneofs_by_name['value'].fields.append(
+  _DATA.fields_by_name['oneof'])
+_DATA.fields_by_name['oneof'].containing_oneof = _DATA.oneofs_by_name['value']
+_METHODID.fields_by_name['api_type'].enum_type = api__type__pb2._APITYPE
+_HTTPMETHODMETA.fields_by_name['path_param_alg'].enum_type = _HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM
+_HTTPMETHODMETA.fields_by_name['obfuscation'].enum_type = _HTTPMETHODMETA_OBFUSCATION
+_HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM.containing_type = _HTTPMETHODMETA
+_HTTPMETHODMETA_OBFUSCATION.containing_type = _HTTPMETHODMETA
+_METHODMETA.fields_by_name['grpc'].message_type = _GRPCMETHODMETA
+_METHODMETA.fields_by_name['http'].message_type = _HTTPMETHODMETA
+_METHODMETA.oneofs_by_name['meta'].fields.append(
+  _METHODMETA.fields_by_name['grpc'])
+_METHODMETA.fields_by_name['grpc'].containing_oneof = _METHODMETA.oneofs_by_name['meta']
+_METHODMETA.oneofs_by_name['meta'].fields.append(
+  _METHODMETA.fields_by_name['http'])
+_METHODMETA.fields_by_name['http'].containing_oneof = _METHODMETA.oneofs_by_name['meta']
+_METHOD_ARGSENTRY.fields_by_name['value'].message_type = _DATA
+_METHOD_ARGSENTRY.containing_type = _METHOD
+_METHOD_RESPONSESENTRY.fields_by_name['value'].message_type = _DATA
+_METHOD_RESPONSESENTRY.containing_type = _METHOD
+_METHOD.fields_by_name['id'].message_type = _METHODID
+_METHOD.fields_by_name['args'].message_type = _METHOD_ARGSENTRY
+_METHOD.fields_by_name['responses'].message_type = _METHOD_RESPONSESENTRY
+_METHOD.fields_by_name['meta'].message_type = _METHODMETA
+DESCRIPTOR.message_types_by_name['Bool'] = _BOOL
+DESCRIPTOR.message_types_by_name['Bytes'] = _BYTES
+DESCRIPTOR.message_types_by_name['String'] = _STRING
+DESCRIPTOR.message_types_by_name['Int32'] = _INT32
+DESCRIPTOR.message_types_by_name['Int64'] = _INT64
+DESCRIPTOR.message_types_by_name['Uint32'] = _UINT32
+DESCRIPTOR.message_types_by_name['Uint64'] = _UINT64
+DESCRIPTOR.message_types_by_name['Double'] = _DOUBLE
+DESCRIPTOR.message_types_by_name['Float'] = _FLOAT
+DESCRIPTOR.message_types_by_name['Primitive'] = _PRIMITIVE
+DESCRIPTOR.message_types_by_name['List'] = _LIST
+DESCRIPTOR.message_types_by_name['Struct'] = _STRUCT
+DESCRIPTOR.message_types_by_name['MapData'] = _MAPDATA
+DESCRIPTOR.message_types_by_name['None'] = _NONE
+DESCRIPTOR.message_types_by_name['Optional'] = _OPTIONAL
+DESCRIPTOR.message_types_by_name['OneOf'] = _ONEOF
+DESCRIPTOR.message_types_by_name['GRPCMeta'] = _GRPCMETA
+DESCRIPTOR.message_types_by_name['HTTPPath'] = _HTTPPATH
+DESCRIPTOR.message_types_by_name['HTTPQuery'] = _HTTPQUERY
+DESCRIPTOR.message_types_by_name['HTTPHeader'] = _HTTPHEADER
+DESCRIPTOR.message_types_by_name['HTTPAuth'] = _HTTPAUTH
+DESCRIPTOR.message_types_by_name['HTTPCookie'] = _HTTPCOOKIE
+DESCRIPTOR.message_types_by_name['HTTPBody'] = _HTTPBODY
+DESCRIPTOR.message_types_by_name['HTTPMultipart'] = _HTTPMULTIPART
+DESCRIPTOR.message_types_by_name['HTTPEmpty'] = _HTTPEMPTY
+DESCRIPTOR.message_types_by_name['HTTPMeta'] = _HTTPMETA
+DESCRIPTOR.message_types_by_name['DataMeta'] = _DATAMETA
+DESCRIPTOR.message_types_by_name['ExampleValue'] = _EXAMPLEVALUE
+DESCRIPTOR.message_types_by_name['Data'] = _DATA
+DESCRIPTOR.message_types_by_name['MethodID'] = _METHODID
+DESCRIPTOR.message_types_by_name['GRPCMethodMeta'] = _GRPCMETHODMETA
+DESCRIPTOR.message_types_by_name['HTTPMethodMeta'] = _HTTPMETHODMETA
+DESCRIPTOR.message_types_by_name['MethodMeta'] = _METHODMETA
+DESCRIPTOR.message_types_by_name['Method'] = _METHOD
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
 Bool = _reflection.GeneratedProtocolMessageType('Bool', (_message.Message,), {
   'DESCRIPTOR' : _BOOL,
   '__module__' : 'method_pb2'
@@ -351,110 +2385,12 @@ _sym_db.RegisterMessage(Method)
 _sym_db.RegisterMessage(Method.ArgsEntry)
 _sym_db.RegisterMessage(Method.ResponsesEntry)
 
-if _descriptor._USE_C_DESCRIPTORS == False:
 
-  DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z*akitasoftware.com/superstar/pb/go/api_spec'
-  _PRIMITIVE_FORMATSENTRY._options = None
-  _PRIMITIVE_FORMATSENTRY._serialized_options = b'8\001'
-  _STRUCT_FIELDSENTRY._options = None
-  _STRUCT_FIELDSENTRY._serialized_options = b'8\001'
-  _ONEOF_OPTIONSENTRY._options = None
-  _ONEOF_OPTIONSENTRY._serialized_options = b'8\001'
-  _DATA_EXAMPLEVALUESENTRY._options = None
-  _DATA_EXAMPLEVALUESENTRY._serialized_options = b'8\001'
-  _METHOD_ARGSENTRY._options = None
-  _METHOD_ARGSENTRY._serialized_options = b'8\001'
-  _METHOD_RESPONSESENTRY._options = None
-  _METHOD_RESPONSESENTRY._serialized_options = b'8\001'
-  _BOOL._serialized_start=55
-  _BOOL._serialized_end=110
-  _BYTES._serialized_start=112
-  _BYTES._serialized_end=169
-  _STRING._serialized_start=171
-  _STRING._serialized_end=230
-  _INT32._serialized_start=232
-  _INT32._serialized_end=289
-  _INT64._serialized_start=291
-  _INT64._serialized_end=348
-  _UINT32._serialized_start=350
-  _UINT32._serialized_end=409
-  _UINT64._serialized_start=411
-  _UINT64._serialized_end=470
-  _DOUBLE._serialized_start=472
-  _DOUBLE._serialized_end=531
-  _FLOAT._serialized_start=533
-  _FLOAT._serialized_end=590
-  _PRIMITIVE._serialized_start=593
-  _PRIMITIVE._serialized_end=1204
-  _PRIMITIVE_FORMATSENTRY._serialized_start=1149
-  _PRIMITIVE_FORMATSENTRY._serialized_end=1195
-  _LIST._serialized_start=1206
-  _LIST._serialized_end=1243
-  _STRUCT._serialized_start=1246
-  _STRUCT._serialized_end=1400
-  _STRUCT_FIELDSENTRY._serialized_start=1339
-  _STRUCT_FIELDSENTRY._serialized_end=1400
-  _MAPDATA._serialized_start=1402
-  _MAPDATA._serialized_end=1471
-  _NONE._serialized_start=1473
-  _NONE._serialized_end=1479
-  _OPTIONAL._serialized_start=1481
-  _OPTIONAL._serialized_end=1564
-  _ONEOF._serialized_start=1567
-  _ONEOF._serialized_end=1713
-  _ONEOF_OPTIONSENTRY._serialized_start=1651
-  _ONEOF_OPTIONSENTRY._serialized_end=1713
-  _GRPCMETA._serialized_start=1715
-  _GRPCMETA._serialized_end=1725
-  _HTTPPATH._serialized_start=1727
-  _HTTPPATH._serialized_end=1750
-  _HTTPQUERY._serialized_start=1752
-  _HTTPQUERY._serialized_end=1776
-  _HTTPHEADER._serialized_start=1778
-  _HTTPHEADER._serialized_end=1803
-  _HTTPAUTH._serialized_start=1805
-  _HTTPAUTH._serialized_end=1914
-  _HTTPAUTH_HTTPAUTHTYPE._serialized_start=1864
-  _HTTPAUTH_HTTPAUTHTYPE._serialized_end=1914
-  _HTTPCOOKIE._serialized_start=1916
-  _HTTPCOOKIE._serialized_end=1941
-  _HTTPBODY._serialized_start=1944
-  _HTTPBODY._serialized_end=2294
-  _HTTPBODY_CONTENTTYPE._serialized_start=2074
-  _HTTPBODY_CONTENTTYPE._serialized_end=2229
-  _HTTPBODY_ERRORS._serialized_start=2231
-  _HTTPBODY_ERRORS._serialized_end=2294
-  _HTTPMULTIPART._serialized_start=2296
-  _HTTPMULTIPART._serialized_end=2325
-  _HTTPEMPTY._serialized_start=2327
-  _HTTPEMPTY._serialized_end=2338
-  _HTTPMETA._serialized_start=2341
-  _HTTPMETA._serialized_end=2696
-  _DATAMETA._serialized_start=2698
-  _DATAMETA._serialized_end=2788
-  _EXAMPLEVALUE._serialized_start=2790
-  _EXAMPLEVALUE._serialized_end=2804
-  _DATA._serialized_start=2807
-  _DATA._serialized_end=3195
-  _DATA_EXAMPLEVALUESENTRY._serialized_start=3110
-  _DATA_EXAMPLEVALUESENTRY._serialized_end=3186
-  _METHODID._serialized_start=3197
-  _METHODID._serialized_end=3258
-  _GRPCMETHODMETA._serialized_start=3260
-  _GRPCMETHODMETA._serialized_end=3276
-  _HTTPMETHODMETA._serialized_start=3279
-  _HTTPMETHODMETA._serialized_end=3630
-  _HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM._serialized_start=3519
-  _HTTPMETHODMETA_PATHPARAMETERINFERENCEALGORITHM._serialized_end=3589
-  _HTTPMETHODMETA_OBFUSCATION._serialized_start=3591
-  _HTTPMETHODMETA_OBFUSCATION._serialized_end=3630
-  _METHODMETA._serialized_start=3632
-  _METHODMETA._serialized_end=3736
-  _METHOD._serialized_start=3739
-  _METHOD._serialized_end=4036
-  _METHOD_ARGSENTRY._serialized_start=3911
-  _METHOD_ARGSENTRY._serialized_end=3970
-  _METHOD_RESPONSESENTRY._serialized_start=3972
-  _METHOD_RESPONSESENTRY._serialized_end=4036
+DESCRIPTOR._options = None
+_PRIMITIVE_FORMATSENTRY._options = None
+_STRUCT_FIELDSENTRY._options = None
+_ONEOF_OPTIONSENTRY._options = None
+_DATA_EXAMPLEVALUESENTRY._options = None
+_METHOD_ARGSENTRY._options = None
+_METHOD_RESPONSESENTRY._options = None
 # @@protoc_insertion_point(module_scope)

@@ -3,7 +3,6 @@
 # source: spec.proto
 """Generated protocol buffer code."""
 from google.protobuf import descriptor as _descriptor
-from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
@@ -15,13 +14,135 @@ _sym_db = _symbol_database.Default()
 import method_pb2 as method__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\nspec.proto\x12\x08\x61pi_spec\x1a\x0cmethod.proto\"\x84\x01\n\x07\x41PISpec\x12!\n\x07methods\x18\x01 \x03(\x0b\x32\x10.api_spec.Method\x12)\n\x04tags\x18\x02 \x03(\x0b\x32\x1b.api_spec.APISpec.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\".\n\x0bMethodCalls\x12\x1f\n\x05\x63\x61lls\x18\x01 \x03(\x0b\x32\x10.api_spec.MethodB,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3')
+DESCRIPTOR = _descriptor.FileDescriptor(
+  name='spec.proto',
+  package='api_spec',
+  syntax='proto3',
+  serialized_options=b'Z*akitasoftware.com/superstar/pb/go/api_spec',
+  create_key=_descriptor._internal_create_key,
+  serialized_pb=b'\n\nspec.proto\x12\x08\x61pi_spec\x1a\x0cmethod.proto\"\x84\x01\n\x07\x41PISpec\x12!\n\x07methods\x18\x01 \x03(\x0b\x32\x10.api_spec.Method\x12)\n\x04tags\x18\x02 \x03(\x0b\x32\x1b.api_spec.APISpec.TagsEntry\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\".\n\x0bMethodCalls\x12\x1f\n\x05\x63\x61lls\x18\x01 \x03(\x0b\x32\x10.api_spec.MethodB,Z*akitasoftware.com/superstar/pb/go/api_specb\x06proto3'
+  ,
+  dependencies=[method__pb2.DESCRIPTOR,])
 
 
 
-_APISPEC = DESCRIPTOR.message_types_by_name['APISpec']
-_APISPEC_TAGSENTRY = _APISPEC.nested_types_by_name['TagsEntry']
-_METHODCALLS = DESCRIPTOR.message_types_by_name['MethodCalls']
+
+_APISPEC_TAGSENTRY = _descriptor.Descriptor(
+  name='TagsEntry',
+  full_name='api_spec.APISpec.TagsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='api_spec.APISpec.TagsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='api_spec.APISpec.TagsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=b'8\001',
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=128,
+  serialized_end=171,
+)
+
+_APISPEC = _descriptor.Descriptor(
+  name='APISpec',
+  full_name='api_spec.APISpec',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='methods', full_name='api_spec.APISpec.methods', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='api_spec.APISpec.tags', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_APISPEC_TAGSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=39,
+  serialized_end=171,
+)
+
+
+_METHODCALLS = _descriptor.Descriptor(
+  name='MethodCalls',
+  full_name='api_spec.MethodCalls',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='calls', full_name='api_spec.MethodCalls.calls', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=173,
+  serialized_end=219,
+)
+
+_APISPEC_TAGSENTRY.containing_type = _APISPEC
+_APISPEC.fields_by_name['methods'].message_type = method__pb2._METHOD
+_APISPEC.fields_by_name['tags'].message_type = _APISPEC_TAGSENTRY
+_METHODCALLS.fields_by_name['calls'].message_type = method__pb2._METHOD
+DESCRIPTOR.message_types_by_name['APISpec'] = _APISPEC
+DESCRIPTOR.message_types_by_name['MethodCalls'] = _METHODCALLS
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
 APISpec = _reflection.GeneratedProtocolMessageType('APISpec', (_message.Message,), {
 
   'TagsEntry' : _reflection.GeneratedProtocolMessageType('TagsEntry', (_message.Message,), {
@@ -44,16 +165,7 @@ MethodCalls = _reflection.GeneratedProtocolMessageType('MethodCalls', (_message.
   })
 _sym_db.RegisterMessage(MethodCalls)
 
-if _descriptor._USE_C_DESCRIPTORS == False:
 
-  DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z*akitasoftware.com/superstar/pb/go/api_spec'
-  _APISPEC_TAGSENTRY._options = None
-  _APISPEC_TAGSENTRY._serialized_options = b'8\001'
-  _APISPEC._serialized_start=39
-  _APISPEC._serialized_end=171
-  _APISPEC_TAGSENTRY._serialized_start=128
-  _APISPEC_TAGSENTRY._serialized_end=171
-  _METHODCALLS._serialized_start=173
-  _METHODCALLS._serialized_end=219
+DESCRIPTOR._options = None
+_APISPEC_TAGSENTRY._options = None
 # @@protoc_insertion_point(module_scope)
